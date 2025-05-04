@@ -6,13 +6,10 @@ const nextConfig: NextConfig = {
   // und verbessert die Leistung der Anwendung.
   reactStrictMode: true,
 
-  // Nutzt die SWC-Compiler-Engine von Next.js, um den Code zu minifizieren
-  swcMinify: true,
-
   // Experimental: aktiviert das neue App-Router-Feature von Next.js,
   // das eine verbesserte Routing- und Layout-Architektur bietet
   experimental: {
-    appDir: true,
+    // appDir: true, // Removed as it is not recognized in the current Next.js version
   },
 
   // Bildoptimierung: Konfiguration der Bildoptimierung in Next.js, Domains von denen Bilder geladen werden dürfen

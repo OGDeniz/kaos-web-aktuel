@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌀 KAOS-WEB – Next.js Projekt für KAOS Media
 
-## Getting Started
+Dies ist das offizielle Frontend-Projekt für **KAOS Media** – ein modernes Webauftrittskonzept basierend auf Next.js, Tailwind CSS, TypeScript und einer komponentenbasierten Architektur.
 
-First, run the development server:
+---
+
+## 📁 Projektstruktur
+
+```
+kaos-web/
+├── public/                  # Statische Dateien (z. B. Bilder, Favicon)
+├── src/
+│   ├── app/                 # Next.js App-Router Struktur (Pages & Layout)
+│   │   ├── layout.tsx       # Root-Layout für alle Seiten
+│   │   └── page.tsx         # Aktuelle Startseite
+│   ├── styles/              # Globale CSS-Dateien inkl. Tailwind
+│   ├── components/          # (wird folgen) – UI-Komponenten (Atoms, Molecules…)
+│   └── layouts/             # (wird folgen) – Seitenlayouts nach Wireframe
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+├── tailwind.config.js
+├── postcss.config.js
+├── eslint.config.mjs
+└── README.md
+```
+
+---
+
+## ⚙️ Technologien & Tools
+
+| Zweck                    | Stack/Tool                     |
+|--------------------------|--------------------------------|
+| Framework                | [Next.js](https://nextjs.org) |
+| Sprache                  | TypeScript                    |
+| Styling                  | Tailwind CSS, PostCSS         |
+| Linting & Formatierung   | ESLint                        |
+| Entwicklungsserver       | Vite Dev mit `npm run dev`    |
+| Paketverwaltung          | npm                           |
+
+---
+
+## 📦 Installation
+
+### 1. Voraussetzungen
+- [Node.js 18.x (LTS)](https://nodejs.org/en/download/)
+- npm (wird mit Node automatisch installiert)
+
+### 2. Projekt klonen
+
+```bash
+git clone <repo-url>
+cd kaos-web
+```
+
+### 3. Abhängigkeiten installieren
+
+```bash
+npm install
+```
+
+### 4. Dev-Server starten
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Projekt läuft dann auf:  
+📍 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✅ Aktuell umgesetzt
 
-## Learn More
+- ✔️ Next.js Projekt aufgesetzt (`npx create-next-app`)
+- ✔️ TypeScript, Tailwind CSS & ESLint konfiguriert
+- ✔️ Dev-Server erfolgreich lauffähig
+- ✔️ Erste Seitenstruktur: `/page.tsx` mit App-Router
+- ✔️ Sprachunterstützung (de/en) vorbereitet
+- ✔️ Bildoptimierung konfiguriert
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔜 Nächste Schritte
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] Layout-Komponenten erstellen (`src/layouts/`)
+- [ ] Section-Komponenten nach Wireframe anlegen (`src/components/sections/`)
+- [ ] Inhalte aus Konzeptplan & Skizzen übertragen
+- [ ] Navigation, CTA und Footer umsetzen
+- [ ] Mehrsprachigkeit & Routing einbinden
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👤 Autor
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Projektidee & Vision:** [KAOS Media]  
+**Setup & Struktur:** [Deniz / FLO]  
+**Stand:** 2025-05-04
+
+---
+
+## 📄 Lizenz
+
+Interne Projektentwicklung – nicht für kommerzielle Nutzung außerhalb von KAOS Media vorgesehen.

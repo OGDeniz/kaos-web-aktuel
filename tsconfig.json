@@ -1,27 +1,41 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ES2017", // Änderungen Versionen wie ES2020 oder ESNext sind auch möglich
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Hier können Sie auch andere Bibliotheken hinzufügen, die Sie benötigen
+    "allowJs": true, // Erlaubt JavaScript-Dateien
+    "skipLibCheck": true, // Überspringt die Überprüfung von .d.ts-Dateien
+    "strict": true, // Aktiviert alle strengen Typprüfungen
+    "noEmit": true, // Verhindert die Ausgabe von Dateien
+    "esModuleInterop": true, // Ermöglicht den Import von CommonJS-Modulen
+    "module": "esnext", // Hier können Sie auch "commonjs" verwenden, wenn Sie es benötigen
+    "moduleResolution": "bundler", // Ermöglicht die Verwendung von ES-Modulen
+    "resolveJsonModule": true, // Ermöglicht den Import von JSON-Dateien
+    "isolatedModules": true, // Verhindert die Verwendung von nicht isolierten Modulen
+    "jsx": "preserve", // Erlaubt JSX-Syntax in TypeScript-Dateien
+    "incremental": true, // Aktiviert die inkrementelle Kompilierung
     "plugins": [
       {
-        "name": "next"
+        "name": "next" // Ermöglicht die Verwendung von Next.js-spezifischen Typen
       }
     ],
+    // hier können Sie auch andere Optionen hinzufügen, die Sie benötigen
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ], // welche Dateien einbezogen werden sollen
+  "exclude": [
+    "node_modules"
+  ] // welche Dateien ausgeschlossen werden sollen
 }
