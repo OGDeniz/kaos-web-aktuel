@@ -8,6 +8,7 @@ module.exports = {
   // lädt TailwindCSS und liest meine Konfiguration von tailwind.config.js ein
   plugins: {
     '@tailwindcss/postcss': {},
+    //tailwindcss: {},
     autoprefixer: {},
   },
 };
