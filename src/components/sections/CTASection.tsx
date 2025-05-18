@@ -1,17 +1,17 @@
-type CTAProps = {
+interface CTAProps {
     label: string;
     href: string;
-};
+}
 
 export default function CTASection({ label, href }: CTAProps) {
     return (
-        <section className="bg-primary text-beige py-10 text-center">
+        <section className="py-6 flex justify-center items-center">
             <a
                 href={href}
-                className="inline-block bg-beige text-primary font-bold text-sm uppercase tracking-wide px-6 py-3 rounded hover:bg-white transition"
+                className="bg-light text-dark font-bold px-6 py-3 rounded shadow-md hover:bg-white transition"
             >
                 {label}
             </a>
         </section>
-    );
+    )
 }

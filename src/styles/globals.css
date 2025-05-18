@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+
+
+/* ========== Base Reset ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-beige);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========== Global Styles ========== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+@theme {
+  --color-primary: #8b0000;
+  --color-secondary: #ba3c3c;
+  --color-dark: #750000;
+  --color-softred: #8b5050;
+  --color-neutral: #374151;
+  --color-metal: #777777;
+  --color-light: #ffffff;
+  --color-beige: #f9f1e9;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--color-light);
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}

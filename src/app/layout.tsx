@@ -1,10 +1,4 @@
-import type { Metadata } from "next";
-import "./globals.css"; // deine eigene CSS-Datei mit Tailwind v4 Setup
-
-export const metadata: Metadata = {
-  title: "KAOS Media",
-  description: "Kreativ. Strategisch. Originell.",
-};
+import '../styles/globals.css';
 
 export default function RootLayout({
   children,
@@ -13,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body >
+      <body className="bg-dark text-light font-sans antialiased">
         {children}
       </body>
     </html>

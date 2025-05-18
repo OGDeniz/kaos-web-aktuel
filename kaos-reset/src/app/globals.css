@@ -1,0 +1,37 @@
+@import "tailwindcss" prefix;
+
+
+:root {
+  --color-primary: #8b0000;
+  /* Tiefrot */
+  --color-secondary: #ba3c3c;
+  /* Dunkelrot */
+  --color-dark: #750000;
+  /* Sehr dunkles Rot */
+  --color-softred: #8b5050;
+  /* Weiches Rot */
+  --color-neutral: #374151;
+  /* Grauton */
+  --color-metal: #777777;
+  /* Metallgrau */
+  --color-light: #ffffff;
+  /* Weiß */
+  --color-beige: #f5e9dc;
+  /* Beigeton */
+
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
