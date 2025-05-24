@@ -5,11 +5,12 @@ import CTASection from "@/components/sections/CTASection"
 
 export default function HomeLayout() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start font-sans bg-dark text-light px-4">
+        <div className="min-h-screen flex flex-col items-center justify-start font-sans bg-light text-dark
+         px-4">
             <main className="w-full max-w-6xl flex flex-col items-center">
 
                 {/* 🔻 1. ClaimBar ganz oben */}
-                <div className="w-full bg-softred text-light text-center text-sm font-semibold uppercase tracking-wider py-2 shadow-md border-b border-neutral">
+                <div className="w-full bg-dark text-light text-center text-sm font-semibold uppercase tracking-wider py-2 shadow-md border-b border-neutral">
                     PERFEKTION ENTSTEHT NUR IM KAOS
                 </div>
 
@@ -21,9 +22,10 @@ export default function HomeLayout() {
                     </div>
 
                     {/* Formel rechts */}
-                    <div className="text-center md:text-left space-y-2">
-                        <h2 className="text-xl font-bold">KAOS-FORMEL</h2>
-                        <ul className="text-sm text-light space-y-1">
+                    <div className="text-center text-dark md:text-left space-y-2">
+                        <h1 className="text-dark">KAOS-FORMEL</h1>
+                        <ul className="text-sm text-dark
+                         space-y-1">
                             <li><span className="text-pink-400">🔮</span> Kreativ</li>
                             <li><span className="text-blue-400">🔎</span> Analytisch</li>
                             <li><span className="text-yellow-400">✨</span> Originell</li>
@@ -35,7 +37,7 @@ export default function HomeLayout() {
 
                 {/* 🔻 3. Elevator Pitch */}
                 <section className="bg-beige text-metal text-center max-w-4xl mx-auto my-10 px-8 py-12 rounded shadow-lg">
-                    <h1 className="text-3xl font-bold mb-4 text-[#8b0000]">Who am I / Elevator Pitch</h1>
+                    <h1 className="text-3xl text-softred ">Who am I / Elevator Pitch</h1>
                     <p className="text-lg leading-relaxed">
                         Wir sind KAOS Media – eine kreative Einheit, die Struktur und Strategie mit Originalität
                         und radikaler Klarheit verbindet.

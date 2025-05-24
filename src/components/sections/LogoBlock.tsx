@@ -8,7 +8,7 @@ export default function LogoBlock() {
                 alt="KAOS Media Logo"
                 className="w-32 md:w-40 rounded shadow-lg mb-2"
             />
-            <span className="text-xl md:text-2xl font-bold text-light tracking-tight">
+            <span className="text-xl md:text-2xl font-bold text-softred tracking-tight">
                 KAOS MEDIA
             </span>
         </div>
