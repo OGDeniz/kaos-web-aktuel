@@ -50,7 +50,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm text-text-secondary hover:text-white transition-colors duration-300"
+                className="relative text-sm text-text-secondary hover:text-white transition-colors duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </Link>

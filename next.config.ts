@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-
   // Aktiviert zusätzliche Features und Optimierungen in der React-Bibliothek
   // und verbessert die Leistung der Anwendung.
   reactStrictMode: true,
@@ -17,7 +16,16 @@ const nextConfig: NextConfig = {
     domains: ['localhost', 'images.unsplash.com', 'cdn.pixabay.com', 'cdn.shopify.com'],
   },
 
+  // Turbopack-Konfiguration für Next.js 16 (leere Config um Kompatibilität zu gewährleisten)
+  turbopack: {},
 
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

@@ -1,16 +1,21 @@
 import React from "react"
+import Image from "next/image";
 
 export default function LogoBlock() {
     return (
         <div className="flex flex-col items-center text-center">
-            <img
-                src="/KAOSmedialogo600.jpg"
+
+            <Image
+                src="/KAOSmedia.svg"
                 alt="KAOS Media Logo"
-                className="w-32 md:w-40 rounded shadow-lg mb-2"
+                width={1000}
+                height={750}
+                className="w-64 h-64 object-contain mb-4"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="high"
+                style={{ filter: "drop-shadow(0 0 10px rgba(255, 0, 0, 0.5))" }}
             />
-            <span className="text-xl md:text-2xl font-bold text-softred tracking-tight">
-                KAOS MEDIA
-            </span>
         </div>
     )
 }

@@ -30,20 +30,21 @@ kaos-web/
 
 ## ⚙️ Technologien & Tools
 
-| Zweck                    | Stack/Tool                     |
-|--------------------------|--------------------------------|
-| Framework                | [Next.js](https://nextjs.org) |
-| Sprache                  | TypeScript                    |
-| Styling                  | Tailwind CSS, PostCSS         |
-| Linting & Formatierung   | ESLint                        |
-| Entwicklungsserver       | Vite Dev mit `npm run dev`    |
-| Paketverwaltung          | npm                           |
+| Zweck                  | Stack/Tool                    |
+| ---------------------- | ----------------------------- |
+| Framework              | [Next.js](https://nextjs.org) |
+| Sprache                | TypeScript                    |
+| Styling                | Tailwind CSS, PostCSS         |
+| Linting & Formatierung | ESLint                        |
+| Entwicklungsserver     | Vite Dev mit `npm run dev`    |
+| Paketverwaltung        | npm                           |
 
 ---
 
 ## 📦 Installation
 
 ### 1. Voraussetzungen
+
 - [Node.js 18.x (LTS)](https://nodejs.org/en/download/)
 - npm (wird mit Node automatisch installiert)
 
