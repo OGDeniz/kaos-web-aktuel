@@ -1,17 +1,16 @@
+import Button from '@/components/ui/Button';
+
 interface CTAProps {
-    label: string;
-    href: string;
+  label: string;
+  href: string;
 }
 
 export default function CTASection({ label, href }: CTAProps) {
-    return (
-        <section className="py-6 flex justify-center items-center">
-            <a
-                href={href}
-                className="bg-light text-dark font-bold px-6 py-3 rounded shadow-md hover:bg-white transition"
-            >
-                {label}
-            </a>
-        </section>
-    )
+  return (
+    <section className="w-full py-20 bg-background">
+      <div className="mx-auto flex max-w-6xl justify-center px-4">
+        <Button href={href}>{label}</Button>
+      </div>
+    </section>
+  );
 }
