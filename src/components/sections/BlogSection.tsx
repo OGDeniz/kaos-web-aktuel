@@ -48,7 +48,7 @@ export default function BlogSection() {
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className="group rounded-2xl bg-surface border border-border overflow-hidden hover:border-accent/30 transition-all duration-500 text-center"
           >
-            <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
               <Image
                 src={post.image}
                 alt={post.title}

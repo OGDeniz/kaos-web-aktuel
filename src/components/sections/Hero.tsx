@@ -6,20 +6,22 @@ export default function Hero() {
   return (
     <section id="hero" className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center">
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/80" />
 
       {/* Red glow accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* Red dot accent */}
+        {/* Logo */}
         <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.5, type: 'spring' }}
-          className="w-3 h-3 bg-accent rounded-full mx-auto mb-8"
-        />
-
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="mb-6"
+        >
+          <img src="/kaosLogo.png" alt="KAOS Media Logo" className="mx-auto w-[300px] h-[300px] bg-amber-50 rounded-full" />
+        </motion.div>
+        
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}

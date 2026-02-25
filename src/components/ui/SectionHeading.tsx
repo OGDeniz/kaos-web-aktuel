@@ -12,9 +12,9 @@ export default function SectionHeading({ title, subtitle, label = 'KAOS Media', 
   return (
     <div className={`mb-20 ${isCenter ? 'text-center' : ''} ${className}`}>
       <div className={`flex items-center gap-4 mb-6 ${isCenter ? 'justify-center' : ''}`}>
-        <div className="w-12 h-[3px] bg-accent rounded-full" />
+        <div className="w-12 h-0.75 bg-accent rounded-full" />
         <span className="text-accent text-sm font-semibold uppercase tracking-widest">{label}</span>
-        {isCenter && <div className="w-12 h-[3px] bg-accent rounded-full" />}
+        {isCenter && <div className="w-12 h-0.75 bg-accent rounded-full" />}
       </div>
       <h2 className="text-text-primary">{title}</h2>
       {subtitle && (

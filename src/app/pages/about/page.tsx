@@ -22,9 +22,9 @@ export default function AboutPage() {
             className="text-center"
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Über uns</span>
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
             <h1 className="text-white">Die Macher von<br />KAOS Media</h1>
           </motion.div>

@@ -41,13 +41,13 @@ const ContactPage: React.FC = () => {
 
   return (
     <GrayLayout >
-    <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-950 px-4 pt-32 pb-20 text-metal min-h-screen overflow-x-hidden">
+    <section className="relative bg-linear-to-br from-neutral-900 via-neutral-800 to-neutral-950 px-4 pt-32 pb-20 text-metal min-h-screen overflow-x-hidden">
       {/* Dekorative Blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 bg-softred opacity-20 rounded-full blur-3xl z-0" />
       <div className="pointer-events-none absolute top-0 right-0 w-80 h-80 bg-blue-500 opacity-20 rounded-full blur-2xl z-0" />
 
       <div className="relative max-w-3xl mx-auto text-center z-10 flex flex-col items-center justify-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 py-4 bg-gradient-to-r from-softred via-white to-blue-400 bg-clip-text text-transparent tracking-tight drop-shadow-lg">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 py-4 bg-linear-to-r from-softred via-white to-blue-400 bg-clip-text text-transparent tracking-tight drop-shadow-lg">
           Kontakt aufnehmen
         </h1>
 
@@ -140,7 +140,7 @@ const ContactPage: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-softred to-blue-500 text-white py-3 px-6 rounded-md font-semibold shadow-md hover:opacity-90 transition"
+            className="w-full bg-linear-to-r from-softred to-blue-500 text-white py-3 px-6 rounded-md font-semibold shadow-md hover:opacity-90 transition"
           >
             Nachricht senden
           </button>

@@ -21,15 +21,15 @@ export default function AboutSection() {
           transition={{ duration: 0.7 }}
           className="relative order-2 lg:order-1"
         >
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mx-auto max-w-md">
+          <div className="relative aspect-4/5 rounded-2xl overflow-hidden mx-auto max-w-md">
             <Image
-              src="/aboutus/team.jpg"
+              src="/philosophy/perfekt.png"
               alt="KAOS Media Team"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/60 to-transparent" />
           </div>
           {/* Decorative */}
           <div className="absolute -bottom-3 -right-3 w-20 h-20 border-2 border-accent/20 rounded-2xl hidden lg:block" />
@@ -45,8 +45,8 @@ export default function AboutSection() {
           className="order-1 lg:order-2 text-center lg:text-left"
         >
           <p className="text-text-secondary text-base leading-relaxed">
-            KAOS Media wurde von Flo & Deniz gegründet – zwei Kreative aus Heidelberg, die Marken
-            nicht nur gestalten, sondern strategisch denken. Wir kombinieren Kreativität mit Daten und
+            KAOS Media wurde von Flo, Deniz & Anna gegründet – drei kreative Köpfe aus Heidelberg, die Marken
+            nicht nur gestalten und liefern, sondern auch strategisch denken. Wir kombinieren Kreativität mit Daten und
             liefern Ergebnisse, die wirken.
           </p>
           <p className="text-text-secondary text-base leading-relaxed">

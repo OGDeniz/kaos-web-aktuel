@@ -15,7 +15,7 @@ export default function ElevatorSection() {
                                 alt="KAOS Media Webdesignhintergrund"
                                 width={1000}
                                 height={800}
-                                className="mx-auto block h-auto w-full max-w-[580px] rounded-3xl object-cover"
+                                className="mx-auto block h-auto w-full max-w-145 rounded-3xl object-cover"
                             />
                         </div>
                         <p className="max-w-xl text-lg leading-relaxed">
