@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/80" />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pb-24">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
