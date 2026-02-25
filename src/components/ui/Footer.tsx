@@ -86,8 +86,8 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-text-muted text-xs">
           <p>&copy; {new Date().getFullYear()} KAOS Media. Alle Rechte vorbehalten.</p>
           <nav className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Impressum</a>
-            <a href="#" className="hover:text-white transition-colors">Datenschutz</a>
+            <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
           </nav>
         </div>
       </div>

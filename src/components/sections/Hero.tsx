@@ -5,11 +5,22 @@ import Button from '@/components/ui/Button';
 export default function Hero() {
   return (
     <section id="hero" className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/redBackground.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay to keep text readable */}
+      <div className="absolute inset-0 bg-black/60" />
+
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/80" />
-
-      {/* Red glow accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Logo */}
@@ -19,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <img src="/kaosLogo.png" alt="KAOS Media Logo" className="mx-auto w-[300px] h-[300px] bg-amber-50 rounded-full" />
+          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[480px] h-[230px]" />
         </motion.div>
         
         {/* Main Headline */}

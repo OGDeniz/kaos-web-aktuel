@@ -27,7 +27,7 @@ export default function AboutSection() {
               alt="KAOS Media Team"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 100vw"
             />
             <div className="absolute inset-0 bg-linear-to-t from-background/60 to-transparent" />
           </div>

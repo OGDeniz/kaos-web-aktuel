@@ -38,7 +38,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-5">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/kaosLogo.jpeg" alt="KAOS Media Logo" width={40} height={40} className="rounded-sm" />
+          <Image src="/KAOS.png" alt="KAOS Media Logo" width={40} height={40} className="rounded-sm" />
           <span className="text-xl font-extrabold tracking-tight text-white">
             KAOS <span className="text-accent">MEDIA</span>
           </span>
