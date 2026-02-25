@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center">
+    <section id="hero" className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center pb-20">
       {/* Background video */}
       <video
         autoPlay
@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-background/80" />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pb-24">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[480px] h-[230px]" />
+          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[55vw] max-w-90 h-auto" />
         </motion.div>
         
         {/* Main Headline */}
