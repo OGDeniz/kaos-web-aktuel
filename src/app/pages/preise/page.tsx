@@ -103,7 +103,7 @@ function formatPrice(price: number) {
 export default function PreisePage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 py-28 md:py-36">
+      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
         <div className="mx-auto max-w-6xl">
 
           {/* ── Header ── */}
@@ -125,7 +125,7 @@ export default function PreisePage() {
             </p>
           </motion.div>
 
-          {/* ── Rabatt-Banner ── */}
+          {/* ── Förder-Check-Banner ── */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,24 +133,31 @@ export default function PreisePage() {
             transition={{ duration: 0.5 }}
             className="mb-20 mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 p-8 text-center"
           >
-            <p className="text-white text-lg font-semibold mb-4">Langfristig sparen</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <span className="inline-block mb-4 px-3 py-1 rounded-full border border-accent/30 text-accent text-xs font-bold tracking-widest uppercase">KAOS Förder-Check</span>
+            <p className="text-white text-xl font-bold mb-3">Bis zu 50 % staatlich förderbar</p>
+            <p className="text-text-secondary text-sm max-w-xl mx-auto leading-relaxed mb-6">
+              Viele unserer Leistungen sind über BAFA, go-digital oder Landesprogramme teilförderbar.
+              Wir prüfen gemeinsam mit dir, ob dein Projekt förderfähig ist – kostenlos und unverbindlich.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-white/10">
               <div className="flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 border border-accent/30 text-accent text-lg font-bold">5%</span>
-                <div className="text-left">
-                  <p className="text-white text-sm font-semibold">6 Monate Laufzeit</p>
-                  <p className="text-text-muted text-xs">auf alle Monatspakete</p>
-                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">1</span>
+                <p className="text-text-secondary text-sm text-left">Förderfähigkeit prüfen</p>
               </div>
-              <div className="hidden sm:block w-px h-12 bg-border" />
+              <div className="hidden sm:block w-px h-8 bg-border" />
               <div className="flex items-center gap-3">
-                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 border border-accent/30 text-accent text-lg font-bold">10%</span>
-                <div className="text-left">
-                  <p className="text-white text-sm font-semibold">12 Monate Laufzeit</p>
-                  <p className="text-text-muted text-xs">auf alle Monatspakete</p>
-                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">2</span>
+                <p className="text-text-secondary text-sm text-left">Programm identifizieren</p>
+              </div>
+              <div className="hidden sm:block w-px h-8 bg-border" />
+              <div className="flex items-center gap-3">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">3</span>
+                <p className="text-text-secondary text-sm text-left">Förderpartner vermitteln</p>
               </div>
             </div>
+            <a href="/pages/foerderung" className="inline-block mt-6 text-accent text-sm font-semibold hover:text-white transition-colors">
+              Mehr erfahren &rarr;
+            </a>
           </motion.div>
 
           {/* ═══════════════════════════════════════════
@@ -220,7 +227,7 @@ export default function PreisePage() {
             <div className="text-center mb-14">
               <h2 className="text-white">Monatspakete</h2>
               <p className="mt-4 text-text-secondary text-base max-w-xl mx-auto">
-                Laufende Betreuung – flexibel skalierbar, monatlich kündbar oder mit Rabatt bei Laufzeit.
+                Laufende Betreuung – flexibel skalierbar, monatlich kündbar, viele Leistungen förderfähig.
               </p>
             </div>
 

@@ -13,7 +13,15 @@ const nextConfig: NextConfig = {
 
   // Bildoptimierung: Konfiguration der Bildoptimierung in Next.js, Domains von denen Bilder geladen werden dürfen
   images: {
-    domains: ['localhost', 'images.unsplash.com', 'cdn.pixabay.com', 'cdn.shopify.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'cdn.pixabay.com' },
+      { protocol: 'https', hostname: 'cdn.shopify.com' },
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      // Dev.to – alle Subdomains (media.dev.to, media2.dev.to, etc.)
+      { protocol: 'https', hostname: '**.dev.to' },
+      { protocol: 'https', hostname: 'dev-to-uploads.s3.amazonaws.com' },
+    ],
   },
 
   // Turbopack-Konfiguration für Next.js 16 (leere Config um Kompatibilität zu gewährleisten)

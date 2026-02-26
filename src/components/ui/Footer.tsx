@@ -20,8 +20,17 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="bg-background-alt border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 md:px-12 py-20">
+    <footer className="border-t border-border relative overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/backgrounds/12882-242487537_medium.mp4"
+      />
+      <div className="absolute inset-0 bg-black/75 pointer-events-none" />
+      <div className="relative mx-auto max-w-6xl px-6 md:px-12 py-20">
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
           {/* Logo & Text */}

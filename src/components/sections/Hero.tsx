@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[55vw] max-w-90 h-auto" />
+          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[10vw] max-w-90 h-auto" />
         </motion.div>
         
         {/* Main Headline */}

@@ -65,7 +65,7 @@ const differentiators = [
 export default function LeistungenPage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 py-28 md:py-36">
+      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
         <div className="mx-auto max-w-5xl space-y-28">
 
           {/* Header */}
