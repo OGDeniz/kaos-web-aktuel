@@ -46,7 +46,7 @@ export default function ServicesSection() {
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className="group relative p-8 md:p-10 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-accent/30 transition-all duration-500 hover:scale-[1.02] text-center"
           >
-            <span className="text-6xl font-extrabold text-white/[0.03] group-hover:text-accent/10 transition-colors duration-500 block">
+            <span className="text-6xl font-extrabold text-white/[0.07] group-hover:text-accent/10 transition-colors duration-500 block">
               {service.num}
             </span>
             <h3 className="mt-2 text-white font-bold">{service.title}</h3>
