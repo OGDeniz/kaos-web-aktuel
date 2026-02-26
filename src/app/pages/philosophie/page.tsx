@@ -22,9 +22,9 @@ export default function PhilosophiePage() {
             className="text-center"
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Philosophie</span>
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
             <h1 className="text-white">
               Perfektion entsteht<br />nur mit <span className="text-accent">KAOS</span>
@@ -43,7 +43,7 @@ export default function PhilosophiePage() {
             transition={{ duration: 0.7 }}
             className="max-w-lg mx-auto"
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="relative aspect-4/3 rounded-2xl overflow-hidden">
               <Image
                 src="/philosophy/perfekt.png"
                 alt="KAOS Philosophie"

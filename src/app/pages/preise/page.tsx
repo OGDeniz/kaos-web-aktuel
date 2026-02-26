@@ -115,9 +115,9 @@ export default function PreisePage() {
             className="text-center mb-24"
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Preise</span>
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
             <h1 className="text-white">Unsere Pakete</h1>
             <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
@@ -257,7 +257,7 @@ export default function PreisePage() {
                     <span className="text-text-muted text-xs ml-1">€ / Monat</span>
                   </div>
                   <p className="text-text-muted text-xs mt-1 mb-5">{pkg.hours}</p>
-                  <Button href="/pages/contact" variant="outline" className="w-full text-sm !py-2.5 !px-4">
+                  <Button href="/pages/contact" variant="outline" className="w-full text-sm py-2.5! px-4!">
                     Anfragen
                   </Button>
                 </motion.div>

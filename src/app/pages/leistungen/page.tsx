@@ -81,9 +81,9 @@ export default function LeistungenPage() {
             className="text-center"
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Unser Angebot</span>
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
             <h1 className="text-white">Strukturierte Services,<br />kreative Ergebnisse</h1>
             <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">

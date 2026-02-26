@@ -104,15 +104,15 @@ export default function FoerderungPage() {
           className="relative mx-auto max-w-4xl text-center"
         >
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-12 h-[3px] bg-accent rounded-full" />
+            <div className="w-12 h-0.75 bg-accent rounded-full" />
             <span className="text-accent text-sm font-semibold uppercase tracking-widest">Förderung</span>
-            <div className="w-12 h-[3px] bg-accent rounded-full" />
+            <div className="w-12 h-0.75 bg-accent rounded-full" />
           </div>
 
-          <h1 className="text-white">
+          <h2 className="text-white">
             Digitales Marketing.<br />
             <span className="text-accent">Teilweise staatlich gefördert.</span>
-          </h1>
+          </h2>
           <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
             Viele unserer Leistungen sind über BAFA, go-digital oder Landesprogramme förderbar.
             Wir prüfen gemeinsam mit euch die Förderfähigkeit – kostenlos, unverbindlich, ohne Bürokratieaufwand für euch.
@@ -228,7 +228,7 @@ export default function FoerderungPage() {
                 <div className="h-1 bg-gradient-to-r from-accent via-red-700 to-transparent" />
                 <div className="p-7 flex flex-col flex-1">
                   <p className="text-text-muted text-[10px] uppercase tracking-widest font-semibold mb-2">{prog.träger}</p>
-                  <h3 className="text-white font-bold text-lg mb-5">{prog.name}</h3>
+                  <h4 className="text-white font-bold text-lg mb-5">{prog.name}</h4>
 
                   {/* Big percentage */}
                   <div className="flex items-end gap-2 mb-5 pb-5 border-b border-border">
@@ -251,7 +251,7 @@ export default function FoerderungPage() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-text-muted text-xs mt-6">
+          <p className="text-center text-text-secondary text-xs mt-6">
             * Förderhöhe und Bedingungen variieren je nach Programm und Einzelfall. Kein Rechtsanspruch auf Förderung.
           </p>
         </div>
@@ -260,7 +260,7 @@ export default function FoerderungPage() {
       {/* ══════════════════════════════════════
           WIE FUNKTIONIERT ES
       ══════════════════════════════════════ */}
-      <section className="relative py-20 px-6 md:px-12 bg-background-alt overflow-hidden">
+      <section className="relative py-20 px-6 md:px-12 bg-background-alt overflow-hidden"> 
         <div className="pointer-events-none absolute -top-20 -left-20 w-80 h-80 rounded-full bg-accent/6 blur-[100px]" />
         <div className="relative mx-auto max-w-4xl">
           <motion.div
@@ -270,7 +270,7 @@ export default function FoerderungPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-white">Wie funktioniert der KAOS Förder-Check?</h2>
+            <h2 className="text-white">Wie funktioniert der <span className="text-accent">KAOS</span> Förder-Check?</h2>
             <p className="mt-4 text-text-secondary text-base max-w-xl mx-auto">
               Ihr müsst keine Förderbürokratie verstehen – wir übernehmen das.
             </p>

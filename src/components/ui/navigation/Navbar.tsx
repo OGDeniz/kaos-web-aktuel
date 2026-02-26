@@ -52,7 +52,7 @@ export default function Navbar() {
               {link.highlight ? (
                 <Link
                   href={link.href}
-                  className="text-sm font-semibold text-accent border border-accent/30 px-3 py-1 rounded-full hover:bg-accent/10 transition-colors duration-300"
+                  className="text-sm font-semibold text-accent border border-accent/30 px-3 py-1 rounded-full hover:bg-accent transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -74,9 +74,9 @@ export default function Navbar() {
           className="md:hidden relative z-50 flex flex-col justify-center items-center w-10 h-10 bg-transparent border-none"
           aria-label="Menu"
         >
-          <span className={`block w-6 h-[2px] bg-white transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-[7px]' : ''}`} />
-          <span className={`block w-6 h-[2px] bg-white mt-[5px] transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-[2px] bg-white mt-[5px] transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${mobileOpen ? 'rotate-45 translate-y-1.75' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-white mt-1.25 transition-all duration-300 ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 bg-white mt-1.25 transition-all duration-300 ${mobileOpen ? '-rotate-45 -translate-y-1.75' : ''}`} />
         </button>
       </nav>
 

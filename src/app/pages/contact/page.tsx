@@ -47,9 +47,9 @@ export default function ContactPage() {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Kontakt</span>
-              <div className="w-12 h-[3px] bg-accent rounded-full" />
+              <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
             <h1 className="text-white">Kontakt aufnehmen</h1>
             <p className="mt-6 text-text-secondary text-lg leading-relaxed">
