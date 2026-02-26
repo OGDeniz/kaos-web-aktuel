@@ -78,24 +78,40 @@ export default function LeistungenPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6 py-10 md:px-10 md:py-12"
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Unser Angebot</span>
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
+            <div className="absolute inset-y-0 right-0 z-0 hidden w-full lg:block">
+              <div className="relative ml-auto h-full w-[48%] min-w-[320px] opacity-40">
+                <Image
+                  src="/hero/leistungHero.png"
+                  alt="Leistungen Hero"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="40vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0b0b0b]/80" />
+              </div>
             </div>
-            <h1 className="text-white">Strukturierte Services,<br />kreative Ergebnisse</h1>
-            <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-              Skalierbare Marken- und Digitallösungen für Gründer, Startups und KMU –
-              individuell, messbar und ohne Ballast.
-            </p>
-            <a
-              href="/pages/foerderung"
-              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-semibold hover:bg-accent/10 transition-colors"
-            >
-              Viele Leistungen bis zu 50 % förderfähig &rarr;
-            </a>
+
+            <div className="relative z-10 text-center lg:max-w-2xl lg:text-left">
+              <div className="mb-6 flex items-center justify-center gap-4 lg:justify-start">
+                <div className="w-12 h-0.75 bg-accent rounded-full" />
+                <span className="text-accent text-sm font-semibold uppercase tracking-widest">Unser Angebot</span>
+                <div className="w-12 h-0.75 bg-accent rounded-full" />
+              </div>
+              <h1 className="text-white">Strukturierte Services,<br />kreative Ergebnisse</h1>
+              <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                Skalierbare Marken- und Digitallösungen für Gründer, Startups und KMU –
+                individuell, messbar und ohne Ballast.
+              </p>
+              <a
+                href="/pages/foerderung"
+                className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-semibold hover:bg-accent/10 transition-colors"
+              >
+                Viele Leistungen bis zu 50 % förderfähig &rarr;
+              </a>
+            </div>
           </motion.div>
 
           {/* Service Cards */}

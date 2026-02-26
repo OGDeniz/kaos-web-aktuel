@@ -26,7 +26,7 @@ export default function AboutPage() {
               <span className="text-accent text-sm font-semibold uppercase tracking-widest">Über uns</span>
               <div className="w-12 h-0.75 bg-accent rounded-full" />
             </div>
-            <h1 className="text-white">Die Macher von<br />KAOS Media</h1>
+            <h1 className="text-white">Die Macher von<br /><span className="border-b-4 border-white pb-1">KAOS <span className="text-accent">Media</span></span></h1>
           </motion.div>
 
           {/* Team */}
@@ -82,7 +82,7 @@ export default function AboutPage() {
           >
             <p className="text-text-secondary leading-relaxed">
               <span className="font-bold text-accent">Wir sind KAOS Media</span> – die Boutique-Agentur für Gründer, Startups und KMU, die Großes vorhaben.
-              Hinter KAOS stehen <span className="font-bold text-white">Florian</span> und <span className="font-bold text-white">Deniz</span> – zwei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
+              Hinter KAOS stehen <span className="font-bold text-white">Florian</span> , <span className="font-bold text-white">Deniz</span> und <span className="font-bold text-white">Anna</span> – drei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
             </p>
             <p className="text-text-secondary leading-relaxed">
               Unsere Stärke liegt im Spagat zwischen kreativer Freiheit und analytischer Präzision.
