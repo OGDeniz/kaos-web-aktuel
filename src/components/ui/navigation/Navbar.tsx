@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 const navLinks = [
   { label: 'Leistungen', href: '/pages/leistungen' },
   { label: 'Preise', href: '/pages/preise' },
+  { label: 'Förderung', href: '/pages/foerderung', highlight: true },
   { label: 'Über uns', href: '/pages/about' },
   { label: 'Blog', href: '/pages/blog' },
   { label: 'Kontakt', href: '/pages/contact' },
@@ -48,12 +49,21 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="relative text-sm text-text-secondary hover:text-white transition-colors duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {link.label}
-              </Link>
+              {link.highlight ? (
+                <Link
+                  href={link.href}
+                  className="text-sm font-semibold text-accent border border-accent/30 px-3 py-1 rounded-full hover:bg-accent/10 transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="relative text-sm text-text-secondary hover:text-white transition-colors duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

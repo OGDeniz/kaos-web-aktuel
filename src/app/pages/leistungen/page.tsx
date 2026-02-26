@@ -10,6 +10,7 @@ const services = [
     title: "Branding & Positionierung",
     description: "Wir schärfen eure Marke vom Naming bis zum marktrelevanten Messaging.",
     image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80",
+    foerderbar: true,
     bullets: [
       "Markenanalyse & Zielgruppen-Research",
       "Brand Story, Tonalität & Corporate Language",
@@ -20,6 +21,7 @@ const services = [
     title: "Webdesign & Development",
     description: "Conversion-orientierte Websites, die eure Marke erlebbar machen.",
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    foerderbar: true,
     bullets: [
       "UX/UI Design mit Fokus auf Nutzerführung",
       "Headless & Next.js Entwicklung",
@@ -30,6 +32,7 @@ const services = [
     title: "Content & Social Media",
     description: "Content, der eure Community aktiviert und für Wiedererkennung sorgt.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+    foerderbar: false,
     bullets: [
       "Kampagnenplanung & Redaktionskonzept",
       "Content-Produktion (Foto, Video, Copy)",
@@ -40,6 +43,7 @@ const services = [
     title: "Performance & Automation",
     description: "Wir skalieren Leads und Sales mit datengetriebenen Kampagnen.",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+    foerderbar: true,
     bullets: [
       "Paid Social & Search Kampagnen",
       "Landingpages & Lead-Funnels",
@@ -86,6 +90,12 @@ export default function LeistungenPage() {
               Skalierbare Marken- und Digitallösungen für Gründer, Startups und KMU –
               individuell, messbar und ohne Ballast.
             </p>
+            <a
+              href="/pages/foerderung"
+              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-semibold hover:bg-accent/10 transition-colors"
+            >
+              Viele Leistungen bis zu 50 % förderfähig &rarr;
+            </a>
           </motion.div>
 
           {/* Service Cards */}
@@ -97,8 +107,13 @@ export default function LeistungenPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 overflow-hidden hover:border-accent/30 transition-all duration-500"
+                className="relative rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 overflow-hidden hover:border-accent/30 transition-all duration-500"
               >
+                {service.foerderbar && (
+                  <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-accent/90 text-white text-[10px] font-bold tracking-wider uppercase">
+                    Förderfähig
+                  </span>
+                )}
                 <div className="relative h-48 overflow-hidden">
                   <Image src={service.image} alt={service.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                   <div className="absolute inset-0 bg-black/40" />
