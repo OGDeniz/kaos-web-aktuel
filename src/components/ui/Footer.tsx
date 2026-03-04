@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 
 const footerNav = [
   { label: 'Startseite', href: '/' },
@@ -79,13 +80,13 @@ export default function Footer() {
             </ul>
             <div className="flex gap-4 mt-6 justify-center md:justify-start">
               <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity">
-                <Image src="/icons/insta.svg" alt="Instagram" width={20} height={20} className="invert" />
+                <img src="/icons/insta.svg" alt="Instagram" width={20} height={20} className="invert" />
               </a>
               <a href="#" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
-                <Image src="/icons/lk.svg" alt="LinkedIn" width={20} height={20} className="invert" />
+                <img src="/icons/lk.svg" alt="LinkedIn" width={20} height={20} className="invert" />
               </a>
               <a href="#" aria-label="Facebook" className="hover:opacity-80 transition-opacity">
-                <Image src="/icons/fb.svg" alt="Facebook" width={20} height={20} className="invert" />
+                <img src="/icons/fb.svg" alt="Facebook" width={20} height={20} className="invert" />
               </a>
             </div>
           </div>

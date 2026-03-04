@@ -78,13 +78,13 @@ const AboutSection = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className={`flex flex-col items-center justify-center ${montserrat.className}`}
                         >
-                            <Image
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
                                 src="/KAOSmedia.svg"
                                 alt="KAOS Media Logo"
                                 width={900}
                                 height={900}
                                 className="drop-shadow-xl bg-gradient-to-br from-softred to-blue-400 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300"
-                                priority
                             />
                             <span className="mt-2 text-xs text-gray-400 tracking-widest uppercase">KAOS Media</span>
                         </motion.div>

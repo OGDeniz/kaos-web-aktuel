@@ -11,7 +11,7 @@ import GrayLayout from "@/layouts/GrayLayout";
 export default function StartPage() {
   return (
     <GrayLayout>
-      <ClaimBar text="KAOS Media - Kreativität trifft Struktur - PERFEKTION ENTSTEHT NUR IM KAOS - BRANDING - WEBDESIGN - SOCIAL MEDIA - STRATEGIE" />
+      <ClaimBar text="KAOS Media - Kreativitat trifft Struktur - PERFEKTION ENTSTEHT NUR IM KAOS - BRANDING - WEBDESIGN - SOCIAL MEDIA - STRATEGIE" />
       <Navbar />
       <ElevatorSection />
       <CTASection label="Jetzt Erstgespräch sichern" href="/kontakt" />

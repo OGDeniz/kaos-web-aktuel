@@ -52,9 +52,8 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               className="hidden md:block"
             >
-              <div className="relative w-28 h-28">
-                <Image src="/KAOSmedia.svg" alt="KAOS Media Logo" fill className="object-contain invert" />
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/KAOSmedia.svg" alt="KAOS Media Logo" className="w-28 h-28 object-contain invert" />
             </motion.div>
 
             <motion.div
