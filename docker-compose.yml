@@ -1,9 +1,9 @@
 services:
   kaos-web:
     build: .
-    container_name: kaos-web
+    container_name: kaos-web-staging
     restart: unless-stopped
     ports:
-      - "3001:3000"
+      - "3002:3000"
     environment:
       - NODE_ENV=production
