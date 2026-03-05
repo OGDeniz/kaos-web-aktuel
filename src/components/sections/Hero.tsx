@@ -1,10 +1,13 @@
-'use client';
-import { motion } from 'framer-motion';
-import Button from '@/components/ui/Button';
+"use client";
+import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center pb-20">
+    <section
+      id="hero"
+      className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center pb-20"
+    >
       {/* Background video */}
       <video
         autoPlay
@@ -30,9 +33,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <img src="/KAOSmedialogoFinal.png" alt="KAOS Media Logo" className="mx-auto w-[10vw] max-w-90 h-auto" />
+          <img
+            src="/KAOSmedialogoFinal.png"
+            alt="KAOS Media Logo"
+            className="mx-auto w-[10vw] max-w-90 h-auto"
+          />
         </motion.div>
-        
+
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -40,7 +47,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-white leading-[0.95]"
         >
-          KREATIVITaT
+          KREATIVITÄT
           <br />
           TRIFFT <span className="text-accent">STRUKTUR</span>
         </motion.h1>
@@ -63,7 +70,9 @@ export default function Hero() {
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button href="#contact">Projekt starten</Button>
-          <Button href="#services" variant="outline">Unsere Leistungen</Button>
+          <Button href="#services" variant="outline">
+            Unsere Leistungen
+          </Button>
         </motion.div>
       </div>
 
@@ -76,7 +85,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
           className="w-6 h-10 border-2 border-text-muted rounded-full flex justify-center pt-2"
         >
           <div className="w-1 h-2 bg-text-muted rounded-full" />
