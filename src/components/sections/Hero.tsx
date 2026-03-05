@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-white leading-[0.95]"
         >
-          KREATIVITÄT
+          KREATIVITaT
           <br />
           TRIFFT <span className="text-accent">STRUKTUR</span>
         </motion.h1>
