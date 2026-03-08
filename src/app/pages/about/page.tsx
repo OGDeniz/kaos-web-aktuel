@@ -39,7 +39,7 @@ export default function AboutPage() {
               className="text-center"
             >
               <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden mx-auto">
-                <Image src="/aboutus/flo1.jpg" alt="Florian" fill className="object-cover" />
+                <Image src="/aboutus/flo1.png" alt="Florian" fill className="object-cover" />
               </div>
               <h3 className="mt-5 text-white font-bold text-lg">Florian</h3>
               <p className="text-text-secondary text-sm">Co-Founder & Strategie</p>
