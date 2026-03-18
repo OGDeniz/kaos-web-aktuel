@@ -1,0 +1,487 @@
+/* ── Page wrapper ── */
+.section {
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 3.5rem 3rem 8rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.headerBadgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.headerLine {
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 9999px;
+}
+
+.headerBadgeText {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.headerTitle {
+  color: var(--color-text-primary);
+}
+
+.headerSubtitle {
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ── Förder-Check-Banner ── */
+.foerderBanner {
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(204, 0, 0, 0.2);
+  background: rgba(204, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+}
+
+.foerderBadge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.foerderTitle {
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.foerderDesc {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.foerderSteps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .foerderSteps {
+    flex-direction: row;
+  }
+}
+
+.foerderStep {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.foerderStepNum {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgba(204, 0, 0, 0.1);
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.foerderStepText {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.foerderDivider {
+  display: none;
+  width: 1px;
+  height: 2rem;
+  background-color: var(--color-border);
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .foerderDivider {
+    display: block;
+  }
+}
+
+.foerderLink {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.foerderLink:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Section blocks ── */
+.sectionBlock {
+  margin-bottom: 7rem;
+}
+
+.sectionHeadingBlock {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  color: var(--color-text-primary);
+}
+
+.sectionSubtitle {
+  margin-top: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subLabel {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.subLabelBlock {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ── Grids ── */
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 640px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid3Monthly {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .grid3Monthly {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── Cards ── */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cardPopular {
+  background: rgba(204, 0, 0, 0.05);
+  border-color: rgba(204, 0, 0, 0.4);
+  box-shadow: 0 0 40px -12px rgba(204, 0, 0, 0.15);
+}
+
+.cardHoverable {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.cardHoverable:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.cardPopularHoverable {
+  background: rgba(204, 0, 0, 0.05);
+  border-color: rgba(204, 0, 0, 0.4);
+  box-shadow: 0 0 40px -12px rgba(204, 0, 0, 0.15);
+}
+
+/* small card (Einzelpakete) */
+.cardSmall {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1.75rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.cardSmall:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Badge on card ── */
+.cardBadgeTop {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.cardBadgeCorner {
+  position: absolute;
+  top: -0.625rem;
+  right: 1rem;
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Card content ── */
+.cardName {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-top: 0.25rem;
+}
+
+.cardNameSm {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.cardDesc {
+  margin-top: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  flex: 1 1 0%;
+}
+
+.cardDescSm {
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  flex: 1 1 0%;
+}
+
+.cardPriceRow {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardPriceRowSm {
+  margin-top: 1.25rem;
+}
+
+.cardPrice {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.cardPriceSm {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.cardCurrency {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  margin-left: 0.25rem;
+}
+
+.cardCurrencySm {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+.cardHours {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardHoursSm {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Single website card ── */
+.singleCard {
+  max-width: 28rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Button overrides ── */
+.btnFull {
+  width: 100%;
+}
+
+.btnOverride {
+  padding: 0.625rem 1rem !important;
+  width: 100%;
+}
+
+/* ── CTA block ── */
+.cta {
+  text-align: center;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4rem 2rem;
+}
+
+.ctaTitle {
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+}
+
+.ctaDesc {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}

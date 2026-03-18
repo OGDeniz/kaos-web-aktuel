@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Link from 'next/link';
+import styles from './ServicesSection.module.css';
 
 const services = [
   {
@@ -36,7 +37,7 @@ export default function ServicesSection() {
         label="Services"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-5xl mx-auto border border-white/10">
+      <div className={styles.grid}>
         {services.map((service, i) => (
           <motion.div
             key={service.num}
@@ -44,27 +45,20 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="group relative p-8 md:p-10 bg-white/3 hover:bg-white/6 transition-colors duration-500 overflow-hidden"
+            className={styles.card}
           >
-            {/* Animated red bottom border */}
-            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent group-hover:w-full transition-all duration-500 ease-out" />
-
-            <span className="text-7xl font-extrabold text-white/6 group-hover:text-accent/10 transition-colors duration-500 block leading-none">
-              {service.num}
-            </span>
-            <h3 className="mt-4 text-white font-bold">{service.title}</h3>
-            <p className="mt-3 text-text-secondary text-base leading-relaxed">{service.desc}</p>
+            <div className={styles.cardBorder} />
+            <span className={styles.number}>{service.num}</span>
+            <h3 className={styles.title}>{service.title}</h3>
+            <p className={styles.description}>{service.desc}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="mt-16 text-center">
-        <Link
-          href="/pages/leistungen"
-          className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-semibold transition-colors text-lg"
-        >
+      <div className={styles.viewAll}>
+        <Link href="/pages/leistungen" className={styles.viewAllLink}>
           Alle Leistungen ansehen
-          <span className="text-xl">&rarr;</span>
+          <span>&rarr;</span>
         </Link>
       </div>
     </SectionWrapper>

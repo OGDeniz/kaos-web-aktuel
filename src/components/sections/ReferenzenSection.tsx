@@ -6,16 +6,17 @@ import Link from 'next/link';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import type { PortfolioPost } from '@/app/api/portfolio/route';
+import styles from './ReferenzenSection.module.css';
 
 function SkeletonCard() {
   return (
-    <div className="rounded-2xl bg-surface border border-border overflow-hidden animate-pulse">
-      <div className="h-48 bg-surface-light" />
-      <div className="p-6 space-y-3">
-        <div className="h-3 w-24 bg-surface-light rounded mx-auto" />
-        <div className="h-5 bg-surface-light rounded" />
-        <div className="h-4 bg-surface-light rounded w-5/6 mx-auto" />
-        <div className="h-4 bg-surface-light rounded w-4/6 mx-auto" />
+    <div className={styles.skeleton}>
+      <div className={styles.skeletonImage} />
+      <div className={styles.skeletonBody}>
+        <div className={`${styles.skeletonLine} ${styles.skeletonLineShort}`} />
+        <div className={`${styles.skeletonLine} ${styles.skeletonLineFull}`} />
+        <div className={`${styles.skeletonLine} ${styles.skeletonLineMd}`} />
+        <div className={`${styles.skeletonLine} ${styles.skeletonLineSm}`} />
       </div>
     </div>
   );
@@ -40,29 +41,29 @@ export default function ReferenzenSection() {
         label="Portfolio"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className={styles.grid}>
         {loading
           ? [0, 1, 2].map(i => <SkeletonCard key={i} />)
           : posts.map((post, i) => {
             const isInternal = post.url.startsWith('/');
             const cardContent = (
               <>
-                <div className="relative aspect-video overflow-hidden">
+                <div className={styles.imageWrapper}>
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={styles.image}
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <span className="text-accent text-xs font-semibold uppercase tracking-widest">{post.category}</span>
-                    <span className="text-text-muted text-xs">{post.readingTime} Min.</span>
+                <div className={styles.cardBody}>
+                  <div className={styles.cardMeta}>
+                    <span className={styles.cardCategory}>{post.category}</span>
+                    <span className={styles.cardReadingTime}>{post.readingTime} Min.</span>
                   </div>
-                  <h3 className="text-white font-bold text-lg group-hover:text-accent transition-colors leading-snug line-clamp-2">{post.title}</h3>
-                  <p className="mt-3 text-text-secondary text-sm line-clamp-2 leading-relaxed">{post.excerpt}</p>
+                  <h3 className={styles.cardTitle}>{post.title}</h3>
+                  <p className={styles.cardExcerpt}>{post.excerpt}</p>
                 </div>
               </>
             );
@@ -73,7 +74,7 @@ export default function ReferenzenSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="group rounded-2xl bg-surface border border-border overflow-hidden hover:border-accent/30 transition-all duration-500 text-center"
+                className={styles.card}
               >
                 {isInternal ? (
                   <Link href={post.url}>{cardContent}</Link>
@@ -86,13 +87,10 @@ export default function ReferenzenSection() {
         }
       </div>
 
-      <div className="mt-16 text-center">
-        <Link
-          href="/pages/portfolio"
-          className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-semibold transition-colors text-lg"
-        >
+      <div className={styles.allProjectsLink}>
+        <Link href="/pages/portfolio" className={styles.allProjectsAnchor}>
           Alle Projekte ansehen
-          <span className="text-xl">&rarr;</span>
+          <span aria-hidden="true">&rarr;</span>
         </Link>
       </div>
     </SectionWrapper>

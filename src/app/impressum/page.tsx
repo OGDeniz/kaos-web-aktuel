@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Layout from '@/layouts/Layout';
+import styles from './page.module.css';
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <motion.div
@@ -8,18 +9,18 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
-    className="space-y-3"
+    className={styles.sectionBlock}
   >
-    <h3 className="text-white text-lg font-bold border-l-4 border-accent pl-4">{title}</h3>
-    <div className="text-text-secondary text-sm leading-relaxed pl-5 space-y-1">{children}</div>
+    <h3 className={styles.sectionTitle}>{title}</h3>
+    <div className={styles.sectionBody}>{children}</div>
   </motion.div>
 );
 
 export default function ImpressumPage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-3xl space-y-14">
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           {/* Header */}
           <motion.div
@@ -28,16 +29,16 @@ export default function ImpressumPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-0.5 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Rechtliches</span>
+            <div className={styles.headerEyebrow}>
+              <div className={styles.headerLine} />
+              <span className={styles.headerLabel}>Rechtliches</span>
             </div>
-            <h2 className="text-white">Impressum</h2>
+            <h2 className={styles.headerTitle}>Impressum</h2>
           </motion.div>
 
           {/* Angaben gemäß § 5 TMG */}
           <Section title="Angaben gemäß § 5 TMG">
-            <p className="font-semibold text-white">KAOS Media</p>
+            <p className={styles.textWhite} style={{ fontWeight: 600 }}>KAOS Media</p>
             <p>Herbststraße 2</p>
             <p>86551 Aichach</p>
             <p>Deutschland</p>
@@ -54,13 +55,13 @@ export default function ImpressumPage() {
           <Section title="Kontakt">
             {/* TODO: Telefonnummer eintragen falls vorhanden */}
             {/* <p>Telefon: +49 [NUMMER]</p> */}
-            <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
+            <p>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
           </Section>
 
           {/* Steuernummer */}
           <Section title="Steuernummer">
-            <p>Steuernummer: <span className="font-mono text-white">102/211/11317</span></p>
-            <p className="mt-1">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
+            <p>Steuernummer: <span className={styles.fontMono} style={{ color: 'var(--color-text-primary)' }}>102/211/11317</span></p>
+            <p className={styles.mt1}>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
           </Section>
 
           {/* Verantwortlich für den Inhalt */}
@@ -78,12 +79,12 @@ export default function ImpressumPage() {
                 href="https://ec.europa.eu/consumers/odr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent-hover transition-colors"
+                className={styles.link}
               >
                 https://ec.europa.eu/consumers/odr/
               </a>
             </p>
-            <p className="mt-2">
+            <p className={styles.mt2}>
               Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
               Verbraucherschlichtungsstelle teilzunehmen.
             </p>
@@ -98,7 +99,7 @@ export default function ImpressumPage() {
               Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
               Tätigkeit hinweisen.
             </p>
-            <p className="mt-2">
+            <p className={styles.mt2}>
               Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den
               allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch
               erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei
@@ -115,7 +116,7 @@ export default function ImpressumPage() {
               Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber
               der Seiten verantwortlich.
             </p>
-            <p className="mt-2">
+            <p className={styles.mt2}>
               Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
               überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
               Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
@@ -132,7 +133,7 @@ export default function ImpressumPage() {
               der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
               Zustimmung des jeweiligen Autors bzw. Erstellers.
             </p>
-            <p className="mt-2">
+            <p className={styles.mt2}>
               Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die
               Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
               gekennzeichnet. Solltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam
@@ -140,7 +141,6 @@ export default function ImpressumPage() {
               Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
             </p>
           </Section>
-
 
         </div>
       </section>

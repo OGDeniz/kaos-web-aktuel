@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button';
+import styles from './CTASection.module.css';
 
 interface CTAProps {
   label: string;
@@ -7,8 +8,8 @@ interface CTAProps {
 
 export default function CTASection({ label, href }: CTAProps) {
   return (
-    <section className="w-full py-20 bg-background">
-      <div className="mx-auto flex max-w-6xl justify-center px-4">
+    <section className={styles.section}>
+      <div className={styles.inner}>
         <Button href={href}>{label}</Button>
       </div>
     </section>

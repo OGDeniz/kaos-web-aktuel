@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import styles from './ScrollProgress.module.css';
 
 export default function ScrollProgress() {
   const [progress, setProgress] = useState(0);
@@ -15,9 +16,9 @@ export default function ScrollProgress() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[2px] z-[9999] bg-transparent">
+    <div className={styles.track}>
       <div
-        className="h-full bg-accent"
+        className={styles.bar}
         style={{ width: `${progress}%`, transition: 'width 0.05s linear' }}
       />
     </div>

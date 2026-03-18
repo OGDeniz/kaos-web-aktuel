@@ -1,0 +1,65 @@
+.section {
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 3.5rem 3rem 8rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrowLine {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 9999px;
+}
+
+.eyebrowLabel {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.h1 {
+  color: #ffffff;
+}
+
+.headerSubtext {
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.625;
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  color: var(--color-text-muted);
+}

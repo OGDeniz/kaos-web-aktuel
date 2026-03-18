@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
+import styles from "./page.module.css";
 
 const values = ["MUT", "KLARHEIT", "AUTHENTIZITÄT"];
 
 export default function AboutPage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-4xl space-y-28">
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           {/* Header */}
           <motion.div
@@ -19,30 +20,35 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className={styles.header}
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Über uns</span>
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
+            <div className={styles.eyebrowRow}>
+              <div className={styles.eyebrowLine} />
+              <span className={styles.eyebrowLabel}>Über uns</span>
+              <div className={styles.eyebrowLine} />
             </div>
-            <h1 className="text-white">Die Macher von<br /><span className="border-b-4 border-white pb-1">KAOS <span className="text-accent">Media</span></span></h1>
+            <h1 className={styles.h1}>
+              Die Macher von<br />
+              <span className={styles.h1Underline}>
+                KAOS <span className={styles.h1Accent}>Media</span>
+              </span>
+            </h1>
           </motion.div>
 
           {/* Team */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+          <div className={styles.team}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center"
+              className={styles.teamMember}
             >
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden mx-auto">
-                <Image src="/aboutus/flo1.png" alt="Florian" fill className="object-cover" />
+              <div className={styles.teamImageWrapper}>
+                <Image src="/aboutus/flo1.png" alt="Florian" fill className={styles.objectCover} style={{ objectFit: "cover" }} />
               </div>
-              <h3 className="mt-5 text-white font-bold text-lg">Florian</h3>
-              <p className="text-text-secondary text-sm">Co-Founder & Strategie</p>
+              <h3 className={styles.teamName}>Florian</h3>
+              <p className={styles.teamRole}>Co-Founder & Strategie</p>
             </motion.div>
 
             <motion.div
@@ -50,10 +56,10 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="hidden md:block"
+              className={styles.teamLogo}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/KAOSmedia.svg" alt="KAOS Media Logo" className="w-28 h-28 object-contain invert" />
+              <img src="/KAOSmedia.svg" alt="KAOS Media Logo" className={styles.logoImg} />
             </motion.div>
 
             <motion.div
@@ -61,13 +67,13 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center"
+              className={styles.teamMember}
             >
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden mx-auto">
-                <Image src="/aboutus/deniz1.jpg" alt="Deniz" fill className="object-cover" />
+              <div className={styles.teamImageWrapper}>
+                <Image src="/aboutus/deniz1.jpg" alt="Deniz" fill style={{ objectFit: "cover" }} />
               </div>
-              <h3 className="mt-5 text-white font-bold text-lg">Deniz</h3>
-              <p className="text-text-secondary text-sm">Co-Founder & Kreation</p>
+              <h3 className={styles.teamName}>Deniz</h3>
+              <p className={styles.teamRole}>Co-Founder & Kreation</p>
             </motion.div>
           </div>
 
@@ -77,15 +83,15 @@ export default function AboutPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-2xl mx-auto rounded-2xl bg-surface border border-border p-10 md:p-12 text-center space-y-6"
+            className={styles.textBlock}
           >
-            <p className="text-text-secondary leading-relaxed">
-              <span className="font-bold text-accent">Wir sind KAOS Media</span> – die Boutique-Agentur für Gründer, Startups und KMU, die Großes vorhaben.
-              Hinter KAOS stehen <span className="font-bold text-white">Florian</span>, <span className="font-bold text-white">Deniz</span> und <span className="font-bold text-white">Anna</span> – drei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
+            <p className={styles.textBlockPara}>
+              <span className={styles.textAccent}>Wir sind KAOS Media</span> – die Boutique-Agentur für Gründer, Startups und KMU, die Großes vorhaben.
+              Hinter KAOS stehen <span className={styles.textWhite}>Florian</span>, <span className={styles.textWhite}>Deniz</span> und <span className={styles.textWhite}>Anna</span> – drei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
             </p>
-            <p className="text-text-secondary leading-relaxed">
+            <p className={styles.textBlockPara}>
               Unsere Stärke liegt im Spagat zwischen kreativer Freiheit und analytischer Präzision.
-              Wir kombinieren Technologie, Strategie und Herzblut zu messbarem Erfolg – <span className="italic text-accent">ohne Bullshit</span>.
+              Wir kombinieren Technologie, Strategie und Herzblut zu messbarem Erfolg – <span className={styles.textItalicAccent}>ohne Bullshit</span>.
             </p>
           </motion.div>
 
@@ -95,12 +101,12 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto space-y-6 text-text-secondary leading-relaxed text-center"
+            className={styles.philosophyBlock}
           >
-            <div className="flex items-center justify-center gap-4 mb-2">
-              <div className="w-8 h-0.5 bg-accent/50 rounded-full" />
-              <span className="text-accent text-xs font-semibold uppercase tracking-widest">Unsere Philosophie</span>
-              <div className="w-8 h-0.5 bg-accent/50 rounded-full" />
+            <div className={styles.philosophyEyebrowRow}>
+              <div className={styles.philosophyEyebrowLine} />
+              <span className={styles.philosophyEyebrowLabel}>Unsere Philosophie</span>
+              <div className={styles.philosophyEyebrowLine} />
             </div>
             <p>
               Wir glauben daran, dass echte Perfektion nicht im stillen Kämmerlein entsteht – sondern dort,
@@ -121,7 +127,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Values */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className={styles.values}>
             {values.map((v, i) => (
               <motion.span
                 key={v}
@@ -129,7 +135,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="px-6 py-3 rounded-full border border-accent/30 text-accent text-sm font-bold tracking-widest"
+                className={styles.valuePill}
               >
                 {v}
               </motion.span>
@@ -142,25 +148,22 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative text-center rounded-2xl bg-accent/10 border border-accent/20 py-14 px-8 max-w-2xl mx-auto overflow-hidden"
+            className={styles.quote}
           >
-            <div className="absolute -top-4 left-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
-              &ldquo;
-            </div>
-            <p className="relative text-2xl md:text-3xl font-bold text-white leading-tight">
+            <div className={styles.quoteMarkTop}>&ldquo;</div>
+            <p className={styles.quoteText}>
               Am Anfang war das KAOS –<br />
-              <span className="text-accent">und nur im KAOS</span><br />
+              <span className={styles.quoteAccent}>und nur im KAOS</span><br />
               entsteht Perfektion!
             </p>
-            <div className="absolute -bottom-12 right-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
-              &rdquo;
-            </div>
+            <div className={styles.quoteMarkBottom}>&rdquo;</div>
           </motion.div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className={styles.cta}>
             <Button href="/pages/contact">Jetzt Erstgespräch sichern</Button>
           </div>
+
         </div>
       </section>
     </Layout>

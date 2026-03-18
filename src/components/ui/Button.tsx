@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -11,14 +12,8 @@ interface ButtonProps {
 }
 
 export default function Button({ children, href, variant = 'primary', className = '', type = 'button', onClick, disabled }: ButtonProps) {
-  const base = 'relative inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base cursor-pointer overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed';
-  const variants = {
-    primary: 'bg-accent text-white before:absolute before:inset-0 before:bg-accent-hover before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-out',
-    outline: 'border-2 border-white/30 text-white transition-colors duration-300 hover:border-accent hover:text-accent',
-  };
-
-  const classes = `${base} ${variants[variant]} ${className}`;
-  const inner = <span className="relative z-10">{children}</span>;
+  const classes = [styles.base, styles[variant], className].filter(Boolean).join(' ');
+  const inner = <span className={styles.inner}>{children}</span>;
 
   if (href) {
     return <Link href={href} className={classes}>{inner}</Link>;

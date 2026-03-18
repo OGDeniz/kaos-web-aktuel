@@ -2,9 +2,7 @@
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Button from '@/components/ui/Button';
-
-const inputClass =
-  'w-full bg-background border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors';
+import styles from './ContactForm.module.css';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -56,15 +54,11 @@ export default function ContactForm() {
   };
 
   return (
-    <form
-      className="rounded-2xl bg-surface border border-border p-8 md:p-12 space-y-6"
-      onSubmit={handleSubmit}
-    >
-      {/* Zeile 1: Name + Email */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.row}>
         <div>
-          <label htmlFor="cf-name" className="block text-sm text-text-muted mb-2">
-            Name <span className="text-accent">*</span>
+          <label htmlFor="cf-name" className={styles.label}>
+            Name <span className={styles.required}>*</span>
           </label>
           <input
             type="text"
@@ -74,12 +68,12 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Dein Name"
-            className={inputClass}
+            className={styles.input}
           />
         </div>
         <div>
-          <label htmlFor="cf-email" className="block text-sm text-text-muted mb-2">
-            E-Mail <span className="text-accent">*</span>
+          <label htmlFor="cf-email" className={styles.label}>
+            E-Mail <span className={styles.required}>*</span>
           </label>
           <input
             type="email"
@@ -89,15 +83,14 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="deine@email.de"
-            className={inputClass}
+            className={styles.input}
           />
         </div>
       </div>
 
-      {/* Zeile 2: Telefon + Betreff */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className={styles.row}>
         <div>
-          <label htmlFor="cf-phone" className="block text-sm text-text-muted mb-2">
+          <label htmlFor="cf-phone" className={styles.label}>
             Telefon (optional)
           </label>
           <input
@@ -107,12 +100,12 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="+49 ..."
-            className={inputClass}
+            className={styles.input}
           />
         </div>
         <div>
-          <label htmlFor="cf-subject" className="block text-sm text-text-muted mb-2">
-            Betreff <span className="text-accent">*</span>
+          <label htmlFor="cf-subject" className={styles.label}>
+            Betreff <span className={styles.required}>*</span>
           </label>
           <input
             type="text"
@@ -122,15 +115,14 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Worum geht's?"
-            className={inputClass}
+            className={styles.input}
           />
         </div>
       </div>
 
-      {/* Nachricht */}
       <div>
-        <label htmlFor="cf-message" className="block text-sm text-text-muted mb-2">
-          Nachricht <span className="text-accent">*</span>
+        <label htmlFor="cf-message" className={styles.label}>
+          Nachricht <span className={styles.required}>*</span>
         </label>
         <textarea
           id="cf-message"
@@ -140,12 +132,11 @@ export default function ContactForm() {
           required
           rows={5}
           placeholder="Erzähl uns von deinem Projekt..."
-          className={`${inputClass} resize-none`}
+          className={`${styles.input} ${styles.textarea}`}
         />
       </div>
 
-      {/* Datenschutz */}
-      <div className="flex items-start gap-3">
+      <div className={styles.checkboxRow}>
         <input
           type="checkbox"
           id="cf-consent"
@@ -153,31 +144,29 @@ export default function ContactForm() {
           checked={formData.consent}
           onChange={handleChange}
           required
-          className="mt-1 accent-accent cursor-pointer"
+          className={styles.checkbox}
         />
-        <label htmlFor="cf-consent" className="text-sm text-text-secondary cursor-pointer">
+        <label htmlFor="cf-consent" className={styles.checkboxLabel}>
           Ich akzeptiere die{' '}
-          <a href="/datenschutz" target="_blank" className="text-accent underline hover:text-accent-hover">
+          <a href="/datenschutz" target="_blank" className={styles.privacyLink}>
             Datenschutzbestimmungen
           </a>
           .
         </label>
       </div>
 
-      {/* Status */}
       {status === 'success' && (
-        <p className="text-green-400 text-sm text-center">
+        <p role="alert" className={styles.success}>
           Nachricht erfolgreich gesendet! Wir melden uns innerhalb von 24h.
         </p>
       )}
       {status === 'error' && (
-        <p className="text-red-400 text-sm text-center">
+        <p role="alert" className={styles.error}>
           Fehler beim Senden. Bitte versuche es erneut.
         </p>
       )}
 
-      {/* Submit */}
-      <div className="text-center pt-2">
+      <div className={styles.submit}>
         <Button type="submit" disabled={status === 'sending'}>
           {status === 'sending' ? 'Wird gesendet…' : 'Nachricht senden'}
         </Button>

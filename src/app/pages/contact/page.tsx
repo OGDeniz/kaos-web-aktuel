@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
+import styles from "./page.module.css";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -31,12 +32,10 @@ export default function ContactPage() {
     setFormData({ name: "", email: "", phone: "", subject: "", message: "", consent: false });
   };
 
-  const inputClasses = "w-full bg-background border border-border rounded-xl px-4 py-3.5 text-white placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors";
-
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-2xl">
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           {/* Header */}
           <motion.div
@@ -44,15 +43,15 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className={styles.header}
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Kontakt</span>
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
+            <div className={styles.eyebrowRow}>
+              <div className={styles.eyebrowLine} />
+              <span className={styles.eyebrowLabel}>Kontakt</span>
+              <div className={styles.eyebrowLine} />
             </div>
-            <h1 className="text-white">Kontakt aufnehmen</h1>
-            <p className="mt-6 text-text-secondary text-lg leading-relaxed">
+            <h1 className={styles.h1}>Kontakt aufnehmen</h1>
+            <p className={styles.headerSubtext}>
               Du hast Fragen oder möchtest mit uns zusammenarbeiten?<br />
               Schreib uns – wir freuen uns auf deine Nachricht!
             </p>
@@ -65,61 +64,106 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 rounded-2xl bg-surface border border-border p-8 md:p-12"
+            className={styles.form}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm text-text-muted mb-2">Name *</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className={inputClasses} placeholder="Dein Name" />
+            <div className={styles.formGrid}>
+              <div className={styles.formField}>
+                <label htmlFor="name" className={styles.label}>Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className={styles.input}
+                  placeholder="Dein Name"
+                />
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm text-text-muted mb-2">E-Mail *</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className={inputClasses} placeholder="deine@email.de" />
+              <div className={styles.formField}>
+                <label htmlFor="email" className={styles.label}>E-Mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className={styles.input}
+                  placeholder="deine@email.de"
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="phone" className="block text-sm text-text-muted mb-2">Telefon (optional)</label>
-                <input type="text" id="phone" name="phone" value={formData.phone} onChange={handleChange} className={inputClasses} placeholder="+49 ..." />
+            <div className={styles.formGrid}>
+              <div className={styles.formField}>
+                <label htmlFor="phone" className={styles.label}>Telefon (optional)</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className={styles.input}
+                  placeholder="+49 ..."
+                />
               </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm text-text-muted mb-2">Betreff *</label>
-                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required className={inputClasses} placeholder="Worum geht's?" />
+              <div className={styles.formField}>
+                <label htmlFor="subject" className={styles.label}>Betreff *</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className={styles.input}
+                  placeholder="Worum geht's?"
+                />
               </div>
             </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm text-text-muted mb-2">Nachricht *</label>
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className={`${inputClasses} resize-none`} placeholder="Erzähl uns von deinem Projekt..." />
+            <div className={styles.formField}>
+              <label htmlFor="message" className={styles.label}>Nachricht *</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={6}
+                className={styles.textarea}
+                placeholder="Erzähl uns von deinem Projekt..."
+              />
             </div>
 
-            <div className="flex items-start gap-3 justify-center">
+            <div className={styles.checkboxRow}>
               <input
                 type="checkbox"
                 name="consent"
                 checked={formData.consent}
                 onChange={handleChange}
                 required
-                className="mt-1 accent-accent"
+                className={styles.checkbox}
               />
-              <label className="text-sm text-text-secondary">
+              <label className={styles.checkboxLabel}>
                 Ich akzeptiere die{" "}
-                <a href="/datenschutz" className="text-accent hover:text-accent-hover underline">Datenschutzbestimmungen</a>.
+                <a href="/datenschutz" className={styles.checkboxLink}>Datenschutzbestimmungen</a>.
               </label>
             </div>
 
-            <div className="text-center pt-2">
-              <Button type="submit" className="w-full sm:w-auto">Nachricht senden</Button>
+            <div className={styles.submitRow}>
+              <Button type="submit" className={styles.submitBtn}>Nachricht senden</Button>
             </div>
           </motion.form>
 
           {/* Contact Info */}
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-text-muted text-sm">
-            <a href="mailto:info@kaosmedia.de" className="hover:text-white transition-colors">info@kaosmedia.de</a>
-            <span className="hidden sm:block w-1 h-1 bg-text-muted rounded-full" />
+          <div className={styles.contactInfo}>
+            <a href="mailto:info@kaosmedia.de" className={styles.contactLink}>info@kaosmedia.de</a>
+            <span className={styles.contactDot} />
             <span>Heidelberg, Deutschland</span>
           </div>
+
         </div>
       </section>
     </Layout>

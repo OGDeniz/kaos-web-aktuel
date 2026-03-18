@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
+import styles from './PortfolioSection.module.css';
 
 const projects = [
   { title: 'Brand Relaunch', category: 'Branding', image: '/hero/img1.jpg' },
@@ -20,7 +21,7 @@ export default function PortfolioSection() {
         label="Portfolio"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+      <div className={styles.grid}>
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -28,30 +29,24 @@ export default function PortfolioSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="group relative aspect-[16/10] overflow-hidden cursor-pointer"
+            className={styles.card}
           >
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className={styles.cardImage}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
 
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/65 transition-all duration-500" />
+            <div className={styles.darkOverlay} />
+            <div className={styles.borderFrame} />
 
-            {/* Red border frame on hover */}
-            <div className="absolute inset-3 border border-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-            {/* Content — slide up on hover */}
-            <div className="absolute inset-0 flex flex-col justify-end p-7">
-              <div className="translate-y-3 group-hover:translate-y-0 transition-transform duration-400 ease-out">
-                <span className="text-accent text-[10px] font-semibold uppercase tracking-[0.2em] block mb-2">
-                  {project.category}
-                </span>
-                <h3 className="text-white font-bold text-xl leading-tight">{project.title}</h3>
-                <span className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-white/70 text-sm flex items-center gap-1">
+            <div className={styles.cardContent}>
+              <div className={styles.cardInner}>
+                <span className={styles.category}>{project.category}</span>
+                <h3 className={styles.projectTitle}>{project.title}</h3>
+                <span className={styles.viewLink}>
                   Projekt ansehen <span>&rarr;</span>
                 </span>
               </div>

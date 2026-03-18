@@ -1,0 +1,60 @@
+.wrapper {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.swatch {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.primary {
+  background: #cc0000;
+  color: #ffffff;
+}
+
+.secondary {
+  background: var(--color-surface, #111111);
+  color: #ffffff;
+}
+
+.dark {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.softred {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.neutral {
+  background: #404040;
+  color: #ffffff;
+}
+
+.metal {
+  background: #6b7280;
+  color: #ffffff;
+}
+
+.light {
+  background: #f5f5f5;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}
+
+.beige {
+  background: #f0ece4;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}

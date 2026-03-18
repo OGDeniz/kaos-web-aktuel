@@ -1,0 +1,147 @@
+.wrapper {
+  /* outer div */
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0ece4;
+  padding: 8rem 1.5rem;
+  color: #404040;
+}
+
+.inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: #404040;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: 3.75rem;
+  }
+}
+
+.headlineAccent {
+  color: #cc0000;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.625;
+  color: #f5f5f5;
+  background: #cc0000;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    font-size: 1.25rem;
+  }
+}
+
+.flexLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .flexLayout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.625;
+  color: #404040;
+  text-align: left;
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.imageWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamImage {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.15s;
+}
+
+.teamImage:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .valuesGrid {
+    gap: 1.5rem;
+  }
+}
+
+.valueBox {
+  background: #374151;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.outro {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-top: 4rem;
+  background: rgba(239, 68, 68, 0.15);
+  padding: 1.5rem 0;
+}

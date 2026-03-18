@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './Footer.module.css';
 /* eslint-disable @next/next/no-img-element */
 
 const footerNav = [
@@ -21,39 +22,36 @@ const services = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border relative overflow-hidden">
+    <footer className={styles.footer}>
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className={styles.video}
         src="/backgrounds/12882-242487537_medium.mp4"
       />
-      <div className="absolute inset-0 bg-black/75 pointer-events-none" />
-      <div className="relative mx-auto max-w-6xl px-6 md:px-12 py-20">
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
-          {/* Logo & Text */}
-          <div className="md:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/kaosLogo.jpeg" alt="KAOS Media Logo" width={36} height={36} className="rounded-sm" />
-              <span className="text-2xl font-extrabold tracking-tight text-white">
-                KAOS <span className="text-accent">MEDIA</span>
+      <div className={styles.overlay} />
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          <div className={styles.brand}>
+            <Link href="/" className={styles.logoLink}>
+              <Image src="/kaosLogo.jpeg" alt="KAOS Media Logo" width={36} height={36} style={{ borderRadius: '2px' }} />
+              <span className={styles.logoText}>
+                KAOS <span className={styles.logoAccent}>MEDIA</span>
               </span>
             </Link>
-            <p className="mt-4 text-text-secondary text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+            <p className={styles.brandDesc}>
               Deine kreative Agentur für digitales Marketing aus Heidelberg. Strategie. Klarheit. Wirkung.
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Navigation</h4>
-            <ul className="space-y-3">
+            <h4 className={styles.colHeading}>Navigation</h4>
+            <ul className={styles.list}>
               {footerNav.map(link => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-text-secondary hover:text-white transition-colors text-sm">
+                  <Link href={link.href} className={styles.navLink}>
                     {link.label}
                   </Link>
                 </li>
@@ -61,43 +59,40 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Services</h4>
-            <ul className="space-y-3">
+            <h4 className={styles.colHeading}>Services</h4>
+            <ul className={styles.list}>
               {services.map(s => (
-                <li key={s} className="text-text-secondary text-sm">{s}</li>
+                <li key={s} className={styles.serviceItem}>{s}</li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Kontakt</h4>
-            <ul className="space-y-3 text-text-secondary text-sm">
-              <li>info@kaosmedia.de</li>
-              <li>Heidelberg, Deutschland</li>
+            <h4 className={styles.colHeading}>Kontakt</h4>
+            <ul className={styles.list}>
+              <li className={styles.contactItem}>info@kaosmedia.de</li>
+              <li className={styles.contactItem}>Heidelberg, Deutschland</li>
             </ul>
-            <div className="flex gap-4 mt-6 justify-center md:justify-start">
-              <a href="#" aria-label="Instagram" className="hover:opacity-80 transition-opacity">
-                <img src="/icons/insta.svg" alt="Instagram" width={20} height={20} className="invert" />
+            <div className={styles.socials}>
+              <a href="#" aria-label="Instagram" className={styles.socialLink}>
+                <img src="/icons/insta.svg" alt="Instagram" width={20} height={20} className={styles.socialIcon} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:opacity-80 transition-opacity">
-                <img src="/icons/lk.svg" alt="LinkedIn" width={20} height={20} className="invert" />
+              <a href="#" aria-label="LinkedIn" className={styles.socialLink}>
+                <img src="/icons/lk.svg" alt="LinkedIn" width={20} height={20} className={styles.socialIcon} />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:opacity-80 transition-opacity">
-                <img src="/icons/fb.svg" alt="Facebook" width={20} height={20} className="invert" />
+              <a href="#" aria-label="Facebook" className={styles.socialLink}>
+                <img src="/icons/fb.svg" alt="Facebook" width={20} height={20} className={styles.socialIcon} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-text-muted text-xs">
+        <div className={styles.bottomBar}>
           <p>&copy; {new Date().getFullYear()} KAOS Media. Alle Rechte vorbehalten.</p>
-          <nav className="flex gap-6">
-            <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
-            <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>
+          <nav className={styles.bottomNav}>
+            <Link href="/impressum" className={styles.bottomNavLink}>Impressum</Link>
+            <Link href="/datenschutz" className={styles.bottomNavLink}>Datenschutz</Link>
           </nav>
         </div>
       </div>

@@ -1,0 +1,201 @@
+.section {
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 3.5rem 3rem 8rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrowLine {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 9999px;
+}
+
+.eyebrowLabel {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.h1 {
+  color: #ffffff;
+}
+
+.h1Accent {
+  color: var(--color-accent);
+}
+
+.headerSubtext {
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.625;
+}
+
+/* Image */
+.imageWrapper {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.imageInner {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+/* Text content */
+.textBlock {
+  max-width: 42rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625;
+  text-align: center;
+}
+
+/* Principles grid */
+.principlesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .principlesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.principleCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.3s;
+}
+
+.principleCard:hover {
+  border-color: rgba(204, 0, 0, 0.4);
+}
+
+.principleTitle {
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+}
+
+.principleText {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+/* Pull quote */
+.quote {
+  position: relative;
+  text-align: center;
+  border-radius: 1rem;
+  background: rgba(204, 0, 0, 0.1);
+  border: 1px solid rgba(204, 0, 0, 0.2);
+  padding: 3.5rem 2rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.quoteMarkTop {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  color: rgba(204, 0, 0, 0.1);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quoteMarkBottom {
+  position: absolute;
+  bottom: -3rem;
+  right: 1rem;
+  color: rgba(204, 0, 0, 0.1);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quoteText {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .quoteText {
+    font-size: 1.875rem;
+  }
+}
+
+.quoteAccent {
+  color: var(--color-accent);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+.outer {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: sans-serif;
+  background: #f0ece4;
+  color: #1f2937;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .outer {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .outer {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .outer {
+    padding: 0 6rem;
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 72rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

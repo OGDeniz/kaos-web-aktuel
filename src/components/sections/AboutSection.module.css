@@ -1,0 +1,140 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.imageSide {
+  position: relative;
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .imageSide {
+    order: 1;
+  }
+}
+
+.imageFrame {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 28rem;
+}
+
+.imageGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.decorBorderBR {
+  display: none;
+  position: absolute;
+  bottom: -0.75rem;
+  right: -0.75rem;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid rgba(204, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.decorBorderTL {
+  display: none;
+  position: absolute;
+  top: -0.75rem;
+  left: -0.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .decorBorderBR,
+  .decorBorderTL {
+    display: block;
+  }
+}
+
+.textSide {
+  order: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .textSide {
+    order: 2;
+    text-align: left;
+  }
+}
+
+.paragraph {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .tags {
+    justify-content: flex-start;
+  }
+}
+
+.tag {
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.blockquote {
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--color-accent);
+  margin-top: 0.5rem;
+}
+
+.quote {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.75;
+}
+
+.btnRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .btnRow {
+    justify-content: flex-start;
+  }
+}

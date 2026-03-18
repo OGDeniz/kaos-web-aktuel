@@ -1,3 +1,5 @@
+import styles from './SectionHeading.module.css';
+
 interface SectionHeadingProps {
   title: string;
   subtitle?: string;
@@ -10,15 +12,15 @@ export default function SectionHeading({ title, subtitle, label = 'KAOS Media', 
   const isCenter = align === 'center';
 
   return (
-    <div className={`mb-20 ${isCenter ? 'text-center' : ''} ${className}`}>
-      <div className={`flex items-center gap-4 mb-6 ${isCenter ? 'justify-center' : ''}`}>
-        <div className="w-12 h-0.75 bg-accent rounded-full" />
-        <span className="text-accent text-sm font-semibold uppercase tracking-widest">{label}</span>
-        {isCenter && <div className="w-12 h-0.75 bg-accent rounded-full" />}
+    <div className={[styles.wrapper, isCenter ? styles.center : '', className].filter(Boolean).join(' ')}>
+      <div className={[styles.labelRow, isCenter ? styles.center : ''].filter(Boolean).join(' ')}>
+        <div className={styles.accentLine} />
+        <span className={styles.label}>{label}</span>
+        {isCenter && <div className={styles.accentLine} />}
       </div>
-      <h2 className="text-text-primary">{title}</h2>
+      <h2 className={styles.title}>{title}</h2>
       {subtitle && (
-        <p className={`mt-6 text-text-secondary text-lg leading-relaxed ${isCenter ? 'max-w-2xl mx-auto' : 'max-w-2xl'}`}>
+        <p className={[styles.subtitle, isCenter ? styles.center : ''].filter(Boolean).join(' ')}>
           {subtitle}
         </p>
       )}

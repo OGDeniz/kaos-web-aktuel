@@ -1,7 +1,9 @@
 import '../styles/globals.css';
+import styles from './layout.module.css';
 import { Manrope, Outfit } from 'next/font/google';
 import type { Metadata } from 'next';
 import ScrollProgress from '@/components/ui/ScrollProgress';
+import MotionProvider from '@/components/ui/MotionProvider';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -38,9 +40,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${manrope.className} ${outfit.variable}`}>
-      <body className="bg-background text-text-primary antialiased">
-        <ScrollProgress />
-        {children}
+      <body className={styles.body}>
+        <MotionProvider>
+          <ScrollProgress />
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );

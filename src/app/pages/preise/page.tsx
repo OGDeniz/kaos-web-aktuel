@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
+import styles from "./page.module.css";
 
 /* ── Data ── */
 
@@ -103,8 +104,8 @@ function formatPrice(price: number) {
 export default function PreisePage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-6xl">
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           {/* ── Header ── */}
           <motion.div
@@ -112,15 +113,15 @@ export default function PreisePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-24"
+            className={styles.header}
           >
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Preise</span>
-              <div className="w-12 h-0.75 bg-accent rounded-full" />
+            <div className={styles.headerBadgeRow}>
+              <div className={styles.headerLine} />
+              <span className={styles.headerBadgeText}>Preise</span>
+              <div className={styles.headerLine} />
             </div>
-            <h1 className="text-white">Unsere Pakete</h1>
-            <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
+            <h1 className={styles.headerTitle}>Unsere Pakete</h1>
+            <p className={styles.headerSubtitle}>
               Transparent, fair und flexibel – wähle das Paket, das zu deinem Business passt.
             </p>
           </motion.div>
@@ -131,31 +132,31 @@ export default function PreisePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-20 mx-auto max-w-3xl rounded-2xl border border-accent/20 bg-accent/5 p-8 text-center"
+            className={styles.foerderBanner}
           >
-            <span className="inline-block mb-4 px-3 py-1 rounded-full border border-accent/30 text-accent text-xs font-bold tracking-widest uppercase">KAOS Förder-Check</span>
-            <p className="text-white text-xl font-bold mb-3">Bis zu 50 % staatlich förderbar</p>
-            <p className="text-text-secondary text-sm max-w-xl mx-auto leading-relaxed mb-6">
+            <span className={styles.foerderBadge}>KAOS Förder-Check</span>
+            <p className={styles.foerderTitle}>Bis zu 50 % staatlich förderbar</p>
+            <p className={styles.foerderDesc}>
               Viele unserer Leistungen sind über BAFA, go-digital oder Landesprogramme teilförderbar.
               Wir prüfen gemeinsam mit dir, ob dein Projekt förderfähig ist – kostenlos und unverbindlich.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4 border-t border-white/10">
-              <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">1</span>
-                <p className="text-text-secondary text-sm text-left">Förderfähigkeit prüfen</p>
+            <div className={styles.foerderSteps}>
+              <div className={styles.foerderStep}>
+                <span className={styles.foerderStepNum}>1</span>
+                <p className={styles.foerderStepText}>Förderfähigkeit prüfen</p>
               </div>
-              <div className="hidden sm:block w-px h-8 bg-border" />
-              <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">2</span>
-                <p className="text-text-secondary text-sm text-left">Programm identifizieren</p>
+              <div className={styles.foerderDivider} />
+              <div className={styles.foerderStep}>
+                <span className={styles.foerderStepNum}>2</span>
+                <p className={styles.foerderStepText}>Programm identifizieren</p>
               </div>
-              <div className="hidden sm:block w-px h-8 bg-border" />
-              <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-bold">3</span>
-                <p className="text-text-secondary text-sm text-left">Förderpartner vermitteln</p>
+              <div className={styles.foerderDivider} />
+              <div className={styles.foerderStep}>
+                <span className={styles.foerderStepNum}>3</span>
+                <p className={styles.foerderStepText}>Förderpartner vermitteln</p>
               </div>
             </div>
-            <a href="/pages/foerderung" className="inline-block mt-6 text-accent text-sm font-semibold hover:text-white transition-colors">
+            <a href="/pages/foerderung" className={styles.foerderLink}>
               Mehr erfahren &rarr;
             </a>
           </motion.div>
@@ -168,16 +169,16 @@ export default function PreisePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-28"
+            className={styles.sectionBlock}
           >
-            <div className="text-center mb-14">
-              <h2 className="text-white">Starten</h2>
-              <p className="mt-4 text-text-secondary text-base max-w-xl mx-auto">
+            <div className={styles.sectionHeadingBlock}>
+              <h2 className={styles.sectionTitle}>Starten</h2>
+              <p className={styles.sectionSubtitle}>
                 Einmalige Pakete für den perfekten Start – vom Branding bis zum Komplettaufbau.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className={styles.grid3}>
               {startupPackages.map((pkg, i) => (
                 <motion.div
                   key={pkg.name}
@@ -185,28 +186,22 @@ export default function PreisePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className={`relative flex flex-col rounded-2xl border p-8 text-center transition-all duration-500 hover:scale-[1.02] ${
-                    pkg.popular
-                      ? "bg-accent/5 border-accent/40 shadow-[0_0_40px_-12px_rgba(204,0,0,0.15)]"
-                      : "bg-surface border-border hover:border-white/20"
-                  }`}
+                  className={`${styles.cardHoverable} ${pkg.popular ? styles.cardPopularHoverable : ""}`}
                 >
                   {pkg.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-accent text-white text-xs font-bold tracking-wider uppercase">
-                      Beliebt
-                    </span>
+                    <span className={styles.cardBadgeTop}>Beliebt</span>
                   )}
 
-                  <h3 className="text-white font-bold text-lg mt-1">{pkg.name}</h3>
-                  <p className="mt-3 text-text-secondary text-sm leading-relaxed flex-1">{pkg.desc}</p>
+                  <h3 className={styles.cardName}>{pkg.name}</h3>
+                  <p className={styles.cardDesc}>{pkg.desc}</p>
 
-                  <div className="mt-6 mb-2">
-                    <span className="text-3xl font-extrabold text-white">{formatPrice(pkg.price)}</span>
-                    <span className="text-text-muted text-sm ml-1">€</span>
+                  <div className={styles.cardPriceRow}>
+                    <span className={styles.cardPrice}>{formatPrice(pkg.price)}</span>
+                    <span className={styles.cardCurrency}>€</span>
                   </div>
-                  <p className="text-text-muted text-xs mb-6">{pkg.hours} · einmalig</p>
+                  <p className={styles.cardHours}>{pkg.hours} · einmalig</p>
 
-                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className="w-full">
+                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className={styles.btnFull}>
                     Anfragen
                   </Button>
                 </motion.div>
@@ -222,20 +217,20 @@ export default function PreisePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-28"
+            className={styles.sectionBlock}
           >
-            <div className="text-center mb-14">
-              <h2 className="text-white">Monatspakete</h2>
-              <p className="mt-4 text-text-secondary text-base max-w-xl mx-auto">
+            <div className={styles.sectionHeadingBlock}>
+              <h2 className={styles.sectionTitle}>Monatspakete</h2>
+              <p className={styles.sectionSubtitle}>
                 Laufende Betreuung – flexibel skalierbar, monatlich kündbar, viele Leistungen förderfähig.
               </p>
             </div>
 
             {/* ── Einzelpakete (erste 4) ── */}
-            <div className="mb-10 text-center">
-              <p className="text-text-muted text-xs uppercase tracking-widest font-semibold mb-6">Einzelpakete</p>
+            <div className={styles.subLabelBlock}>
+              <p className={styles.subLabel}>Einzelpakete</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+            <div className={styles.grid4}>
               {monthlyPackages.slice(0, 4).map((pkg, i) => (
                 <motion.div
                   key={pkg.name}
@@ -243,21 +238,19 @@ export default function PreisePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.5 }}
-                  className="relative flex flex-col rounded-2xl bg-surface border border-border p-7 text-center hover:border-white/20 transition-all duration-500"
+                  className={styles.cardSmall}
                 >
                   {pkg.badge && (
-                    <span className="absolute -top-2.5 right-4 px-3 py-0.5 rounded-full bg-accent text-white text-[10px] font-bold tracking-wider uppercase">
-                      {pkg.badge}
-                    </span>
+                    <span className={styles.cardBadgeCorner}>{pkg.badge}</span>
                   )}
-                  <h3 className="text-white font-bold text-base">{pkg.name}</h3>
-                  <p className="mt-2 text-text-secondary text-xs leading-relaxed flex-1">{pkg.desc}</p>
-                  <div className="mt-5">
-                    <span className="text-2xl font-extrabold text-white">{formatPrice(pkg.price)}</span>
-                    <span className="text-text-muted text-xs ml-1">€ / Monat</span>
+                  <h3 className={styles.cardNameSm}>{pkg.name}</h3>
+                  <p className={styles.cardDescSm}>{pkg.desc}</p>
+                  <div className={styles.cardPriceRowSm}>
+                    <span className={styles.cardPriceSm}>{formatPrice(pkg.price)}</span>
+                    <span className={styles.cardCurrencySm}>€ / Monat</span>
                   </div>
-                  <p className="text-text-muted text-xs mt-1 mb-5">{pkg.hours}</p>
-                  <Button href="/pages/contact" variant="outline" className="w-full text-sm py-2.5! px-4!">
+                  <p className={styles.cardHoursSm}>{pkg.hours}</p>
+                  <Button href="/pages/contact" variant="outline" className={styles.btnOverride}>
                     Anfragen
                   </Button>
                 </motion.div>
@@ -265,10 +258,10 @@ export default function PreisePage() {
             </div>
 
             {/* ── Kombipakete (5-6) ── */}
-            <div className="mb-10 text-center">
-              <p className="text-text-muted text-xs uppercase tracking-widest font-semibold mb-6">Kombipakete</p>
+            <div className={styles.subLabelBlock}>
+              <p className={styles.subLabel}>Kombipakete</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+            <div className={styles.grid2}>
               {monthlyPackages.slice(4, 6).map((pkg, i) => (
                 <motion.div
                   key={pkg.name}
@@ -276,25 +269,19 @@ export default function PreisePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className={`relative flex flex-col rounded-2xl border p-8 text-center transition-all duration-500 hover:scale-[1.02] ${
-                    pkg.popular
-                      ? "bg-accent/5 border-accent/40"
-                      : "bg-surface border-border hover:border-white/20"
-                  }`}
+                  className={`${styles.cardHoverable} ${pkg.popular ? styles.cardPopularHoverable : ""}`}
                 >
                   {pkg.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-accent text-white text-xs font-bold tracking-wider uppercase">
-                      Empfohlen
-                    </span>
+                    <span className={styles.cardBadgeTop}>Empfohlen</span>
                   )}
-                  <h3 className="text-white font-bold text-lg mt-1">{pkg.name}</h3>
-                  <p className="mt-3 text-text-secondary text-sm leading-relaxed flex-1">{pkg.desc}</p>
-                  <div className="mt-5">
-                    <span className="text-3xl font-extrabold text-white">{formatPrice(pkg.price)}</span>
-                    <span className="text-text-muted text-sm ml-1">€ / Monat</span>
+                  <h3 className={styles.cardName}>{pkg.name}</h3>
+                  <p className={styles.cardDesc}>{pkg.desc}</p>
+                  <div className={styles.cardPriceRowSm}>
+                    <span className={styles.cardPrice}>{formatPrice(pkg.price)}</span>
+                    <span className={styles.cardCurrency}>€ / Monat</span>
                   </div>
-                  <p className="text-text-muted text-xs mt-1 mb-6">{pkg.hours}</p>
-                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className="w-full">
+                  <p className={styles.cardHours}>{pkg.hours}</p>
+                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className={styles.btnFull}>
                     Anfragen
                   </Button>
                 </motion.div>
@@ -302,10 +289,10 @@ export default function PreisePage() {
             </div>
 
             {/* ── Full Service (7-9) ── */}
-            <div className="mb-10 text-center">
-              <p className="text-text-muted text-xs uppercase tracking-widest font-semibold mb-6">Full Service</p>
+            <div className={styles.subLabelBlock}>
+              <p className={styles.subLabel}>Full Service</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+            <div className={styles.grid3Monthly}>
               {monthlyPackages.slice(6, 9).map((pkg, i) => (
                 <motion.div
                   key={pkg.name}
@@ -313,25 +300,19 @@ export default function PreisePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className={`relative flex flex-col rounded-2xl border p-8 text-center transition-all duration-500 hover:scale-[1.02] ${
-                    pkg.popular
-                      ? "bg-accent/5 border-accent/40 shadow-[0_0_40px_-12px_rgba(204,0,0,0.15)]"
-                      : "bg-surface border-border hover:border-white/20"
-                  }`}
+                  className={`${styles.cardHoverable} ${pkg.popular ? styles.cardPopularHoverable : ""}`}
                 >
                   {pkg.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-accent text-white text-xs font-bold tracking-wider uppercase">
-                      Beliebt
-                    </span>
+                    <span className={styles.cardBadgeTop}>Beliebt</span>
                   )}
-                  <h3 className="text-white font-bold text-lg mt-1">{pkg.name}</h3>
-                  <p className="mt-3 text-text-secondary text-sm leading-relaxed flex-1">{pkg.desc}</p>
-                  <div className="mt-5">
-                    <span className="text-3xl font-extrabold text-white">{formatPrice(pkg.price)}</span>
-                    <span className="text-text-muted text-sm ml-1">€ / Monat</span>
+                  <h3 className={styles.cardName}>{pkg.name}</h3>
+                  <p className={styles.cardDesc}>{pkg.desc}</p>
+                  <div className={styles.cardPriceRowSm}>
+                    <span className={styles.cardPrice}>{formatPrice(pkg.price)}</span>
+                    <span className={styles.cardCurrency}>€ / Monat</span>
                   </div>
-                  <p className="text-text-muted text-xs mt-1 mb-6">{pkg.hours}</p>
-                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className="w-full">
+                  <p className={styles.cardHours}>{pkg.hours}</p>
+                  <Button href="/pages/contact" variant={pkg.popular ? "primary" : "outline"} className={styles.btnFull}>
                     Anfragen
                   </Button>
                 </motion.div>
@@ -344,16 +325,16 @@ export default function PreisePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="max-w-md mx-auto rounded-2xl bg-surface border border-border p-8 text-center"
+              className={styles.singleCard}
             >
-              <h3 className="text-white font-bold text-lg">{monthlyPackages[9].name}</h3>
-              <p className="mt-3 text-text-secondary text-sm leading-relaxed">{monthlyPackages[9].desc}</p>
-              <div className="mt-5">
-                <span className="text-3xl font-extrabold text-white">{formatPrice(monthlyPackages[9].price)}</span>
-                <span className="text-text-muted text-sm ml-1">€ / Monat</span>
+              <h3 className={styles.cardName}>{monthlyPackages[9].name}</h3>
+              <p className={styles.cardDesc}>{monthlyPackages[9].desc}</p>
+              <div className={styles.cardPriceRowSm}>
+                <span className={styles.cardPrice}>{formatPrice(monthlyPackages[9].price)}</span>
+                <span className={styles.cardCurrency}>€ / Monat</span>
               </div>
-              <p className="text-text-muted text-xs mt-1 mb-6">{monthlyPackages[9].hours}</p>
-              <Button href="/pages/contact" variant="outline" className="w-full">Anfragen</Button>
+              <p className={styles.cardHours}>{monthlyPackages[9].hours}</p>
+              <Button href="/pages/contact" variant="outline" className={styles.btnFull}>Anfragen</Button>
             </motion.div>
           </motion.div>
 
@@ -363,10 +344,10 @@ export default function PreisePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center rounded-2xl bg-white/5 border border-white/10 py-16 px-8"
+            className={styles.cta}
           >
-            <h2 className="text-white mb-4">Nicht sicher, welches Paket passt?</h2>
-            <p className="text-text-secondary text-base max-w-xl mx-auto mb-8">
+            <h2 className={styles.ctaTitle}>Nicht sicher, welches Paket passt?</h2>
+            <p className={styles.ctaDesc}>
               Kein Problem – wir beraten dich kostenlos und finden gemeinsam die beste Lösung für dein Business.
             </p>
             <Button href="/pages/contact">Kostenloses Erstgespräch</Button>

@@ -1,0 +1,276 @@
+.section {
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 3.5rem 3rem 8rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrowLine {
+  width: 3rem;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 9999px;
+}
+
+.eyebrowLabel {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.h1 {
+  color: #ffffff;
+}
+
+.h1Underline {
+  border-bottom: 4px solid #ffffff;
+  padding-bottom: 0.25rem;
+}
+
+.h1Accent {
+  color: var(--color-accent);
+}
+
+/* Team */
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .team {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.teamImageWrapper {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .teamImageWrapper {
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+.teamName {
+  margin-top: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.teamRole {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.teamLogo {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .teamLogo {
+    display: block;
+  }
+}
+
+.logoImg {
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+/* Text block */
+.textBlock {
+  max-width: 42rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .textBlock {
+    padding: 3rem;
+  }
+}
+
+.textBlockPara {
+  color: var(--color-text-secondary);
+  line-height: 1.625;
+}
+
+.textAccent {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.textWhite {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.textItalicAccent {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+/* Philosophy text */
+.philosophyBlock {
+  max-width: 42rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625;
+  text-align: center;
+}
+
+.philosophyEyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.philosophyEyebrowLine {
+  width: 2rem;
+  height: 2px;
+  background: rgba(204, 0, 0, 0.5);
+  border-radius: 9999px;
+}
+
+.philosophyEyebrowLabel {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Values */
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.valuePill {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Quote */
+.quote {
+  position: relative;
+  text-align: center;
+  border-radius: 1rem;
+  background: rgba(204, 0, 0, 0.1);
+  border: 1px solid rgba(204, 0, 0, 0.2);
+  padding: 3.5rem 2rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.quoteMarkTop {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  color: rgba(204, 0, 0, 0.1);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quoteMarkBottom {
+  position: absolute;
+  bottom: -3rem;
+  right: 1rem;
+  color: rgba(204, 0, 0, 0.1);
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.quoteText {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .quoteText {
+    font-size: 1.875rem;
+  }
+}
+
+.quoteAccent {
+  color: var(--color-accent);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}

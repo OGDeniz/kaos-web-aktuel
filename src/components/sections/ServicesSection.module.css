@@ -1,0 +1,92 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 64rem;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background-color 0.5s;
+  overflow: hidden;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 2.5rem;
+  }
+}
+
+.cardBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-accent);
+  transition: width 0.5s ease-out;
+}
+
+.card:hover .cardBorder {
+  width: 100%;
+}
+
+.number {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.06);
+  display: block;
+  line-height: 1;
+  transition: color 0.5s;
+}
+
+.card:hover .number {
+  color: rgba(204, 0, 0, 0.1);
+}
+
+.title {
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 0.75rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.viewAll {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.viewAllLink:hover {
+  color: var(--color-accent-hover);
+}

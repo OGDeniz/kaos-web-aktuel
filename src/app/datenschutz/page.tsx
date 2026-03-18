@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Layout from '@/layouts/Layout';
+import styles from './page.module.css';
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <motion.div
@@ -8,18 +9,18 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5 }}
-    className="space-y-3"
+    className={styles.sectionBlock}
   >
-    <h3 className="text-white text-lg font-bold border-l-4 border-accent pl-4">{title}</h3>
-    <div className="text-text-secondary text-sm leading-relaxed pl-5 space-y-2">{children}</div>
+    <h3 className={styles.sectionTitle}>{title}</h3>
+    <div className={styles.sectionBody}>{children}</div>
   </motion.div>
 );
 
 export default function DatenschutzPage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-3xl space-y-14">
+      <section className={styles.section}>
+        <div className={styles.container}>
 
           {/* Header */}
           <motion.div
@@ -28,12 +29,12 @@ export default function DatenschutzPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-0.5 bg-accent rounded-full" />
-              <span className="text-accent text-sm font-semibold uppercase tracking-widest">Rechtliches</span>
+            <div className={styles.headerEyebrow}>
+              <div className={styles.headerLine} />
+              <span className={styles.headerLabel}>Rechtliches</span>
             </div>
-            <h2 className="text-white">Datenschutzerklärung</h2>
-            <p className="mt-4 text-text-muted text-sm">Stand: Februar 2026</p>
+            <h2 className={styles.headerTitle}>Datenschutzerklärung</h2>
+            <p className={styles.headerMeta}>Stand: Februar 2026</p>
           </motion.div>
 
           {/* 1. Verantwortlicher */}
@@ -42,11 +43,11 @@ export default function DatenschutzPage() {
               Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und sonstiger
               nationaler Datenschutzgesetze sowie anderer datenschutzrechtlicher Bestimmungen ist:
             </p>
-            <div className="mt-2 rounded-lg bg-surface border border-border p-4 text-text-secondary space-y-0.5">
-              <p className="font-semibold text-white">KAOS Media</p>
+            <div className={styles.infoBox}>
+              <p className={styles.textWhite} style={{ fontWeight: 600 }}>KAOS Media</p>
               <p>Herbststraße 2</p>
               <p>86551 Aichach, Deutschland</p>
-              <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
+              <p>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
             </div>
           </Section>
 
@@ -97,7 +98,7 @@ export default function DatenschutzPage() {
               Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten
               Server-Log-Dateien, die dein Browser automatisch an uns übermittelt. Dies sind:
             </p>
-            <ul className="list-disc list-inside space-y-1 mt-1">
+            <ul className={styles.list}>
               <li>Browsertyp und Browserversion</li>
               <li>Verwendetes Betriebssystem</li>
               <li>Referrer URL</li>
@@ -151,10 +152,10 @@ export default function DatenschutzPage() {
               Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Anfrage).
               Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
             </p>
-            <p className="font-semibold text-white mt-2">Einsatz von EmailJS</p>
+            <p className={styles.textWhite} style={{ fontWeight: 600, marginTop: '0.5rem' }}>Einsatz von EmailJS</p>
             <p>
               Zur technischen Übermittlung der über das Kontaktformular gesendeten Nachrichten nutzen
-              wir den Dienst <strong className="text-white">EmailJS</strong> (Anbieter: EmailJS Ltd.,
+              wir den Dienst <strong className={styles.textWhite}>EmailJS</strong> (Anbieter: EmailJS Ltd.,
               United Kingdom). Wenn du das Kontaktformular absendest, werden deine eingegebenen Daten
               (Name, E-Mail-Adresse, ggf. Telefonnummer, Betreff und Nachricht) über die Server von
               EmailJS an unsere E-Mail-Adresse weitergeleitet.
@@ -171,7 +172,7 @@ export default function DatenschutzPage() {
                 href="https://www.emailjs.com/legal/privacy-policy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent-hover transition-colors"
+                className={styles.link}
               >
                 www.emailjs.com/legal/privacy-policy
               </a>
@@ -200,7 +201,7 @@ export default function DatenschutzPage() {
           {/* 8. Rechte der betroffenen Person */}
           <Section title="8. Deine Rechte als betroffene Person">
             <p>Du hast gegenüber uns folgende Rechte hinsichtlich der dich betreffenden personenbezogenen Daten:</p>
-            <div className="space-y-3 mt-2">
+            <div className={styles.rightsGrid}>
               {[
                 {
                   title: 'Recht auf Auskunft (Art. 15 DSGVO)',
@@ -231,9 +232,9 @@ export default function DatenschutzPage() {
                   text: 'Sofern die Verarbeitung deiner Daten auf einer Einwilligung beruht, hast du das Recht, diese jederzeit mit Wirkung für die Zukunft zu widerrufen. Die bis zum Widerruf erfolgte Verarbeitung bleibt rechtmäßig.',
                 },
               ].map(({ title, text }) => (
-                <div key={title} className="rounded-lg bg-surface border border-border p-4">
-                  <p className="font-semibold text-white text-xs mb-1">{title}</p>
-                  <p className="text-text-secondary text-xs leading-relaxed">{text}</p>
+                <div key={title} className={styles.rightCard}>
+                  <p className={styles.rightCardTitle}>{title}</p>
+                  <p className={styles.rightCardText}>{text}</p>
                 </div>
               ))}
             </div>
@@ -250,13 +251,13 @@ export default function DatenschutzPage() {
             <p>
               Die zuständige Aufsichtsbehörde für Bayern ist:
             </p>
-            <div className="rounded-lg bg-surface border border-border p-4 text-text-secondary space-y-0.5 text-xs">
-              <p className="font-semibold text-white text-sm">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</p>
+            <div className={`${styles.infoBox} ${styles.textXs}`}>
+              <p className={`${styles.textWhite} ${styles.textSm}`} style={{ fontWeight: 600 }}>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</p>
               <p>Promenade 27</p>
               <p>91522 Ansbach</p>
               <p>Telefon: +49 981 53-1300</p>
-              <p>E-Mail: <a href="mailto:poststelle@lda.bayern.de" className="text-accent hover:text-accent-hover transition-colors">poststelle@lda.bayern.de</a></p>
-              <p>Website: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover transition-colors">www.lda.bayern.de</a></p>
+              <p>E-Mail: <a href="mailto:poststelle@lda.bayern.de" className={styles.link}>poststelle@lda.bayern.de</a></p>
+              <p>Website: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" className={styles.link}>www.lda.bayern.de</a></p>
             </div>
           </Section>
 
@@ -279,21 +280,20 @@ export default function DatenschutzPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-xl bg-surface border border-accent/20 p-6 space-y-2"
+            className={styles.contactBox}
           >
-            <h3 className="text-white font-bold text-base">Fragen zum Datenschutz?</h3>
-            <p className="text-text-secondary text-sm leading-relaxed">
+            <h3 className={styles.contactBoxTitle}>Fragen zum Datenschutz?</h3>
+            <p className={styles.contactBoxText}>
               Bei Fragen zur Erhebung, Verarbeitung oder Nutzung deiner personenbezogenen Daten,
               bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten wende dich bitte an:
             </p>
             <a
               href="mailto:info@kaosmedia.de"
-              className="inline-block text-accent hover:text-accent-hover transition-colors text-sm font-semibold"
+              className={styles.contactBoxLink}
             >
               info@kaosmedia.de
             </a>
           </motion.div>
-
 
         </div>
       </section>

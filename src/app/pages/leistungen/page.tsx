@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
+import styles from "./page.module.css";
 
 const services = [
   {
@@ -69,8 +70,8 @@ const differentiators = [
 export default function LeistungenPage() {
   return (
     <Layout>
-      <section className="px-6 md:px-12 pt-10 pb-24 md:pt-14 md:pb-32">
-        <div className="mx-auto max-w-5xl space-y-28">
+      <section className={styles.section}>
+        <div className={styles.inner}>
 
           {/* Header */}
           <motion.div
@@ -78,44 +79,41 @@ export default function LeistungenPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-6 py-10 md:px-10 md:py-12"
+            className={styles.heroCard}
           >
-            <div className="absolute inset-y-0 right-0 z-0 hidden w-full lg:block">
-              <div className="relative ml-auto h-full w-[48%] min-w-[320px] opacity-40">
+            <div className={styles.heroImageWrapper}>
+              <div className={styles.heroImageInner}>
                 <Image
                   src="/hero/leistungHero.png"
                   alt="Leistungen Hero"
                   fill
                   priority
-                  className="object-cover object-center"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   sizes="40vw"
                 />
-                <div className="absolute inset-0 bg-linear-to-l from-transparent to-[#0b0b0b]/80" />
+                <div className={styles.heroImageGradient} />
               </div>
             </div>
 
-            <div className="relative z-10 text-center lg:max-w-2xl lg:text-left">
-              <div className="mb-6 flex items-center justify-center gap-4 lg:justify-start">
-                <div className="w-12 h-0.75 bg-accent rounded-full" />
-                <span className="text-accent text-sm font-semibold uppercase tracking-widest">Unser Angebot</span>
-                <div className="w-12 h-0.75 bg-accent rounded-full" />
+            <div className={styles.heroContent}>
+              <div className={styles.heroEyebrow}>
+                <div className={styles.eyebrowLine} />
+                <span className={styles.eyebrowText}>Unser Angebot</span>
+                <div className={styles.eyebrowLine} />
               </div>
-              <h1 className="text-white">Strukturierte Services,<br />kreative Ergebnisse</h1>
-              <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <h1 className={styles.heroHeading}>Strukturierte Services,<br />kreative Ergebnisse</h1>
+              <p className={styles.heroSubtext}>
                 Skalierbare Marken- und Digitallösungen für Gründer, Startups und KMU –
                 individuell, messbar und ohne Ballast.
               </p>
-              <a
-                href="/pages/foerderung"
-                className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-semibold hover:bg-accent/10 transition-colors"
-              >
+              <a href="/pages/foerderung" className={styles.foerderLink}>
                 Viele Leistungen bis zu 50 % förderfähig &rarr;
               </a>
             </div>
           </motion.div>
 
           {/* Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className={styles.servicesGrid}>
             {services.map((service, index) => (
               <motion.article
                 key={service.title}
@@ -123,24 +121,28 @@ export default function LeistungenPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 overflow-hidden hover:border-accent/30 transition-all duration-500"
+                className={styles.serviceCard}
               >
                 {service.foerderbar && (
-                  <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-accent/90 text-white text-[10px] font-bold tracking-wider uppercase">
-                    Förderfähig
-                  </span>
+                  <span className={styles.foerderBadge}>Förderfähig</span>
                 )}
-                <div className="relative h-48 overflow-hidden">
-                  <Image src={service.image} alt={service.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
-                  <div className="absolute inset-0 bg-black/40" />
+                <div className={styles.serviceImageWrapper}>
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className={styles.serviceImageOverlay} />
                 </div>
-                <div className="p-8 text-center">
-                  <h3 className="text-white font-bold text-xl">{service.title}</h3>
-                  <p className="mt-2 text-text-secondary text-sm">{service.description}</p>
-                  <ul className="mt-5 space-y-2 inline-block text-left">
+                <div className={styles.serviceBody}>
+                  <h3 className={styles.serviceTitle}>{service.title}</h3>
+                  <p className={styles.serviceDesc}>{service.description}</p>
+                  <ul className={styles.bulletList}>
                     {service.bullets.map(item => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-text-secondary">
-                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent" />
+                      <li key={item} className={styles.bulletItem}>
+                        <span className={styles.bullet} />
                         {item}
                       </li>
                     ))}
@@ -151,24 +153,22 @@ export default function LeistungenPage() {
           </div>
 
           {/* Workflow + Differentiators */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className={styles.twoColGrid}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl bg-surface border border-border p-10"
+              className={styles.workflowBox}
             >
-              <h3 className="text-white font-bold text-2xl mb-8 text-center">So arbeiten wir</h3>
-              <ol className="space-y-6 max-w-sm mx-auto">
+              <h3 className={styles.boxHeading}>So arbeiten wir</h3>
+              <ol className={styles.workflowList}>
                 {workflow.map((phase, index) => (
-                  <li key={phase.step} className="flex gap-4 items-start">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-bold text-sm flex-none">
-                      {index + 1}
-                    </span>
+                  <li key={phase.step} className={styles.workflowItem}>
+                    <span className={styles.stepBadge}>{index + 1}</span>
                     <div>
-                      <p className="font-semibold text-white">{phase.step}</p>
-                      <p className="text-text-secondary text-sm mt-1">{phase.detail}</p>
+                      <p className={styles.stepTitle}>{phase.step}</p>
+                      <p className={styles.stepDetail}>{phase.detail}</p>
                     </div>
                   </li>
                 ))}
@@ -180,16 +180,16 @@ export default function LeistungenPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 p-10"
+              className={styles.whyBox}
             >
-              <h3 className="text-white font-bold text-2xl mb-4 text-center">Warum KAOS Media?</h3>
-              <p className="text-text-secondary text-sm mb-8 text-center max-w-md mx-auto">
+              <h3 className={styles.boxHeading}>Warum KAOS Media?</h3>
+              <p className={styles.whySubtext}>
                 Wir verbinden Kreativität mit Daten und liefern euch ein Team, das wie eine Inhouse-Unit denkt – nur flexibler.
               </p>
-              <ul className="space-y-4 max-w-sm mx-auto">
+              <ul className={styles.differList}>
                 {differentiators.map(point => (
-                  <li key={point} className="flex items-center gap-3 text-text-secondary text-sm">
-                    <span className="h-2 w-2 rounded-full bg-accent flex-none" />
+                  <li key={point} className={styles.differItem}>
+                    <span className={styles.dot} />
                     {point}
                   </li>
                 ))}
@@ -198,7 +198,7 @@ export default function LeistungenPage() {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className={styles.ctaWrapper}>
             <Button href="/pages/contact">Jetzt Erstgespräch sichern</Button>
           </div>
         </div>

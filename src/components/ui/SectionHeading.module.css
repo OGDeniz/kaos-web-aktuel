@@ -1,0 +1,47 @@
+.wrapper {
+  margin-bottom: 5rem;
+}
+.wrapper.center {
+  text-align: center;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.labelRow.center {
+  justify-content: center;
+}
+
+.accentLine {
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 9999px;
+}
+
+.label {
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.title {
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 42rem;
+}
+.subtitle.center {
+  margin-left: auto;
+  margin-right: auto;
+}
