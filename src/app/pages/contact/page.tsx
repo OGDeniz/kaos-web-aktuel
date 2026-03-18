@@ -116,7 +116,7 @@ export default function ContactPage() {
 
           {/* Contact Info */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-text-muted text-sm">
-            <a href="mailto:info@kaos.media" className="hover:text-white transition-colors">info@kaos.media</a>
+            <a href="mailto:info@kaosmedia.de" className="hover:text-white transition-colors">info@kaosmedia.de</a>
             <span className="hidden sm:block w-1 h-1 bg-text-muted rounded-full" />
             <span>Heidelberg, Deutschland</span>
           </div>

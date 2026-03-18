@@ -23,8 +23,8 @@ export default function ContactSection() {
         <ContactForm />
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8 text-text-secondary text-sm">
-          <a href="mailto:info@kaos.media" className="hover:text-white transition-colors">
-            info@kaos.media
+          <a href="mailto:info@kaosmedia.de" className="hover:text-white transition-colors">
+            info@kaosmedia.de
           </a>
           <span className="hidden sm:block w-1 h-1 bg-text-muted rounded-full" />
           <span>Heidelberg, Deutschland</span>

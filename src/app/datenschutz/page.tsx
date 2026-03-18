@@ -47,7 +47,7 @@ export default function DatenschutzPage() {
               {/* TODO: Adresse eintragen */}
               <p>[Straße und Hausnummer]</p>
               <p>[PLZ] Heidelberg, Deutschland</p>
-              <p>E-Mail: <a href="mailto:info@kaos.media" className="text-accent hover:text-accent-hover transition-colors">info@kaos.media</a></p>
+              <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
             </div>
           </Section>
 
@@ -263,10 +263,10 @@ export default function DatenschutzPage() {
               bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten wende dich bitte an:
             </p>
             <a
-              href="mailto:info@kaos.media"
+              href="mailto:info@kaosmedia.de"
               className="inline-block text-accent hover:text-accent-hover transition-colors text-sm font-semibold"
             >
-              info@kaos.media
+              info@kaosmedia.de
             </a>
           </motion.div>
 

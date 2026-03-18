@@ -56,7 +56,7 @@ export default function ImpressumPage() {
           <Section title="Kontakt">
             {/* TODO: Telefonnummer eintragen falls vorhanden */}
             {/* <p>Telefon: +49 [NUMMER]</p> */}
-            <p>E-Mail: <a href="mailto:info@kaos.media" className="text-accent hover:text-accent-hover transition-colors">info@kaos.media</a></p>
+            <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
           </Section>
 
           {/* Umsatzsteuer-ID */}

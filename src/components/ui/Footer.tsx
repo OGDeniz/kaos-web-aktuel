@@ -75,7 +75,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-widest text-text-muted mb-6">Kontakt</h4>
             <ul className="space-y-3 text-text-secondary text-sm">
-              <li>info@kaos.media</li>
+              <li>info@kaosmedia.de</li>
               <li>Heidelberg, Deutschland</li>
             </ul>
             <div className="flex gap-4 mt-6 justify-center md:justify-start">

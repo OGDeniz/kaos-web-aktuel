@@ -4,7 +4,8 @@
       "Bash(npm view:*)",
       "WebFetch(domain:madmindstudios.com)",
       "WebFetch(domain:www.frontrowgroup.de)",
-      "WebFetch(domain:dd.nyc)"
+      "WebFetch(domain:dd.nyc)",
+      "Bash(grep -n \"export const metadata\\\\|generateMetadata\" /c/Users/Teilnehmer/Desktop/Kaos-Media/Homepage/kaos-web-aktuel/kaos-web-aktuel/src/app/pages/*/*.tsx)"
     ]
   }
 }
