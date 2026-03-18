@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { BlogPost } from '@/app/api/blog/route';
+import type { PortfolioPost } from '@/app/api/portfolio/route';
 
-function CardInner({ post }: { post: BlogPost }) {
+function CardInner({ post }: { post: PortfolioPost }) {
   return (
     <>
       <div className="relative h-48 overflow-hidden shrink-0">
@@ -33,7 +33,7 @@ function CardInner({ post }: { post: BlogPost }) {
   );
 }
 
-export default function BlogGrid({ posts }: { posts: BlogPost[] }) {
+export default function PortfolioGrid({ posts }: { posts: PortfolioPost[] }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {posts.map((post, i) => {

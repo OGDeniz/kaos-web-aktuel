@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
-import type { BlogPost } from '@/app/api/blog/route';
+import type { PortfolioPost } from '@/app/api/portfolio/route';
 
 function SkeletonCard() {
   return (
@@ -21,19 +21,19 @@ function SkeletonCard() {
   );
 }
 
-export default function BlogSection() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+export default function ReferenzenSection() {
+  const [posts, setPosts] = useState<PortfolioPost[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/blog?limit=3')
+    fetch('/api/portfolio?limit=3')
       .then(r => r.ok ? r.json() : [])
       .then(data => { setPosts(data); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);
 
   return (
-    <SectionWrapper id="blog">
+    <SectionWrapper id="referenzen">
       <SectionHeading
         title="Unsere Arbeiten"
         subtitle="Ein Einblick in ausgewählte Projekte, die wir für unsere Kunden umgesetzt haben."
@@ -88,10 +88,10 @@ export default function BlogSection() {
 
       <div className="mt-16 text-center">
         <Link
-          href="/pages/blog"
+          href="/pages/portfolio"
           className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-semibold transition-colors text-lg"
         >
-          Alle Beiträge lesen
+          Alle Projekte ansehen
           <span className="text-xl">&rarr;</span>
         </Link>
       </div>

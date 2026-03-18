@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Preise', href: '/pages/preise' },
   { label: 'Förderung', href: '/pages/foerderung', highlight: true },
   { label: 'Über uns', href: '/pages/about' },
-  { label: 'Blog', href: '/pages/blog' },
+  { label: 'Portfolio', href: '/pages/portfolio' },
   { label: 'Kontakt', href: '/pages/contact' },
 ];
 

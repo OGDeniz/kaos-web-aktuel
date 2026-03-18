@@ -1,9 +1,9 @@
 import Layout from '@/layouts/Layout';
-import BlogGrid from '@/components/sections/BlogGrid';
-import { getPosts } from '@/lib/getPosts';
+import PortfolioGrid from '@/components/sections/PortfolioGrid';
+import { getPortfolio } from '@/lib/getPortfolio';
 
-export default async function BlogPage() {
-  const posts = await getPosts(9);
+export default async function PortfolioPage() {
+  const posts = await getPortfolio(9);
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ export default async function BlogPage() {
           </div>
 
           {posts.length > 0 ? (
-            <BlogGrid posts={posts} />
+            <PortfolioGrid posts={posts} />
           ) : (
             <p className="text-center text-text-muted">Keine Artikel geladen.</p>
           )}

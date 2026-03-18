@@ -1,4 +1,4 @@
-export interface BlogPost {
+export interface PortfolioPost {
   title: string;
   excerpt: string;
   image: string;
@@ -8,6 +8,6 @@ export interface BlogPost {
   readingTime: number;
 }
 
-export interface LocalBlogPost extends BlogPost {
+export interface LocalPortfolioPost extends PortfolioPost {
   slug: string;
 }

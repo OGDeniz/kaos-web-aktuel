@@ -3,7 +3,7 @@ import Hero from '@/components/sections/Hero';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AboutSection from '@/components/sections/AboutSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
-import BlogSection from '@/components/sections/BlogSection';
+import ReferenzenSection from '@/components/sections/ReferenzenSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/ui/Footer';
 
@@ -16,7 +16,7 @@ export default function HomePage() {
         <ServicesSection />
         <AboutSection />
         <PortfolioSection />
-        <BlogSection />
+        <ReferenzenSection />
         <ContactSection />
       </main>
       <Footer />

@@ -8,7 +8,7 @@ const footerNav = [
   { label: 'Leistungen', href: '/pages/leistungen' },
   { label: 'Preise', href: '/pages/preise' },
   { label: 'Über uns', href: '/pages/about' },
-  { label: 'Blog', href: '/pages/blog' },
+  { label: 'Portfolio', href: '/pages/portfolio' },
   { label: 'Kontakt', href: '/pages/contact' },
 ];
 

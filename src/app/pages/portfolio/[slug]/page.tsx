@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/layouts/Layout';
-import { postRegistry } from '@/content/blog/index';
+import { postRegistry } from '@/content/portfolio/index';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: Props) {
   const entry = postRegistry[slug];
   if (!entry) return {};
   return {
-    title: `${entry.meta.title} | KAOS Media Blog`,
+    title: `${entry.meta.title} | KAOS Media Portfolio`,
     description: entry.meta.excerpt,
   };
 }
 
-export default async function BlogPostPage({ params }: Props) {
+export default async function PortfolioPostPage({ params }: Props) {
   const { slug } = await params;
   const entry = postRegistry[slug];
   if (!entry) notFound();
@@ -35,10 +35,10 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Breadcrumb */}
           <nav className="mb-8">
             <Link
-              href="/pages/blog"
+              href="/pages/portfolio"
               className="text-text-muted hover:text-accent text-sm transition-colors inline-flex items-center gap-2"
             >
-              <span>&#8592;</span> Zurück zum Blog
+              <span>&#8592;</span> Zurück zum Portfolio
             </Link>
           </nav>
 

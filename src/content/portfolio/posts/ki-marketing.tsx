@@ -1,6 +1,6 @@
-import type { LocalBlogPost } from '@/types/blog';
+import type { LocalPortfolioPost } from '@/types/portfolio';
 
-export const meta: LocalBlogPost = {
+export const meta: LocalPortfolioPost = {
   slug: 'ki-im-digitalen-marketing',
   title: 'Wie KI das digitale Marketing verändert – und was das für kleine Unternehmen bedeutet',
   excerpt:
@@ -10,7 +10,7 @@ export const meta: LocalBlogPost = {
   category: 'Marketing',
   date: '18. März 2026',
   readingTime: 6,
-  url: '/pages/blog/ki-im-digitalen-marketing',
+  url: '/pages/portfolio/ki-im-digitalen-marketing',
 };
 
 export default function Content() {

@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPosts } from '@/lib/getPosts';
+import { getPortfolio } from '@/lib/getPortfolio';
 
-// Re-export so existing imports like `import type { BlogPost } from '@/app/api/blog/route'` keep working
-export type { BlogPost } from '@/types/blog';
+export type { PortfolioPost } from '@/types/portfolio';
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const limit = parseInt(searchParams.get('limit') ?? '9', 10);
-  const posts = await getPosts(limit);
+  const posts = await getPortfolio(limit);
   return NextResponse.json(posts);
 }

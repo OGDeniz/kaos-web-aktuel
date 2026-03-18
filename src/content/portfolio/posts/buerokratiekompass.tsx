@@ -1,6 +1,6 @@
-import type { LocalBlogPost } from '@/types/blog';
+import type { LocalPortfolioPost } from '@/types/portfolio';
 
-export const meta: LocalBlogPost = {
+export const meta: LocalPortfolioPost = {
   slug: 'portfolio-buerokratiekompass',
   title: 'Bürokratiekompass – Orientierung im deutschen Bürokratiedschungel, digital gemacht',
   excerpt:
@@ -9,7 +9,7 @@ export const meta: LocalBlogPost = {
   category: 'Portfolio',
   date: '18. März 2026',
   readingTime: 4,
-  url: '/pages/blog/portfolio-buerokratiekompass',
+  url: '/pages/portfolio/portfolio-buerokratiekompass',
 };
 
 export default function Content() {

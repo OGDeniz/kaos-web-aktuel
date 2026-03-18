@@ -1,6 +1,6 @@
-import type { LocalBlogPost } from '@/types/blog';
+import type { LocalPortfolioPost } from '@/types/portfolio';
 
-export const meta: LocalBlogPost = {
+export const meta: LocalPortfolioPost = {
   slug: 'portfolio-osteopathie-weichselfelder',
   title: 'Webauftritt für Osteopathie Weichselfelder – Modern, vertrauenswürdig, patientenorientiert',
   excerpt:
@@ -9,7 +9,7 @@ export const meta: LocalBlogPost = {
   category: 'Portfolio',
   date: '18. März 2026',
   readingTime: 4,
-  url: '/pages/blog/portfolio-osteopathie-weichselfelder',
+  url: '/pages/portfolio/portfolio-osteopathie-weichselfelder',
 };
 
 export default function Content() {

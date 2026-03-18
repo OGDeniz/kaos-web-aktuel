@@ -1,6 +1,6 @@
-import type { LocalBlogPost } from '@/types/blog';
+import type { LocalPortfolioPost } from '@/types/portfolio';
 
-export const meta: LocalBlogPost = {
+export const meta: LocalPortfolioPost = {
   slug: 'portfolio-stickerei-zschoche',
   title: 'Stickerei Zschoche – Handwerk trifft modernem Webdesign',
   excerpt:
@@ -9,7 +9,7 @@ export const meta: LocalBlogPost = {
   category: 'Portfolio',
   date: '18. März 2026',
   readingTime: 3,
-  url: '/pages/blog/portfolio-stickerei-zschoche',
+  url: '/pages/portfolio/portfolio-stickerei-zschoche',
 };
 
 export default function Content() {
