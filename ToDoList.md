@@ -127,7 +127,7 @@
 | #   | Aufgabe                                                                           | Status |
 | --- | --------------------------------------------------------------------------------- | ------ |
 | 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ✅ Erledigt |
-| 2   | Blog zeigt nur externe `dev.to`-Artikel — kein eigener Content, hohe Absprungrate | ❌ Offen |
+| 2   | Blog zeigt nur externe `dev.to`-Artikel — kein eigener Content, hohe Absprungrate | ✅ Erledigt — 5 eigene Case Studies + Detailseiten; umbenannt zu Referenzen/Portfolio |
 | 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ✅ Erledigt — E-Mails kommen an |
 | 4   | Cookie Consent Banner fehlt komplett                                              | ❌ Offen |
 
@@ -136,9 +136,9 @@
 | #   | Aufgabe                                                                                  | Status |
 | --- | ---------------------------------------------------------------------------------------- | ------ |
 | 5   | Social Links im Footer hinterlegen — Instagram, LinkedIn, Facebook zeigen auf `#`        | ❌ Offen |
-| 6   | Portfolio-Projekte mit echten Case Studies füllen — „Projekt ansehen →" führt ins Nichts | ❌ Offen |
+| 6   | Portfolio-Projekte mit echten Case Studies füllen — „Projekt ansehen →" führt ins Nichts | ✅ Erledigt — `/pages/portfolio` mit 5 Projekten + Detailseiten |
 | 7   | Contact-Page: `alert()` durch echten Danke-State ersetzen                                | ⚠️ Teilweise (Homepage OK) |
-| 8   | EmailJS in Datenschutzerklärung dokumentieren                                            | ❌ Offen |
+| 8   | EmailJS in Datenschutzerklärung dokumentieren                                            | ✅ Erledigt |
 
 ### 🟡 Mittelfristig — vor/nach Go-Live
 
@@ -175,6 +175,8 @@
 | Datenschutz Adresse | Herbststraße 2, 86551 Aichach eingetragen |
 | EmailJS in Datenschutz dokumentiert | Sektion 6 inkl. Rechtsgrundlage + Privacy-Policy-Link |
 | Aufsichtsbehörde korrigiert | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern |
+| Eigene Portfolio/Referenz-Seite | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]` |
+| Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio` |
 
 ---
 
