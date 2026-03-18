@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full bg-background overflow-hidden flex items-center justify-center pb-20"
+      className="relative min-h-svh w-full bg-background overflow-hidden flex items-center justify-center py-24 md:py-28"
     >
       {/* Background video */}
       <video
@@ -36,7 +36,7 @@ export default function Hero() {
           <img
             src="/KAOSmedialogoFinal.png"
             alt="KAOS Media Logo"
-            className="mx-auto w-[10vw] max-w-90 h-auto"
+            className="mx-auto w-[12vw] max-w-50 min-w-15 h-auto"
           />
         </motion.div>
 
@@ -81,15 +81,16 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-text-muted rounded-full flex justify-center pt-2"
-        >
-          <div className="w-1 h-2 bg-text-muted rounded-full" />
-        </motion.div>
+        <span className="text-text-muted text-[10px] uppercase tracking-[0.2em] font-medium">Scroll</span>
+        <div className="relative w-px h-12 bg-white/10 overflow-hidden">
+          <motion.div
+            className="absolute top-0 left-0 w-full bg-accent"
+            animate={{ height: ['0%', '100%', '0%'], top: ['0%', '0%', '100%'] }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+          />
+        </div>
       </motion.div>
     </section>
   );

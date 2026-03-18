@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { label: 'Leistungen', href: '/pages/leistungen' },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -39,33 +41,45 @@ export default function Navbar() {
       <nav className="mx-auto max-w-6xl flex items-center justify-between px-6 py-5">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/Kaos.png" alt="KAOS Media Logo" width={40} height={40} className="rounded-sm" />
+          <Image src="/logo/K_logo.svg" alt="KAOS Media Logo" width={40} height={40} />
           <span className="text-xl font-extrabold tracking-tight text-white">
             KAOS <span className="text-accent">MEDIA</span>
           </span>
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map(link => (
-            <li key={link.href}>
-              {link.highlight ? (
-                <Link
-                  href={link.href}
-                  className="text-sm font-semibold text-accent border border-accent/30 px-3 py-1 rounded-full hover:bg-accent transition-colors duration-300"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <Link
-                  href={link.href}
-                  className="relative text-sm text-text-secondary hover:text-white transition-colors duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {link.label}
-                </Link>
-              )}
-            </li>
-          ))}
+        <ul className="hidden md:flex items-center gap-5 xl:gap-8">
+          {navLinks.map(link => {
+            const isActive = pathname.startsWith(link.href);
+            return (
+              <li key={link.href}>
+                {link.highlight ? (
+                  <Link
+                    href={link.href}
+                    className={`text-sm font-semibold border px-3 py-1 rounded-full transition-colors duration-300 ${
+                      isActive
+                        ? 'bg-accent text-white border-accent'
+                        : 'text-accent border-accent/30 hover:bg-accent hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={`relative text-sm transition-colors duration-300 pb-1 group ${
+                      isActive ? 'text-white' : 'text-text-secondary hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                    <span className={`absolute bottom-0 left-0 h-px bg-accent transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`} />
+                  </Link>
+                )}
+              </li>
+            );
+          })}
         </ul>
 
         {/* Mobile Hamburger */}
@@ -91,17 +105,23 @@ export default function Navbar() {
             className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-border"
           >
             <ul className="flex flex-col items-center gap-6 py-10">
-              {navLinks.map(link => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-lg text-text-secondary hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map(link => {
+                const isActive = pathname.startsWith(link.href);
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`text-lg transition-colors flex items-center gap-2 ${
+                        isActive ? 'text-white font-semibold' : 'text-text-secondary hover:text-white'
+                      }`}
+                    >
+                      {isActive && <span className="w-1.5 h-1.5 rounded-full bg-accent" />}
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
         )}

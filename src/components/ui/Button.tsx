@@ -11,17 +11,18 @@ interface ButtonProps {
 }
 
 export default function Button({ children, href, variant = 'primary', className = '', type = 'button', onClick, disabled }: ButtonProps) {
-  const base = 'inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-base transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100';
+  const base = 'relative inline-flex items-center justify-center px-8 py-3.5 font-semibold text-base cursor-pointer overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed';
   const variants = {
-    primary: 'bg-accent text-white hover:bg-accent-hover hover:scale-105',
-    outline: 'border-2 border-white/20 text-white hover:border-accent hover:text-accent hover:scale-105',
+    primary: 'bg-accent text-white before:absolute before:inset-0 before:bg-accent-hover before:translate-x-[-100%] hover:before:translate-x-0 before:transition-transform before:duration-300 before:ease-out',
+    outline: 'border-2 border-white/30 text-white transition-colors duration-300 hover:border-accent hover:text-accent',
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
+  const inner = <span className="relative z-10">{children}</span>;
 
   if (href) {
-    return <Link href={href} className={classes}>{children}</Link>;
+    return <Link href={href} className={classes}>{inner}</Link>;
   }
 
-  return <button type={type} onClick={onClick} disabled={disabled} className={classes}>{children}</button>;
+  return <button type={type} onClick={onClick} disabled={disabled} className={classes}>{inner}</button>;
 }

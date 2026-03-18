@@ -1,11 +1,19 @@
 import '../styles/globals.css';
-import { Inter } from 'next/font/google';
+import { Manrope, Outfit } from 'next/font/google';
 import type { Metadata } from 'next';
+import ScrollProgress from '@/components/ui/ScrollProgress';
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['700', '800', '900'],
+  display: 'swap',
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
@@ -29,8 +37,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={inter.className}>
+    <html lang="de" className={`${manrope.className} ${outfit.variable}`}>
       <body className="bg-background text-text-primary antialiased">
+        <ScrollProgress />
         {children}
       </body>
     </html>

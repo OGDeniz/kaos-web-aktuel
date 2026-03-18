@@ -36,7 +36,7 @@ export default function ServicesSection() {
         label="Services"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-5xl mx-auto border border-white/10">
         {services.map((service, i) => (
           <motion.div
             key={service.num}
@@ -44,13 +44,16 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="group relative p-8 md:p-10 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-accent/30 transition-all duration-500 hover:scale-[1.02] text-center"
+            className="group relative p-8 md:p-10 bg-white/3 hover:bg-white/6 transition-colors duration-500 overflow-hidden"
           >
-            <span className="text-6xl font-extrabold text-white/[0.07] group-hover:text-accent/10 transition-colors duration-500 block">
+            {/* Animated red bottom border */}
+            <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-accent group-hover:w-full transition-all duration-500 ease-out" />
+
+            <span className="text-7xl font-extrabold text-white/6 group-hover:text-accent/10 transition-colors duration-500 block leading-none">
               {service.num}
             </span>
-            <h3 className="mt-2 text-white font-bold">{service.title}</h3>
-            <p className="mt-4 text-text-secondary text-base leading-relaxed">{service.desc}</p>
+            <h3 className="mt-4 text-white font-bold">{service.title}</h3>
+            <p className="mt-3 text-text-secondary text-base leading-relaxed">{service.desc}</p>
           </motion.div>
         ))}
       </div>

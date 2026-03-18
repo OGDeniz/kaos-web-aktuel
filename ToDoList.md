@@ -20,7 +20,7 @@
 ### Datenschutzerklärung (`/datenschutz`)
 
 - [x] **Adresse des Verantwortlichen** vervollständigen — Herbststraße 2, 86551 Aichach eingetragen
-- [ ] **Hosting-Anbieter konkret benennen** — aktuell nur generisch beschrieben; konkreten Anbieter (z. B. Vercel) eintragen + AVV-Nachweis ergänzen
+- [ ] **Hosting-Anbieter konkret benennen** — VPS bei **netcup** (Server-Hosting), Domain bei **ionos**; beide Anbieter in der Datenschutzerklärung namentlich eintragen + AVV-Nachweise ergänzen (netcup AVV: https://www.netcup.de/kontakt/auftragsverarbeitung.php)
 - [x] **EmailJS im Datenschutz erwähnt** — Abschnitt in Sektion 6 ergänzt inkl. Rechtsgrundlage + Link zur EmailJS Privacy Policy
 - [ ] **Cookie-Abschnitt aktualisieren**, sobald GA/GTM eingebunden wird — aktuell steht „keine Tracking-Cookies", das muss dann vollständig überarbeitet werden
 - [ ] **GA4 + GTM Abschnitt** hinzufügen inkl. Opt-out-Möglichkeit und Auftragsverarbeitungsvertrag mit Google
