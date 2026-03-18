@@ -5,7 +5,7 @@ import SectionWrapper from '@/components/ui/SectionWrapper';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 
-const values = ['KREATIV', 'ANALYTISCH', 'ORIGINELL', 'STRUKTURIERT'];
+const values = ['MUT', 'KLARHEIT', 'AUTHENTIZITÄT'];
 
 export default function AboutSection() {
   return (
@@ -42,20 +42,20 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="order-1 lg:order-2 text-center lg:text-left"
+          className="order-1 lg:order-2 text-center lg:text-left space-y-5"
         >
           <p className="text-text-secondary text-base leading-relaxed">
-            KAOS Media wurde von Flo, Deniz & Anna gegründet – drei kreative Köpfe aus Heidelberg, die Marken
-            nicht nur gestalten und liefern, sondern auch strategisch denken. Wir kombinieren Kreativität mit Daten und
-            liefern Ergebnisse, die wirken.
+            Echte Perfektion entsteht nicht im stillen Kämmerlein – sondern dort, wo Ideen mutig aufeinandertreffen,
+            wachsen und sich entfalten dürfen.
           </p>
           <p className="text-text-secondary text-base leading-relaxed">
-            Als Boutique-Agentur mit direktem Founder-Kontakt sind wir flexibel, schnell und
-            persönlich – ohne unnötigen Overhead.
+            Bei KAOS Media ist &ldquo;Chaos&rdquo; kein Fehler, sondern ein Prinzip. Wir ordnen kreative Vielfalt,
+            technische Präzision und menschliche Leidenschaft zu einem Ganzen – für Gründer:innen,
+            Unternehmer:innen und Visionäre, die mehr wollen als 08/15.
           </p>
 
           {/* Value Tags */}
-          <div className="flex flex-wrap gap-3 mt-8 mb-10 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
             {values.map((v, i) => (
               <motion.span
                 key={v}
@@ -70,8 +70,21 @@ export default function AboutSection() {
             ))}
           </div>
 
-          <div className="flex justify-center lg:justify-start">
-            <Button href="/pages/about" variant="outline">Mehr erfahren</Button>
+          {/* Quote Block */}
+          <motion.blockquote
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="pl-5 border-l-2 border-accent mt-2"
+          >
+            <p className="text-white font-semibold text-base italic leading-relaxed">
+              &ldquo;Am Anfang war das KAOS – und nur im KAOS entsteht Perfektion.&rdquo;
+            </p>
+          </motion.blockquote>
+
+          <div className="flex justify-center lg:justify-start pt-2">
+            <Button href="/pages/philosophie" variant="outline">Unsere Philosophie</Button>
           </div>
         </motion.div>
       </div>

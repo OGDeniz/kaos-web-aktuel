@@ -5,7 +5,7 @@ import Image from "next/image";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
 
-const values = ["KREATIV", "ANALYTISCH", "ORIGINELL", "STRUKTURIERT"];
+const values = ["MUT", "KLARHEIT", "AUTHENTIZITÄT"];
 
 export default function AboutPage() {
   return (
@@ -81,11 +81,42 @@ export default function AboutPage() {
           >
             <p className="text-text-secondary leading-relaxed">
               <span className="font-bold text-accent">Wir sind KAOS Media</span> – die Boutique-Agentur für Gründer, Startups und KMU, die Großes vorhaben.
-              Hinter KAOS stehen <span className="font-bold text-white">Florian</span> , <span className="font-bold text-white">Deniz</span> und <span className="font-bold text-white">Anna</span> – drei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
+              Hinter KAOS stehen <span className="font-bold text-white">Florian</span>, <span className="font-bold text-white">Deniz</span> und <span className="font-bold text-white">Anna</span> – drei erfahrene Unternehmer mit echten Höhen, Tiefen und Visionen.
             </p>
             <p className="text-text-secondary leading-relaxed">
               Unsere Stärke liegt im Spagat zwischen kreativer Freiheit und analytischer Präzision.
               Wir kombinieren Technologie, Strategie und Herzblut zu messbarem Erfolg – <span className="italic text-accent">ohne Bullshit</span>.
+            </p>
+          </motion.div>
+
+          {/* Philosophy Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto space-y-6 text-text-secondary leading-relaxed text-center"
+          >
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <div className="w-8 h-0.5 bg-accent/50 rounded-full" />
+              <span className="text-accent text-xs font-semibold uppercase tracking-widest">Unsere Philosophie</span>
+              <div className="w-8 h-0.5 bg-accent/50 rounded-full" />
+            </div>
+            <p>
+              Wir glauben daran, dass echte Perfektion nicht im stillen Kämmerlein entsteht – sondern dort,
+              wo Ideen mutig aufeinandertreffen, wachsen und sich entfalten dürfen.
+            </p>
+            <p>
+              Bei KAOS Media ist &ldquo;Chaos&rdquo; kein Fehler, sondern ein Prinzip: Wir ordnen kreative Vielfalt,
+              technische Präzision und menschliche Leidenschaft zu einem Ganzen.
+            </p>
+            <p>
+              Wir arbeiten nicht für Zahlen oder Awards – wir arbeiten für Menschen. Für Gründer:innen,
+              für Unternehmer:innen, für Visionäre. Für alle, die mehr wollen als 08/15.
+            </p>
+            <p>
+              Wir begleiten unsere Kunden nicht nur mit Know-how, sondern mit echter Hingabe.
+              Wir glauben an nachhaltigen Erfolg – nicht an schnelle Trends.
             </p>
           </motion.div>
 
@@ -106,18 +137,25 @@ export default function AboutPage() {
           </div>
 
           {/* Quote */}
-          <motion.blockquote
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto text-center rounded-2xl bg-white/5 border border-white/10 px-10 py-12"
+            transition={{ duration: 0.7 }}
+            className="relative text-center rounded-2xl bg-accent/10 border border-accent/20 py-14 px-8 max-w-2xl mx-auto overflow-hidden"
           >
-            <p className="text-2xl font-bold text-white italic leading-snug">
-              &ldquo;Kreativität trifft Struktur –<br />Perfektion entsteht nur im KAOS&rdquo;
+            <div className="absolute -top-4 left-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
+              &ldquo;
+            </div>
+            <p className="relative text-2xl md:text-3xl font-bold text-white leading-tight">
+              Am Anfang war das KAOS –<br />
+              <span className="text-accent">und nur im KAOS</span><br />
+              entsteht Perfektion!
             </p>
-            <footer className="mt-6 text-text-muted text-sm">– KAOS Media Team</footer>
-          </motion.blockquote>
+            <div className="absolute -bottom-12 right-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
+              &rdquo;
+            </div>
+          </motion.div>
 
           {/* CTA */}
           <div className="text-center">

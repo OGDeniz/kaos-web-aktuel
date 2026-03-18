@@ -5,7 +5,23 @@ import Image from "next/image";
 import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
 
-const values = ["KREATIV", "ANALYTISCH", "ORIGINELL", "STRUKTURIERT"];
+const principles = [
+  {
+    title: "MUT",
+    description:
+      "Wir glauben an mutige Ideen, die aufeinandertreffen, wachsen und sich entfalten dürfen. Perfektion braucht den Mut zur Unordnung.",
+  },
+  {
+    title: "KLARHEIT",
+    description:
+      "Chaos ohne Struktur ist Lärm. Wir ordnen kreative Vielfalt und technische Präzision zu einem klaren, wirkungsvollen Ganzen.",
+  },
+  {
+    title: "AUTHENTIZITÄT",
+    description:
+      "Wir arbeiten nicht für Zahlen oder Awards – sondern für Menschen. Mit echter Hingabe, ohne Kompromisse bei dem, was wirklich zählt.",
+  },
+];
 
 export default function PhilosophiePage() {
   return (
@@ -30,8 +46,8 @@ export default function PhilosophiePage() {
               Perfektion entsteht<br />nur mit <span className="text-accent">KAOS</span>
             </h1>
             <p className="mt-6 text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed">
-              Wir sind KAOS Media – die Agentur, bei der alles zusammenpasst: Webdesign, SEO, SEA,
-              Social Media & AI-Marketing, Branding und Positionierung – aus einer Hand.
+              Bei KAOS Media ist &ldquo;Chaos&rdquo; kein Fehler, sondern ein Prinzip: Wir ordnen kreative Vielfalt,
+              technische Präzision und menschliche Leidenschaft zu einem Ganzen.
             </p>
           </motion.div>
 
@@ -51,6 +67,7 @@ export default function PhilosophiePage() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-background/50 to-transparent" />
             </div>
           </motion.div>
 
@@ -63,58 +80,62 @@ export default function PhilosophiePage() {
             className="max-w-2xl mx-auto space-y-6 text-text-secondary leading-relaxed text-center"
           >
             <p>
-              Wir unterstützen vor allem KMU, Gründer und Startups mit digitalen Lösungen auf höchstem Niveau.
-              Durch die Anwendung modernster Technik und AI-Marketing verschaffen wir Ihnen die Vorteile und
-              Positionen, die Sie brauchen.
+              Wir glauben daran, dass echte Perfektion nicht im stillen Kämmerlein entsteht – sondern dort,
+              wo Ideen mutig aufeinandertreffen, wachsen und sich entfalten dürfen.
             </p>
             <p>
-              Wir sind keine Uni-Absolventen mit Buzzwords, sondern die &ldquo;alte Garde&rdquo; mit echter
-              Unternehmererfahrung. Beide über 40, beide selbst schon durch die Höhen und Tiefen der
-              Selbstständigkeit gegangen.
+              Wir arbeiten nicht für Zahlen oder Awards – wir arbeiten für Menschen. Für Gründer:innen,
+              für Unternehmer:innen, für Visionäre. Für alle, die mehr wollen als 08/15.
             </p>
             <p>
-              Bei uns gibt es kein Marketing von der Stange, sondern ehrliche Arbeit mit Empathie,
-              Leidenschaft, Erfahrung und Know-how.
-            </p>
-            <p>
-              So perfekt wie unsere Leistung, so perfekt sind unsere Preise. Nicht, weil wir es nicht
-              draufhaben, sondern weil wir bei KMU wirklich etwas bewirken wollen.
+              Wir begleiten unsere Kunden nicht nur mit Know-how, sondern mit echter Hingabe.
+              Wir glauben an nachhaltigen Erfolg – nicht an schnelle Trends.
             </p>
           </motion.div>
 
-          {/* Values Grid */}
-          <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
-            {values.map((v, i) => (
+          {/* Principles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {principles.map((p, i) => (
               <motion.div
-                key={v}
+                key={p.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-surface border border-border rounded-xl py-5 px-6 text-center"
+                transition={{ delay: i * 0.15, duration: 0.5 }}
+                className="bg-surface border border-border rounded-2xl p-6 text-center flex flex-col gap-3 hover:border-accent/40 transition-colors duration-300"
               >
-                <span className="text-accent font-bold tracking-widest text-sm">{v}</span>
+                <span className="text-accent font-bold tracking-widest text-sm">{p.title}</span>
+                <p className="text-text-secondary text-sm leading-relaxed">{p.description}</p>
               </motion.div>
             ))}
           </div>
 
-          {/* Outro */}
+          {/* Pull Quote */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.97 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center rounded-2xl bg-accent/10 border border-accent/20 py-10 px-8 max-w-2xl mx-auto"
+            transition={{ duration: 0.7 }}
+            className="relative text-center rounded-2xl bg-accent/10 border border-accent/20 py-14 px-8 max-w-2xl mx-auto overflow-hidden"
           >
-            <p className="text-xl font-semibold text-white">
-              Weil Perfektion nicht vom Band kommt.
+            <div className="absolute -top-4 left-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
+              &ldquo;
+            </div>
+            <p className="relative text-2xl md:text-3xl font-bold text-white leading-tight">
+              Am Anfang war das KAOS –<br />
+              <span className="text-accent">und nur im KAOS</span><br />
+              entsteht Perfektion!
             </p>
+            <div className="absolute -bottom-12 right-4 text-accent/10 text-[7rem] font-black leading-none select-none pointer-events-none">
+              &rdquo;
+            </div>
           </motion.div>
 
           {/* CTA */}
           <div className="text-center">
             <Button href="/pages/contact">Get your KAOS</Button>
           </div>
+
         </div>
       </section>
     </Layout>
