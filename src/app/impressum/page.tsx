@@ -37,19 +37,17 @@ export default function ImpressumPage() {
 
           {/* Angaben gemäß § 5 TMG */}
           <Section title="Angaben gemäß § 5 TMG">
-            <p className="font-semibold text-white">KAOS Media UG</p>
-            {/* TODO: Echte Adresse eintragen */}
-            <p>[Straße und Hausnummer]</p>
-            <p>[PLZ] Heidelberg</p>
+            <p className="font-semibold text-white">KAOS Media</p>
+            <p>Herbststraße 2</p>
+            <p>86551 Aichach</p>
             <p>Deutschland</p>
           </Section>
 
           {/* Vertreten durch */}
           <Section title="Vertreten durch">
-            {/* TODO: Vollständige Namen eintragen */}
-            <p>Florian Kos</p>
+            <p>Anna-Katharina Dhillon</p>
             <p>Deniz Yavuzkaya</p>
-            <p>Anna Katharina Dhillon</p>
+            <p>Florian Kos</p>
           </Section>
 
           {/* Kontakt */}
@@ -59,21 +57,17 @@ export default function ImpressumPage() {
             <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
           </Section>
 
-          {/* Umsatzsteuer-ID */}
-          <Section title="Umsatzsteuer-Identifikationsnummer">
-            {/* TODO: USt-IdNr eintragen, sobald vorhanden – oder Abschnitt entfernen falls keine Umsatzsteuerpflicht */}
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-            </p>
-            <p className="font-mono text-white">[DE-XXXXXXXXX]</p>
+          {/* Steuernummer */}
+          <Section title="Steuernummer">
+            <p>Steuernummer: <span className="font-mono text-white">102/211/11317</span></p>
+            <p className="mt-1">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
           </Section>
 
           {/* Verantwortlich für den Inhalt */}
           <Section title="Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV">
-            {/* TODO: Verantwortliche Person eintragen */}
-            <p>Florian [Nachname] &amp; Deniz [Nachname]</p>
-            <p>[Straße und Hausnummer]</p>
-            <p>[PLZ] Heidelberg</p>
+            <p>Anna-Katharina Dhillon</p>
+            <p>Herbststraße 2</p>
+            <p>86551 Aichach</p>
           </Section>
 
           {/* Streitschlichtung */}
@@ -147,18 +141,6 @@ export default function ImpressumPage() {
             </p>
           </Section>
 
-          {/* Note */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="rounded-xl bg-surface border border-border p-6 text-xs text-text-muted"
-          >
-            <p>
-              <span className="text-accent font-semibold">Hinweis:</span> Angaben in eckigen Klammern
-              müssen noch durch die korrekten Daten ersetzt werden (Nachname, Adresse, ggf. USt-IdNr.).
-            </p>
-          </motion.div>
 
         </div>
       </section>

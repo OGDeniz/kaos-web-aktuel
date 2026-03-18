@@ -44,9 +44,8 @@ export default function DatenschutzPage() {
             </p>
             <div className="mt-2 rounded-lg bg-surface border border-border p-4 text-text-secondary space-y-0.5">
               <p className="font-semibold text-white">KAOS Media</p>
-              {/* TODO: Adresse eintragen */}
-              <p>[Straße und Hausnummer]</p>
-              <p>[PLZ] Heidelberg, Deutschland</p>
+              <p>Herbststraße 2</p>
+              <p>86551 Aichach, Deutschland</p>
               <p>E-Mail: <a href="mailto:info@kaosmedia.de" className="text-accent hover:text-accent-hover transition-colors">info@kaosmedia.de</a></p>
             </div>
           </Section>
@@ -152,6 +151,31 @@ export default function DatenschutzPage() {
               Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung deiner Anfrage).
               Zwingende gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
             </p>
+            <p className="font-semibold text-white mt-2">Einsatz von EmailJS</p>
+            <p>
+              Zur technischen Übermittlung der über das Kontaktformular gesendeten Nachrichten nutzen
+              wir den Dienst <strong className="text-white">EmailJS</strong> (Anbieter: EmailJS Ltd.,
+              United Kingdom). Wenn du das Kontaktformular absendest, werden deine eingegebenen Daten
+              (Name, E-Mail-Adresse, ggf. Telefonnummer, Betreff und Nachricht) über die Server von
+              EmailJS an unsere E-Mail-Adresse weitergeleitet.
+            </p>
+            <p>
+              EmailJS verarbeitet diese Daten ausschließlich zur Weiterleitung der Nachricht und speichert
+              sie nicht dauerhaft. Rechtsgrundlage für die Übermittlung ist Art. 6 Abs. 1 lit. b DSGVO
+              (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer
+              funktionierenden Kontaktmöglichkeit).
+            </p>
+            <p>
+              Weitere Informationen zum Datenschutz bei EmailJS findest du unter:{' '}
+              <a
+                href="https://www.emailjs.com/legal/privacy-policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent-hover transition-colors"
+              >
+                www.emailjs.com/legal/privacy-policy
+              </a>
+            </p>
           </Section>
 
           {/* 7. Cookies */}
@@ -224,15 +248,15 @@ export default function DatenschutzPage() {
               DSGVO verstößt (Art. 77 DSGVO).
             </p>
             <p>
-              Die zuständige Aufsichtsbehörde für Baden-Württemberg ist:
+              Die zuständige Aufsichtsbehörde für Bayern ist:
             </p>
             <div className="rounded-lg bg-surface border border-border p-4 text-text-secondary space-y-0.5 text-xs">
-              <p className="font-semibold text-white text-sm">Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg</p>
-              <p>Lautenschlagerstraße 20</p>
-              <p>70173 Stuttgart</p>
-              <p>Telefon: +49 711 615541-0</p>
-              <p>E-Mail: <a href="mailto:poststelle@lfdi.bwl.de" className="text-accent hover:text-accent-hover transition-colors">poststelle@lfdi.bwl.de</a></p>
-              <p>Website: <a href="https://www.baden-wuerttemberg.datenschutz.de" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover transition-colors">www.baden-wuerttemberg.datenschutz.de</a></p>
+              <p className="font-semibold text-white text-sm">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</p>
+              <p>Promenade 27</p>
+              <p>91522 Ansbach</p>
+              <p>Telefon: +49 981 53-1300</p>
+              <p>E-Mail: <a href="mailto:poststelle@lda.bayern.de" className="text-accent hover:text-accent-hover transition-colors">poststelle@lda.bayern.de</a></p>
+              <p>Website: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover transition-colors">www.lda.bayern.de</a></p>
             </div>
           </Section>
 
@@ -270,20 +294,6 @@ export default function DatenschutzPage() {
             </a>
           </motion.div>
 
-          {/* Hinweis-Box */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="rounded-xl bg-surface border border-border p-6 text-xs text-text-muted"
-          >
-            <p>
-              <span className="text-accent font-semibold">Hinweis:</span> Angaben in eckigen Klammern
-              im Impressum und auf dieser Seite müssen noch durch die korrekten Daten ersetzt werden
-              (Nachname, Adresse). Vor Veröffentlichung der Website empfiehlt sich eine rechtliche
-              Prüfung durch einen Fachanwalt für IT-Recht.
-            </p>
-          </motion.div>
 
         </div>
       </section>

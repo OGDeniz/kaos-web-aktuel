@@ -8,20 +8,20 @@
 
 ### Impressum (`/impressum`)
 
-- [ ] **Straße & Hausnummer** eintragen — Platzhalter `[Straße und Hausnummer]` ersetzen (Zeile 42 + 75)
-- [ ] **PLZ** eintragen — Platzhalter `[PLZ]` ersetzen (Zeile 43 + 76)
-- [ ] **Rechtsform prüfen**: „KAOS Media UG" — ist die UG bereits im Handelsregister eingetragen? Falls ja, **Handelsregisternummer + Registergericht** ergänzen (Pflicht gemäß § 5 TMG)
-- [ ] **USt-IdNr.** eintragen — Platzhalter `[DE-XXXXXXXXX]` ersetzen (Zeile 68), oder Hinweis auf Kleinunternehmerregelung § 19 UStG ergänzen
-- [ ] **Vollständige Nachnamen** von Florian und Deniz eintragen — Platzhalter `[Nachname]` ersetzen (Zeile 74)
-- [ ] **Verantwortlicher nach § 18 Abs. 2 MStV** — Adresse im entsprechenden Abschnitt vervollständigen
+- [x] **Straße & Hausnummer** — Herbststraße 2, 86551 Aichach eingetragen
+- [x] **PLZ / Stadt** — eingetragen
+- [x] **Rechtsform** — kein UG, Kleinunternehmerregelung § 19 UStG; kein Handelsregistereintrag nötig
+- [x] **Steuernummer** eingetragen (102/211/11317) + Kleinunternehmerhinweis § 19 UStG ergänzt
+- [x] **Vollständige Namen** aller Gründer eingetragen (Anna-Katharina Dhillon, Deniz Yavuzkaya, Florian Kos)
+- [x] **Verantwortlicher nach § 18 Abs. 2 MStV** — Anna-Katharina Dhillon, Herbststraße 2, 86551 Aichach
 - [ ] Prüfen: Berufshaftpflicht oder Kammerzugehörigkeit anzugeben? (für Agenturen meist nicht erforderlich)
 - [ ] **Rechtlichen Review** durch IT-Anwalt einholen ⚠️
 
 ### Datenschutzerklärung (`/datenschutz`)
 
-- [ ] **Adresse des Verantwortlichen** vervollständigen — Platzhalter `[Straße und Hausnummer]` ersetzen (Zeile 48)
+- [x] **Adresse des Verantwortlichen** vervollständigen — Herbststraße 2, 86551 Aichach eingetragen
 - [ ] **Hosting-Anbieter konkret benennen** — aktuell nur generisch beschrieben; konkreten Anbieter (z. B. Vercel) eintragen + AVV-Nachweis ergänzen
-- [ ] **EmailJS im Datenschutz erwähnen** — Kontaktformular nutzt EmailJS als Drittanbieter; Abschnitt mit Rechtsgrundlage + Datenweitergabe ergänzen
+- [x] **EmailJS im Datenschutz erwähnt** — Abschnitt in Sektion 6 ergänzt inkl. Rechtsgrundlage + Link zur EmailJS Privacy Policy
 - [ ] **Cookie-Abschnitt aktualisieren**, sobald GA/GTM eingebunden wird — aktuell steht „keine Tracking-Cookies", das muss dann vollständig überarbeitet werden
 - [ ] **GA4 + GTM Abschnitt** hinzufügen inkl. Opt-out-Möglichkeit und Auftragsverarbeitungsvertrag mit Google
 - [ ] **Cookie Consent Banner** implementieren — vor GA-Einbindung zwingend erforderlich (DSGVO + ePrivacy)
@@ -126,9 +126,9 @@
 
 | #   | Aufgabe                                                                           | Status |
 | --- | --------------------------------------------------------------------------------- | ------ |
-| 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ❌ Offen |
+| 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ✅ Erledigt |
 | 2   | Blog zeigt nur externe `dev.to`-Artikel — kein eigener Content, hohe Absprungrate | ❌ Offen |
-| 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ⚠️ EmailJS aktiv, Testlauf ausstehend |
+| 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ✅ Erledigt — E-Mails kommen an |
 | 4   | Cookie Consent Banner fehlt komplett                                              | ❌ Offen |
 
 ### ⚠️ Kurzfristig — innerhalb 1–2 Wochen
@@ -171,6 +171,10 @@
 | Open Graph Tags Homepage | `layout.tsx` hat vollständige OG-Tags |
 | EmailJS Kontaktformular-Backend | Eingebunden via `@emailjs/browser` |
 | Favicon | Hinzugefügt |
+| Impressum vollständig | Adresse, Namen, Steuernummer, Kleinunternehmerregelung § 19 UStG |
+| Datenschutz Adresse | Herbststraße 2, 86551 Aichach eingetragen |
+| EmailJS in Datenschutz dokumentiert | Sektion 6 inkl. Rechtsgrundlage + Privacy-Policy-Link |
+| Aufsichtsbehörde korrigiert | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern |
 
 ---
 
