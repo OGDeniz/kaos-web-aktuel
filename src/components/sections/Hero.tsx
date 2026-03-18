@@ -27,18 +27,19 @@ export default function Hero() {
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Logo */}
-        <motion.div
+      {/*  <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
           <img
-            src="/KAOSmedialogoFinal.png"
+            src="/logo/KAOSmedia.svg"
             alt="KAOS Media Logo"
             className="mx-auto w-[12vw] max-w-50 min-w-15 h-auto"
           />
         </motion.div>
+        /*}
 
         {/* Main Headline */}
         <motion.h1
