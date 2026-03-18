@@ -20,7 +20,20 @@ export default function Hero() {
       <div className={styles.overlay} />
       <div className={styles.gradient} />
 
+      
       <div className={styles.content}>
+        
+      <div className={styles.logoContainer}>
+        <motion.img
+          src="/logo/KAOSmedia_white.png"
+          alt="KAOS Logo"
+          className={styles.logo}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        />
+      </div>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +60,7 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.4 }}
           className={styles.cta}
         >
-          <Button href="#contact">Projekt starten</Button>
+          <Button href="#contact">Get your KAOS</Button>
           <Button href="#services" variant="outline">
             Unsere Leistungen
           </Button>
