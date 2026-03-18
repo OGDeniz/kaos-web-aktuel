@@ -35,24 +35,18 @@ export default function BlogSection() {
   return (
     <SectionWrapper id="blog">
       <SectionHeading
-        title="Insights & News"
-        subtitle="Wissen, Trends und Einblicke aus der Welt des digitalen Marketings."
-        label="Blog"
+        title="Unsere Arbeiten"
+        subtitle="Ein Einblick in ausgewählte Projekte, die wir für unsere Kunden umgesetzt haben."
+        label="Portfolio"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {loading
           ? [0, 1, 2].map(i => <SkeletonCard key={i} />)
-          : posts.map((post, i) => (
-            <motion.article
-              key={post.url}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group rounded-2xl bg-surface border border-border overflow-hidden hover:border-accent/30 transition-all duration-500 text-center"
-            >
-              <a href={post.url} target="_blank" rel="noopener noreferrer">
+          : posts.map((post, i) => {
+            const isInternal = post.url.startsWith('/');
+            const cardContent = (
+              <>
                 <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={post.image}
@@ -70,9 +64,25 @@ export default function BlogSection() {
                   <h3 className="text-white font-bold text-lg group-hover:text-accent transition-colors leading-snug line-clamp-2">{post.title}</h3>
                   <p className="mt-3 text-text-secondary text-sm line-clamp-2 leading-relaxed">{post.excerpt}</p>
                 </div>
-              </a>
-            </motion.article>
-          ))
+              </>
+            );
+            return (
+              <motion.article
+                key={post.url}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="group rounded-2xl bg-surface border border-border overflow-hidden hover:border-accent/30 transition-all duration-500 text-center"
+              >
+                {isInternal ? (
+                  <Link href={post.url}>{cardContent}</Link>
+                ) : (
+                  <a href={post.url} target="_blank" rel="noopener noreferrer">{cardContent}</a>
+                )}
+              </motion.article>
+            );
+          })
         }
       </div>
 

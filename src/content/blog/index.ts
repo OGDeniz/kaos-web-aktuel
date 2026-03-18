@@ -1,0 +1,38 @@
+import type React from 'react';
+import type { LocalBlogPost } from '@/types/blog';
+import { meta as osteopathieMeta, default as OsteopathieContent } from './posts/osteopathie-weichselfelder';
+import { meta as buerokratieMeta, default as BuerokratieContent } from './posts/buerokratiekompass';
+import { meta as schluesselMeta, default as SchluesselContent } from './posts/schluesselrp';
+import { meta as stickereimeta, default as StickereiContent } from './posts/stickerei-zschoche';
+
+/**
+ * Fügt einen neuen Artikel hinzu:
+ * 1. Neue Datei in src/content/blog/posts/<slug>.tsx erstellen
+ * 2. meta-Objekt und default Content-Komponente exportieren
+ * 3. Hier importieren und in postRegistry eintragen
+ *
+ * Reihenfolge: Neueste Posts zuerst (oben = ganz vorne im Blog)
+ */
+export const postRegistry: Record<
+  string,
+  { meta: LocalBlogPost; Content: React.ComponentType }
+> = {
+  'portfolio-osteopathie-weichselfelder': {
+    meta: osteopathieMeta,
+    Content: OsteopathieContent,
+  },
+  'portfolio-buerokratiekompass': {
+    meta: buerokratieMeta,
+    Content: BuerokratieContent,
+  },
+  'portfolio-schluesselrp': {
+    meta: schluesselMeta,
+    Content: SchluesselContent,
+  },
+  'portfolio-stickerei-zschoche': {
+    meta: stickereimeta,
+    Content: StickereiContent,
+  },
+};
+
+export const localPosts: LocalBlogPost[] = Object.values(postRegistry).map((p) => p.meta);
