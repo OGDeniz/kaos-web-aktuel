@@ -42,7 +42,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className={styles.brandDesc}>
-              Deine kreative Agentur für digitales Marketing aus Heidelberg. Strategie. Klarheit. Wirkung.
+              Deine kreative Agentur für digitales Marketing! Strategie. Klarheit. Wirkung.
             </p>
           </div>
 
@@ -72,7 +72,9 @@ export default function Footer() {
             <h4 className={styles.colHeading}>Kontakt</h4>
             <ul className={styles.list}>
               <li className={styles.contactItem}>info@kaosmedia.de</li>
+              <li className={styles.contactItem}>Aichach, Deutschland</li>
               <li className={styles.contactItem}>Heidelberg, Deutschland</li>
+              <li className={styles.contactItem}>Barcelona, Spanien</li>
             </ul>
             <div className={styles.socials}>
               <a href="#" aria-label="Instagram" className={styles.socialLink}>

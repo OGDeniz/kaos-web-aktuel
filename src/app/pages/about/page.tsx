@@ -6,7 +6,7 @@ import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
 import styles from "./page.module.css";
 
-const values = ["MUT", "KLARHEIT", "AUTHENTIZITÄT"];
+const values = ["KREATIV", "ANALYTISCH", "ORIGINELL", "STRUKTURIERT"];
 
 export default function AboutPage() {
   return (
@@ -127,6 +127,9 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Values */}
+          <div className={styles.formelHeading}>
+            <h2>Unsere Formel für KAOS:</h2>
+          </div>
           <div className={styles.values}>
             {values.map((v, i) => (
               <motion.span
