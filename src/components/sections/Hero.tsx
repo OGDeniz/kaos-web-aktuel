@@ -11,7 +11,6 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="/hero/img1.jpg"
         className={styles.video}
       >
         <source src="/redBackground.mp4" type="video/mp4" />
