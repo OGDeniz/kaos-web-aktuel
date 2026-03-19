@@ -44,13 +44,22 @@ export default function Hero() {
           TRIFFT <span className={styles.accent}>STRUKTUR</span>
         </motion.h1>
 
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.4 }}
+          className={styles.tagline}
+        >
+          Ergebnisse entstehen.
+        </motion.h2>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.4 }}
           className={styles.subline}
         >
-          Deine kreative Agentur für digitales Marketing aus Heidelberg
+          Die KAOS-Methode verbindet Kreativität, Daten und klare Prozesse zu digitalen Lösungen, die funktionieren.
         </motion.p>
 
         <motion.div
