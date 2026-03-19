@@ -7,6 +7,7 @@ import PortfolioSection from '@/components/sections/PortfolioSection';
 import ReferenzenSection from '@/components/sections/ReferenzenSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/ui/Footer';
+import ProofSection from '@/components/sections/ProofSection';
 
 export default function HomePage() {
   return (
@@ -18,7 +19,7 @@ export default function HomePage() {
         <ServicesSection />
         <AboutSection />
         <PortfolioSection />
-        <ReferenzenSection />
+        <ProofSection />
         <ContactSection />
       </main>
       <Footer />

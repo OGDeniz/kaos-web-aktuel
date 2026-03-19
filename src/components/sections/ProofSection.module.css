@@ -1,0 +1,134 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.statCard::before,
+.projectCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(204, 0, 0, 0.14), transparent 38%);
+  pointer-events: none;
+}
+
+.statValue {
+  display: inline-flex;
+  margin-bottom: 0.85rem;
+  color: var(--color-text-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.statLabel {
+  margin: 0 0 0.5rem;
+  color: var(--color-text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.statDescription {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 0.96rem;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.projectCard {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.projectCategory {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projectTitle {
+  margin: 0 0 0.8rem;
+  color: var(--color-text-primary);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.projectText {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.projectResult {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.projectResultLabel {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projectResultText {
+  margin: 0;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+@media (max-width: 1080px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statDescription,
+  .projectText,
+  .projectResultText {
+    font-size: 0.98rem;
+  }
+}

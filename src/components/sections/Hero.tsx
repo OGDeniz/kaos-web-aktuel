@@ -6,32 +6,24 @@ import styles from "./Hero.module.css";
 export default function Hero() {
   return (
     <section id="hero" className={styles.section}>
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={styles.video}
-      >
+      <video autoPlay muted loop playsInline className={styles.video}>
         <source src="/redBackground.mp4" type="video/mp4" />
       </video>
 
       <div className={styles.overlay} />
       <div className={styles.gradient} />
 
-      
       <div className={styles.content}>
-        
-      <div className={styles.logoContainer}>
-        <motion.img
-          src="/logo/KAOSmedia_white.png"
-          alt="KAOS Logo"
-          className={styles.logo}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-        />
-      </div>
+        <div className={styles.logoContainer}>
+          <motion.img
+            src="/logo/KAOSmedia_white.png"
+            alt="KAOS Logo"
+            className={styles.logo}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          />
+        </div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -59,7 +51,8 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.4 }}
           className={styles.subline}
         >
-          Die KAOS-Methode verbindet Kreativität, Daten und klare Prozesse zu digitalen Lösungen, die funktionieren.
+          Die KAOS-Methode verbindet Kreativität, Daten und klare Prozesse zu
+          digitalen Lösungen, die funktionieren.
         </motion.p>
 
         <motion.div
@@ -86,8 +79,11 @@ export default function Hero() {
         <div className={styles.scrollBar}>
           <motion.div
             className={styles.scrollLine}
-            animate={{ height: ['0%', '100%', '0%'], top: ['0%', '0%', '100%'] }}
-            transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+            animate={{
+              height: ["0%", "100%", "0%"],
+              top: ["0%", "0%", "100%"],
+            }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
           />
         </div>
       </motion.div>
