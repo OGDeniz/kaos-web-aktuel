@@ -125,12 +125,12 @@
   color: #fff;
 }
 
-.articleContent a {
+.articleContent a:not(:global(.portfolio-visit-btn)) {
   color: var(--color-accent);
   text-decoration: none;
 }
 
-.articleContent a:hover {
+.articleContent a:not(:global(.portfolio-visit-btn)):hover {
   color: var(--color-accent-hover);
 }
 

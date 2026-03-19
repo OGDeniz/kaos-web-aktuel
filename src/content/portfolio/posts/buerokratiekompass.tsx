@@ -72,16 +72,14 @@ export default function Content() {
         Einzelunternehmer, Gründer und alle, die einfach wissen wollen, was sie als nächstes tun
         müssen. Strukturiert, verständlich, hilfreich.
       </p>
-      <div className="not-prose my-6">
-        <a
-          href="https://www.buerokratiekompass.de/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-xl transition-colors duration-200"
-        >
-          Website besuchen &rarr;
-        </a>
-      </div>
+      <a
+        href="https://www.buerokratiekompass.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="portfolio-visit-btn"
+      >
+        Website besuchen &rarr;
+      </a>
 
       <h2>Ähnliches Projekt für euch?</h2>
       <p>

@@ -98,6 +98,25 @@ button {
   color: var(--color-text-primary);
 }
 
+/* ========== Portfolio Visit Button ========== */
+.portfolio-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin: 1.5rem 0;
+}
+
+.portfolio-visit-btn:hover {
+  background: var(--color-accent-hover);
+}
+
 /* ========== Grain Overlay ========== */
 body::after {
   content: '';
