@@ -34,15 +34,16 @@
 
 ### Voraussetzungen (Pflicht vor Aktivierung)
 
-- [ ] **Cookie Consent Management Platform (CMP)** implementieren — z. B. Cookiebot, Usercentrics oder Klaro (Open Source)
-  - Consent muss **vor** dem Laden von GTM/GA eingeholt werden
-  - Consent-Status muss an GTM übergeben werden (Consent Mode v2)
+- [x] **Cookie Consent Banner** implementiert — eigene Lösung in `CookieBanner.tsx`
+  - Bottom-Banner + vollständiges Einstellungs-Modal mit 3 Kategorien
+  - Consent wird in `localStorage` gespeichert
+  - Consent Mode v2 Defaults (`denied`) werden vor GTM gesetzt, Update nach Nutzerwahl
 
 ### Google Tag Manager (GTM)
 
 - [x] **GTM-Konto erstellen** & Container für `kaosmedia.de` anlegen (ID: GTM-TWSLXCXM)
 - [x] **GTM-Snippet** in Next.js eingebunden — `layout.tsx` via `next/script` (`afterInteractive`) + `<noscript>`-Fallback
-- [ ] **Google Consent Mode v2** im GTM konfigurieren — Default-Status auf `denied`, Update nach Consent
+- [x] **Google Consent Mode v2** — Default `denied` via inline Script vor GTM, Update via `gtag('consent','update')` nach Nutzerwahl
 
 ### Google Analytics 4 (GA4)
 
@@ -121,7 +122,7 @@
 | 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ✅ Erledigt |
 | 2   | Blog zeigt nur externe `dev.to`-Artikel — kein eigener Content, hohe Absprungrate | ✅ Erledigt — 5 eigene Case Studies + Detailseiten; umbenannt zu Referenzen/Portfolio |
 | 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ✅ Erledigt — E-Mails kommen an |
-| 4   | Cookie Consent Banner fehlt komplett                                              | ❌ Offen |
+| 4   | Cookie Consent Banner fehlt komplett                                              | ✅ Erledigt — eigene Lösung mit Consent Mode v2 |
 
 ### ⚠️ Kurzfristig — innerhalb 1–2 Wochen
 

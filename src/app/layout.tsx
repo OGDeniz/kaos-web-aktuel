@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import MotionProvider from '@/components/ui/MotionProvider';
+import CookieBanner from '@/components/ui/CookieBanner';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -42,6 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="de" className={`${manrope.className} ${outfit.variable}`}>
       <head>
+        {/* Consent Mode v2 defaults — must run before GTM */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':2000});`,
+          }}
+        />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -67,6 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <ScrollProgress />
           {children}
         </MotionProvider>
+        <CookieBanner />
       </body>
     </html>
   );
