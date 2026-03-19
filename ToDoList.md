@@ -49,9 +49,9 @@
 
 - [x] **GA4-Property** in Google Analytics erstellt (ID: G-H35DLFCPC2)
 - [x] **GA4-Tag** über GTM eingespielt — Google-Tag mit Measurement ID G-H35DLFCPC2, Trigger: Initialization - All Pages
-- [ ] **IP-Anonymisierung** dokumentieren — in GA4 standardmäßig aktiv
-- [ ] **Auftragsverarbeitungsvertrag (AVV)** mit Google in der GA4-Konsole abschließen
-- [ ] **Datenspeicherung auf 14 Monate** begrenzen (DSGVO-konform)
+- [x] **IP-Anonymisierung** — in GA4 standardmäßig aktiv
+- [x] **Auftragsverarbeitungsvertrag (AVV)** mit Google abgeschlossen
+- [x] **Datenspeicherung auf 14 Monate** begrenzt
 - [ ] **Interne IPs ausschließen** — Filter in GA4 einrichten
 
 ### Events & Conversion Tracking
@@ -117,36 +117,36 @@
 
 ### 🚨 Kritisch — sofort beheben (Seite ist bereits live!)
 
-| #   | Aufgabe                                                                           | Status |
-| --- | --------------------------------------------------------------------------------- | ------ |
-| 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ✅ Erledigt |
+| #   | Aufgabe                                                                           | Status                                                                                |
+| --- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 1   | Impressum-Platzhalter ersetzen — Abmahnrisiko!                                    | ✅ Erledigt                                                                           |
 | 2   | Blog zeigt nur externe `dev.to`-Artikel — kein eigener Content, hohe Absprungrate | ✅ Erledigt — 5 eigene Case Studies + Detailseiten; umbenannt zu Referenzen/Portfolio |
-| 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ✅ Erledigt — E-Mails kommen an |
-| 4   | Cookie Consent Banner fehlt komplett                                              | ✅ Erledigt — eigene Lösung mit Consent Mode v2 |
+| 3   | Formular-Backend verifizieren — EmailJS eingebunden, Submissions testen           | ✅ Erledigt — E-Mails kommen an                                                       |
+| 4   | Cookie Consent Banner fehlt komplett                                              | ✅ Erledigt — eigene Lösung mit Consent Mode v2                                       |
 
 ### ⚠️ Kurzfristig — innerhalb 1–2 Wochen
 
-| #   | Aufgabe                                                                                  | Status |
-| --- | ---------------------------------------------------------------------------------------- | ------ |
-| 5   | Social Links im Footer hinterlegen — Instagram, LinkedIn, Facebook zeigen auf `#`        | ❌ Offen |
+| #   | Aufgabe                                                                                  | Status                                                          |
+| --- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 5   | Social Links im Footer hinterlegen — Instagram, LinkedIn, Facebook zeigen auf `#`        | ❌ Offen                                                        |
 | 6   | Portfolio-Projekte mit echten Case Studies füllen — „Projekt ansehen →" führt ins Nichts | ✅ Erledigt — `/pages/portfolio` mit 5 Projekten + Detailseiten |
-| 7   | Contact-Page: `alert()` durch echten Danke-State ersetzen                                | ⚠️ Teilweise (Homepage OK) |
-| 8   | EmailJS in Datenschutzerklärung dokumentieren                                            | ✅ Erledigt |
+| 7   | Contact-Page: `alert()` durch echten Danke-State ersetzen                                | ✅ Erledigt                                                     |
+| 8   | EmailJS in Datenschutzerklärung dokumentieren                                            | ✅ Erledigt                                                     |
 
 ### 🟡 Mittelfristig — vor/nach Go-Live
 
-| #   | Aufgabe                                                                                | Status |
-| --- | -------------------------------------------------------------------------------------- | ------ |
-| 9   | Schema Markup ergänzen — LocalBusiness, Organization, Service                          | ❌ Offen |
-| 10  | Core Web Vitals prüfen — Hintergrundvideos auf mehreren Seiten können LCP/CLS belasten | ❌ Ausstehend |
-| 11  | Unsplash-Bilder durch eigene Assets ersetzen — externe Abhängigkeit                    | ❌ Offen |
-| 12  | Weitere Portfolio-Case-Studies ergänzen — bestehende Kundenprojekte dokumentieren      | ❌ Offen |
+| #   | Aufgabe                                                                                | Status                   |
+| --- | -------------------------------------------------------------------------------------- | ------------------------ |
+| 9   | Schema Markup ergänzen — LocalBusiness, Organization, Service                          | ❌ Offen                 |
+| 10  | Core Web Vitals prüfen — Hintergrundvideos auf mehreren Seiten können LCP/CLS belasten | ❌ Ausstehend            |
+| 11  | Unsplash-Bilder durch eigene Assets ersetzen — externe Abhängigkeit                    | ❌ Offen                 |
+| 12  | Weitere Portfolio-Case-Studies ergänzen — bestehende Kundenprojekte dokumentieren      | ❌ Offen                 |
 | 13  | ~~Förderungsseite auf Vollständigkeit prüfen~~ — **Erledigt** ✅                       | ✅ Seite ist vollständig |
 
 ### 🟢 Optional / Nice-to-have
 
-| #   | Aufgabe                                                                                   | Status |
-| --- | ----------------------------------------------------------------------------------------- | ------ |
+| #   | Aufgabe                                                                                   | Status   |
+| --- | ----------------------------------------------------------------------------------------- | -------- |
 | 14  | Calendly o. Ä. für „Erstgespräch sichern" integrieren — erhöht Conversion deutlich        | ❌ Offen |
 | 15  | AGB erstellen — empfehlenswert bei den Preispaketen                                       | ❌ Offen |
 | 16  | `llms.txt` implementieren — ihr verkauft GEO als Service, das solltet ihr selbst vorleben | ❌ Offen |
@@ -155,27 +155,30 @@
 
 ## ✅ Abgeschlossen
 
-| Aufgabe | Notiz |
-| ------- | ----- |
-| Über-uns Seite (`/pages/about`) | Vollständig, keine Platzhalter |
-| Preise Seite (`/pages/preise`) | Vollständig mit Paketen und CTAs |
-| Förderung Seite (`/pages/foerderung`) | Vollständig mit Programmen und Prozess |
-| ContactForm inline Success-State | Grüne Erfolgsmeldung nach Absenden vorhanden |
-| Open Graph Tags Homepage | `layout.tsx` hat vollständige OG-Tags |
-| EmailJS Kontaktformular-Backend | Eingebunden via `@emailjs/browser` |
-| Favicon | Hinzugefügt |
-| Impressum vollständig | Adresse, Namen, Steuernummer, Kleinunternehmerregelung § 19 UStG |
-| Datenschutz Adresse | Herbststraße 2, 86551 Aichach eingetragen |
-| EmailJS in Datenschutz dokumentiert | Sektion 6 inkl. Rechtsgrundlage + Privacy-Policy-Link |
-| Aufsichtsbehörde korrigiert | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern |
-| Eigene Portfolio/Referenz-Seite | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]` |
-| Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio`, API `/api/blog` → `/api/portfolio`, Navbar & Footer aktualisiert |
-| Google Tag Manager eingebunden | GTM-TWSLXCXM via `next/script` in `layout.tsx` — `<head>` + `<noscript>`-Fallback |
-| GA4 Property erstellt & Tag deployed | Measurement ID: G-H35DLFCPC2 · Google-Tag in GTM (Version 2) · Consent Mode v2 vollständig konfiguriert |
-| Hosting-Anbieter bekannt | VPS: netcup · Domain: ionos — noch in `/datenschutz` einzutragen |
-| Sitemap erstellt & deployed | `next-sitemap` installiert, `public/sitemap.xml` + `public/sitemap-0.xml` generiert, alle Routen enthalten |
-| robots.txt erstellt | `public/robots.txt` mit `Allow: /` + Sitemap-Verweis |
-| Google Search Console eingerichtet | Property angelegt, DNS-TXT-Record gesetzt, Sitemap eingereicht |
+| Aufgabe                               | Notiz                                                                                                                                 |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Über-uns Seite (`/pages/about`)       | Vollständig, keine Platzhalter                                                                                                        |
+| Preise Seite (`/pages/preise`)        | Vollständig mit Paketen und CTAs                                                                                                      |
+| Förderung Seite (`/pages/foerderung`) | Vollständig mit Programmen und Prozess                                                                                                |
+| ContactForm inline Success-State      | Grüne Erfolgsmeldung nach Absenden vorhanden                                                                                          |
+| Open Graph Tags Homepage              | `layout.tsx` hat vollständige OG-Tags                                                                                                 |
+| EmailJS Kontaktformular-Backend       | Eingebunden via `@emailjs/browser`                                                                                                    |
+| Favicon                               | Hinzugefügt                                                                                                                           |
+| Impressum vollständig                 | Adresse, Namen, Steuernummer, Kleinunternehmerregelung § 19 UStG                                                                      |
+| Datenschutz Adresse                   | Herbststraße 2, 86551 Aichach eingetragen                                                                                             |
+| EmailJS in Datenschutz dokumentiert   | Sektion 6 inkl. Rechtsgrundlage + Privacy-Policy-Link                                                                                 |
+| Aufsichtsbehörde korrigiert           | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern                                                                               |
+| Eigene Portfolio/Referenz-Seite       | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]`                                                                       |
+| Blog → Portfolio umbenannt            | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio`, API `/api/blog` → `/api/portfolio`, Navbar & Footer aktualisiert |
+| Google Tag Manager eingebunden        | GTM-TWSLXCXM via `next/script` in `layout.tsx` — `<head>` + `<noscript>`-Fallback                                                     |
+| GA4 Property erstellt & Tag deployed  | Measurement ID: G-H35DLFCPC2 · Google-Tag in GTM (Version 2) · Consent Mode v2 vollständig konfiguriert                               |
+| GA4 Nutzerzugang Flo                  | Florian Kos als Nutzer in Google Analytics hinzugefügt                                                                                |
+| AVV mit Google abgeschlossen          | Datenverarbeitungsbedingungen in GA4 akzeptiert                                                                                       |
+| Datenschutzerklärung aktualisiert     | Hosting (netcup/IONOS), Cookies (3 Kategorien), GA4/GTM Sektion, Stand März 2026                                                      |
+| Hosting-Anbieter bekannt              | VPS: netcup · Domain: ionos — noch in `/datenschutz` einzutragen                                                                      |
+| Sitemap erstellt & deployed           | `next-sitemap` installiert, `public/sitemap.xml` + `public/sitemap-0.xml` generiert, alle Routen enthalten                            |
+| robots.txt erstellt                   | `public/robots.txt` mit `Allow: /` + Sitemap-Verweis                                                                                  |
+| Google Search Console eingerichtet    | Property angelegt, DNS-TXT-Record gesetzt, Sitemap eingereicht                                                                        |
 
 ---
 

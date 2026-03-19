@@ -1,5 +1,6 @@
 import Navbar from '@/components/ui/navigation/Navbar';
 import Hero from '@/components/sections/Hero';
+import KaosMethodSection from '@/components/sections/KaosMethode';
 import ServicesSection from '@/components/sections/ServicesSection';
 import AboutSection from '@/components/sections/AboutSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <KaosMethodSection />
         <ServicesSection />
         <AboutSection />
         <PortfolioSection />
