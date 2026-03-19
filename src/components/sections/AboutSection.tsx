@@ -6,7 +6,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import styles from './AboutSection.module.css';
 
-const values = ['MUT', 'KLARHEIT', 'AUTHENTIZITÄT'];
+const values = ['KREATIV', 'ANALYTISCH', 'ORIGINELL', 'STRUKTURIERT'];
 
 export default function AboutSection() {
   return (
@@ -26,7 +26,7 @@ export default function AboutSection() {
               src="/philosophy/perfekt.png"
               alt="KAOS Media Team"
               fill
-              className="object-cover"
+              style={{ objectFit: 'cover' }}
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className={styles.imageGradient} />

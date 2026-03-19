@@ -1,4 +1,4 @@
-import React from "react"
+import styles from "./ClaimBar.module.css"
 
 type ClaimBarProps = {
     text: string
@@ -6,7 +6,7 @@ type ClaimBarProps = {
 
 export default function ClaimBar({ text }: ClaimBarProps) {
     return (
-        <div className="w-full bg-primary text-light text-center text-sm font-semibold uppercase tracking-wider py-2  shadow-md border-b border-neutral">
+        <div className={styles.bar}>
             {text}
         </div>
     )

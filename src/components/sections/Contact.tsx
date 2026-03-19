@@ -4,22 +4,23 @@ import ContactForm from '@/components/ui/ContactForm';
 import ClaimBar from './ClaimBar';
 import GrayLayout from '../../layouts/GrayLayout';
 import Footer from '../ui/Footer';
+import styles from './Contact.module.css';
 
 const ContactPage: React.FC = () => {
   return (
     <GrayLayout>
-      <section className="relative bg-background px-4 pt-32 pb-20 min-h-screen overflow-x-hidden">
-        <div className="max-w-2xl mx-auto">
+      <section className={styles.section}>
+        <div className={styles.container}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className={styles.header}
           >
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">
-              Kontakt <span className="text-accent">aufnehmen</span>
+            <h1 className={styles.title}>
+              Kontakt <span className={styles.titleAccent}>aufnehmen</span>
             </h1>
-            <p className="text-text-secondary max-w-xl mx-auto">
+            <p className={styles.subtitle}>
               Du hast Fragen oder möchtest mit uns zusammenarbeiten? Schreib uns gerne – wir freuen uns auf deine Nachricht!
             </p>
           </motion.div>
@@ -32,11 +33,11 @@ const ContactPage: React.FC = () => {
             <ContactForm />
           </motion.div>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-8 text-text-secondary text-sm">
-            <a href="mailto:info@kaosmedia.de" className="hover:text-white transition-colors">
+          <div className={styles.meta}>
+            <a href="mailto:info@kaosmedia.de" className={styles.metaLink}>
               info@kaosmedia.de
             </a>
-            <span className="hidden sm:block w-1 h-1 bg-text-muted rounded-full" />
+            <span className={styles.metaDot} />
             <span>Heidelberg, Deutschland</span>
           </div>
         </div>
