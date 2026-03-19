@@ -47,8 +47,8 @@
 
 ### Google Analytics 4 (GA4)
 
-- [ ] **GA4-Property** in Google Analytics erstellen
-- [ ] **GA4-Tag** über GTM einspielen — Measurement ID eintragen
+- [x] **GA4-Property** in Google Analytics erstellt (ID: G-H35DLFCPC2)
+- [x] **GA4-Tag** über GTM eingespielt — Google-Tag mit Measurement ID G-H35DLFCPC2, Trigger: Initialization - All Pages
 - [ ] **IP-Anonymisierung** dokumentieren — in GA4 standardmäßig aktiv
 - [ ] **Auftragsverarbeitungsvertrag (AVV)** mit Google in der GA4-Konsole abschließen
 - [ ] **Datenspeicherung auf 14 Monate** begrenzen (DSGVO-konform)
@@ -171,6 +171,7 @@
 | Eigene Portfolio/Referenz-Seite | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]` |
 | Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio`, API `/api/blog` → `/api/portfolio`, Navbar & Footer aktualisiert |
 | Google Tag Manager eingebunden | GTM-TWSLXCXM via `next/script` in `layout.tsx` — `<head>` + `<noscript>`-Fallback |
+| GA4 Property erstellt & Tag deployed | Measurement ID: G-H35DLFCPC2 · Google-Tag in GTM (Version 2) · Consent Mode v2 vollständig konfiguriert |
 | Hosting-Anbieter bekannt | VPS: netcup · Domain: ionos — noch in `/datenschutz` einzutragen |
 | Sitemap erstellt & deployed | `next-sitemap` installiert, `public/sitemap.xml` + `public/sitemap-0.xml` generiert, alle Routen enthalten |
 | robots.txt erstellt | `public/robots.txt` mit `Allow: /` + Sitemap-Verweis |
