@@ -19,7 +19,8 @@
 .logo {
   display: block;
   width: auto;
-  height: 15.5rem;
+  height: clamp(8rem, 35vw, 15.5rem);
+  max-width: 90%;
   margin: 0 auto;
 }
 

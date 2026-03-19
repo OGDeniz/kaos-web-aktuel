@@ -37,7 +37,7 @@ export default function Navbar() {
       <header className={[styles.header, scrolled ? styles.headerScrolled : ''].filter(Boolean).join(' ')}>
         <nav className={styles.nav}>
           <Link href="/" className={styles.logoLink}>
-            <Image src="/logo/K_logo.svg" alt="KAOS Media Logo" width={40} height={40} />
+            <Image src="/logo/K_logo.svg" alt="KAOS Media Logo" width={40} height={40} style={{ flexShrink: 0, width: 40, height: 40 }} />
             <span className={styles.logoText}>
               KAOS <span className={styles.logoAccent}>MEDIA</span>
             </span>

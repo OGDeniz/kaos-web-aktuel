@@ -28,13 +28,27 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoLink img {
+  flex-shrink: 0;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .logoText {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   color: #fff;
+  white-space: nowrap;
+}
+
+@media (min-width: 400px) {
+  .logoText {
+    font-size: 1.25rem;
+  }
 }
 
 .logoAccent {
