@@ -86,9 +86,9 @@
 
 - [ ] **`src/app/sitemap.ts`** anlegen (App Router nativ) — ODER `next-sitemap` installieren
 - [ ] Alle relevanten Routen aufnehmen:
-  - `/` · `/pages/leistungen` · `/pages/preise` · `/pages/foerderung` · `/pages/about` · `/pages/blog` · `/pages/contact`
+  - `/` · `/pages/leistungen` · `/pages/preise` · `/pages/foerderung` · `/pages/about` · `/pages/portfolio` · `/pages/contact`
 - [ ] `/impressum` und `/datenschutz` aus der Sitemap **ausschließen** + `noindex` setzen
-- [ ] Blog-Posts dynamisch in die Sitemap aufnehmen (`additionalPaths` oder `sitemap.ts`)
+- [ ] Portfolio-Projekte dynamisch in die Sitemap aufnehmen — `/pages/portfolio/[slug]` für alle 4 Case Studies
 
 ### robots.txt konfigurieren
 
@@ -106,7 +106,7 @@
 - [ ] **`noindex, nofollow`** auf `/impressum` und `/datenschutz` setzen (Metadata API: `robots: { index: false }`)
 - [ ] **Open Graph + Twitter Card** auf allen Unterseiten ergänzen
   - ✅ Homepage (`layout.tsx`): OG-Tags vorhanden
-  - ❌ Alle Unterseiten haben keine eigenen OG-Tags: `/leistungen`, `/preise`, `/foerderung`, `/about`, `/blog`, `/contact`, `/philosophie`
+  - ❌ Alle Unterseiten haben keine eigenen OG-Tags: `/leistungen`, `/preise`, `/foerderung`, `/about`, `/portfolio`, `/contact`, `/philosophie`
 - [ ] **`<title>` und `<meta description>`** individuell pro Unterseite befüllen
   - ✅ Homepage: Custom Metadata vorhanden
   - ❌ Alle Unterseiten erben aktuell die generische Homepage-Metadata
@@ -147,7 +147,7 @@
 | 9   | Schema Markup ergänzen — LocalBusiness, Organization, Service                          | ❌ Offen |
 | 10  | Core Web Vitals prüfen — Hintergrundvideos auf mehreren Seiten können LCP/CLS belasten | ❌ Ausstehend |
 | 11  | Unsplash-Bilder durch eigene Assets ersetzen — externe Abhängigkeit                    | ❌ Offen |
-| 12  | Eigene Blog-Artikel erstellen — keyword-basiert                                        | ❌ Offen |
+| 12  | Weitere Portfolio-Case-Studies ergänzen — bestehende Kundenprojekte dokumentieren      | ❌ Offen |
 | 13  | ~~Förderungsseite auf Vollständigkeit prüfen~~ — **Erledigt** ✅                       | ✅ Seite ist vollständig |
 
 ### 🟢 Optional / Nice-to-have
@@ -176,7 +176,8 @@
 | EmailJS in Datenschutz dokumentiert | Sektion 6 inkl. Rechtsgrundlage + Privacy-Policy-Link |
 | Aufsichtsbehörde korrigiert | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern |
 | Eigene Portfolio/Referenz-Seite | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]` |
-| Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio` |
+| Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio`, API `/api/blog` → `/api/portfolio`, Navbar & Footer aktualisiert |
+| Hosting-Anbieter bekannt | VPS: netcup · Domain: ionos — noch in `/datenschutz` einzutragen |
 
 ---
 
