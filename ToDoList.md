@@ -40,8 +40,8 @@
 
 ### Google Tag Manager (GTM)
 
-- [ ] **GTM-Konto erstellen** & Container für `kaosmedia.de` anlegen
-- [ ] **GTM-Snippet** in Next.js einbinden — `<head>` und `<body>` via `next/script` oder `_document.tsx`
+- [x] **GTM-Konto erstellen** & Container für `kaosmedia.de` anlegen (ID: GTM-TWSLXCXM)
+- [x] **GTM-Snippet** in Next.js eingebunden — `layout.tsx` via `next/script` (`afterInteractive`) + `<noscript>`-Fallback
 - [ ] **Google Consent Mode v2** im GTM konfigurieren — Default-Status auf `denied`, Update nach Consent
 
 ### Google Analytics 4 (GA4)
@@ -66,8 +66,8 @@
 
 ### Google Search Console
 
-- [ ] **Search Console Property** anlegen & Domain via DNS-TXT-Record verifizieren
-- [ ] **Sitemap** einreichen nach erstem Deploy
+- [x] **Search Console Property** angelegt & Domain via DNS-TXT-Record verifiziert
+- [x] **Sitemap** eingereicht
 - [ ] **Indexierungsstatus** nach 24–48h prüfen
 
 ### Qualitätssicherung
@@ -82,24 +82,16 @@
 
 ### Sitemap erstellen (Next.js)
 
-> **Empfehlung:** Da App Router genutzt wird, native `app/sitemap.ts` bevorzugen — kein externes Package nötig.
-
-- [ ] **`src/app/sitemap.ts`** anlegen (App Router nativ) — ODER `next-sitemap` installieren
-- [ ] Alle relevanten Routen aufnehmen:
-  - `/` · `/pages/leistungen` · `/pages/preise` · `/pages/foerderung` · `/pages/about` · `/pages/portfolio` · `/pages/contact`
-- [ ] `/impressum` und `/datenschutz` aus der Sitemap **ausschließen** + `noindex` setzen
-- [ ] Portfolio-Projekte dynamisch in die Sitemap aufnehmen — `/pages/portfolio/[slug]` für alle 4 Case Studies
+- [x] **`next-sitemap`** installiert — `public/sitemap.xml` (Index) + `public/sitemap-0.xml` generiert
+- [x] Alle relevanten Routen aufnehmen:
+  - `/` · `/pages/leistungen` · `/pages/preise` · `/pages/foerderung` · `/pages/about` · `/pages/portfolio` · `/pages/contact` · Portfolio-Slugs
+- [x] `/impressum` und `/datenschutz` aus der Sitemap **ausgeschlossen** (via `next-sitemap.config.js`)
+- [x] Portfolio-Projekte (alle 4 Slugs) in der Sitemap enthalten
 
 ### robots.txt konfigurieren
 
-- [ ] **`src/app/robots.ts`** anlegen (App Router nativ) — ODER `public/robots.txt` erstellen:
-  ```
-  User-agent: *
-  Allow: /
-  Disallow: /api/
-  Sitemap: https://www.kaosmedia.de/sitemap.xml
-  ```
-- [ ] `/api/`-Routen explizit disallowen
+- [x] **`public/robots.txt`** erstellt mit `Allow: /` + Sitemap-Verweis
+- [ ] `/api/`-Routen explizit disallowen — aktuell fehlt `Disallow: /api/` in robots.txt
 
 ### Meta-Tags & Indexierung je Seite
 
@@ -113,9 +105,9 @@
 
 ### Google Search Console
 
-- [ ] Property anlegen & Domain via DNS-TXT-Record verifizieren
-- [ ] `sitemap.xml` nach erstem Deploy einreichen
-- [ ] Indexierungsstatus nach 24–48h prüfen
+- [x] Property anlegen & Domain via DNS-TXT-Record verifizieren
+- [x] `sitemap.xml` nach Deploy eingereicht
+- [ ] Indexierungsstatus nach 24–48h prüfen — Status aktualisiert sich automatisch
 - [ ] `robots.txt` im Search Console Tool auf Fehler testen
 
 ---
@@ -177,7 +169,11 @@
 | Aufsichtsbehörde korrigiert | BW → BayLDA (Bayern, Ansbach) — Sitz ist Aichach/Bayern |
 | Eigene Portfolio/Referenz-Seite | 5 Case Studies mit Detailseiten unter `/pages/portfolio/[slug]` |
 | Blog → Portfolio umbenannt | BlogSection → ReferenzenSection, `/pages/blog` → `/pages/portfolio`, API `/api/blog` → `/api/portfolio`, Navbar & Footer aktualisiert |
+| Google Tag Manager eingebunden | GTM-TWSLXCXM via `next/script` in `layout.tsx` — `<head>` + `<noscript>`-Fallback |
 | Hosting-Anbieter bekannt | VPS: netcup · Domain: ionos — noch in `/datenschutz` einzutragen |
+| Sitemap erstellt & deployed | `next-sitemap` installiert, `public/sitemap.xml` + `public/sitemap-0.xml` generiert, alle Routen enthalten |
+| robots.txt erstellt | `public/robots.txt` mit `Allow: /` + Sitemap-Verweis |
+| Google Search Console eingerichtet | Property angelegt, DNS-TXT-Record gesetzt, Sitemap eingereicht |
 
 ---
 

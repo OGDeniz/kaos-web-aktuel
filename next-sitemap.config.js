@@ -5,4 +5,15 @@ module.exports = {
     priority: 0.7,
     exclude: ['/impressum', '/datenschutz', '/api/*'],
   // ...other options
-};
+
+robotsTxtOptions: {
+  additionalSitemaps: [],
+  policies: [
+    {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/'],
+    },
+  ],
+    },  
+}
