@@ -5,14 +5,6 @@ import { meta as buerokratieMeta, default as BuerokratieContent } from './posts/
 import { meta as schluesselMeta, default as SchluesselContent } from './posts/schluesselrp';
 import { meta as stickereimeta, default as StickereiContent } from './posts/stickerei-zschoche';
 
-/**
- * Fügt einen neuen Artikel hinzu:
- * 1. Neue Datei in src/content/portfolio/posts/<slug>.tsx erstellen
- * 2. meta-Objekt und default Content-Komponente exportieren
- * 3. Hier importieren und in postRegistry eintragen
- *
- * Reihenfolge: Neueste Projekte zuerst (oben = ganz vorne im Portfolio)
- */
 export const postRegistry: Record<
   string,
   { meta: LocalPortfolioPost; Content: React.ComponentType }
