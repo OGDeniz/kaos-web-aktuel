@@ -156,7 +156,7 @@ export default function AboutPage() {
             <div className={styles.quoteMarkTop}>&ldquo;</div>
             <p className={styles.quoteText}>
               Am Anfang war das KAOS –<br />
-              <span className={styles.quoteAccent}>und nur im KAOS</span><br />
+              <span className={styles.quoteAccent}>und nur mit KAOS</span><br />
               entsteht Perfektion!
             </p>
             <div className={styles.quoteMarkBottom}>&rdquo;</div>

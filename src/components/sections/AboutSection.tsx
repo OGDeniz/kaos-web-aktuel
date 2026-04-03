@@ -75,7 +75,7 @@ export default function AboutSection() {
             className={styles.blockquote}
           >
             <p className={styles.quote}>
-              &ldquo;Am Anfang war das KAOS – und nur im KAOS entsteht Perfektion.&rdquo;
+              &ldquo;Am Anfang war das KAOS – und nur mit KAOS entsteht Perfektion.&rdquo;
             </p>
           </motion.blockquote>
 

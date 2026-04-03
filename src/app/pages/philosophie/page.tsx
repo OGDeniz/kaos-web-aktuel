@@ -6,6 +6,13 @@ import Layout from "@/layouts/Layout";
 import Button from "@/components/ui/Button";
 import styles from "./page.module.css";
 
+const kaosAcronym = [
+  { letter: "K", rest: "Kreativ" },
+  { letter: "A", rest: "Analytisch" },
+  { letter: "O", rest: "Originell" },
+  { letter: "S", rest: "Strukturiert" },
+];
+
 const principles = [
   {
     title: "MUT",
@@ -21,6 +28,11 @@ const principles = [
     title: "AUTHENTIZITÄT",
     description:
       "Wir arbeiten nicht für Zahlen oder Awards – sondern für Menschen. Mit echter Hingabe, ohne Kompromisse bei dem, was wirklich zählt.",
+  },
+  {
+    title: "TRANSPARENZ",
+    description:
+      "Offene Kommunikation ist keine Selbstverständlichkeit – für uns ist sie Grundlage. Wir arbeiten ehrlich, nachvollziehbar und auf Augenhöhe.",
   },
 ];
 
@@ -51,6 +63,23 @@ export default function PhilosophiePage() {
               technische Präzision und menschliche Leidenschaft zu einem Ganzen.
             </p>
           </motion.div>
+
+          {/* KAOS Akronym */}
+          <div className={styles.kaosAcronym}>
+            {kaosAcronym.map((item, i) => (
+              <motion.div
+                key={item.letter}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12, duration: 0.5 }}
+                className={styles.kaosItem}
+              >
+                <span className={styles.kaosLetter}>{item.letter}</span>
+                <span className={styles.kaosRest}>{item.rest}</span>
+              </motion.div>
+            ))}
+          </div>
 
           {/* Image */}
           <motion.div
@@ -122,7 +151,7 @@ export default function PhilosophiePage() {
             <div className={styles.quoteMarkTop}>&ldquo;</div>
             <p className={styles.quoteText}>
               Am Anfang war das KAOS –<br />
-              <span className={styles.quoteAccent}>und nur im KAOS</span><br />
+              <span className={styles.quoteAccent}>und nur mit KAOS</span><br />
               entsteht Perfektion!
             </p>
             <div className={styles.quoteMarkBottom}>&rdquo;</div>
