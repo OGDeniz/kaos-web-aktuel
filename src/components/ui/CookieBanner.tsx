@@ -329,22 +329,22 @@ export default function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-          className="fixed bottom-0 left-0 right-0 z-[9990] bg-surface/95 backdrop-blur-md border-t border-border"
+          className="fixed bottom-0 left-0 right-0 z-[9990] bg-surface/98 backdrop-blur-md border-t-2 border-accent shadow-[0_-8px_40px_rgba(0,0,0,0.6)]"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col md:flex-row md:items-center gap-4">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col md:flex-row md:items-center gap-5">
             {/* Icon + Text */}
-            <div className="flex items-start gap-3 flex-1 min-w-0">
-              <div className="shrink-0 mt-0.5 w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-accent" strokeLinecap="round">
+            <div className="flex items-start gap-4 flex-1 min-w-0">
+              <div className="shrink-0 mt-0.5 w-11 h-11 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-accent" strokeLinecap="round">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 8v4M12 16h.01" />
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-text-primary text-sm leading-snug">
+                <p className="font-bold text-text-primary text-base leading-snug">
                   Wir nutzen Cookies
                 </p>
-                <p className="text-text-secondary text-xs leading-relaxed mt-0.5">
+                <p className="text-text-secondary text-sm leading-relaxed mt-1">
                   Um dir die bestmögliche Erfahrung zu bieten, setzen wir Cookies ein — u. a. für Analyse
                   und Marketing. Du entscheidest, was du zulässt.{' '}
                   <Link href="/datenschutz" className="text-accent hover:text-accent-hover underline underline-offset-2 transition-colors">
@@ -355,22 +355,22 @@ export default function CookieBanner() {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-wrap items-center gap-2 shrink-0">
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
               <button
                 onClick={() => setShowSettings(true)}
-                className="px-3.5 py-2 text-xs font-medium border border-border rounded-lg text-text-secondary hover:text-text-primary hover:border-white/20 hover:bg-white/5 transition-all"
+                className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg text-text-secondary hover:text-text-primary hover:border-white/20 hover:bg-white/5 transition-all"
               >
                 Einstellungen
               </button>
               <button
                 onClick={rejectAll}
-                className="px-3.5 py-2 text-xs font-medium border border-border rounded-lg text-text-secondary hover:text-text-primary hover:border-white/20 hover:bg-white/5 transition-all"
+                className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg text-text-secondary hover:text-text-primary hover:border-white/20 hover:bg-white/5 transition-all"
               >
                 Nur notwendige
               </button>
               <button
                 onClick={acceptAll}
-                className="px-4 py-2 text-xs font-bold bg-accent hover:bg-accent-hover rounded-lg text-white transition-colors"
+                className="px-6 py-2.5 text-sm font-bold bg-accent hover:bg-accent-hover rounded-lg text-white transition-colors shadow-[0_0_20px_rgba(204,0,0,0.4)]"
               >
                 Alle akzeptieren
               </button>
