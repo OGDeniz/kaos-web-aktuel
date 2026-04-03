@@ -136,7 +136,7 @@ export default function CookieBanner() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9998]"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-9998"
             onClick={() => setShowSettings(false)}
           />
 
@@ -147,7 +147,7 @@ export default function CookieBanner() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.97, y: 20 }}
             transition={{ type: 'spring', damping: 28, stiffness: 300 }}
-            className="fixed inset-x-4 top-1/2 -translate-y-1/2 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-2xl bg-surface border border-border rounded-2xl z-[9999] flex flex-col overflow-hidden"
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-2xl bg-surface border border-border rounded-2xl z-9999 flex flex-col overflow-hidden"
             style={{ maxHeight: '90vh' }}
           >
             {/* Modal Header */}
@@ -329,7 +329,7 @@ export default function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-          className="fixed bottom-0 left-0 right-0 z-[9990] bg-surface/98 backdrop-blur-md border-t-2 border-accent shadow-[0_-8px_40px_rgba(0,0,0,0.6)]"
+          className="fixed bottom-0 left-0 right-0 z-9990 bg-surface/98 backdrop-blur-md border-t-2 border-accent shadow-[0_-8px_40px_rgba(0,0,0,0.6)]"
         >
           <div className="max-w-7xl mx-auto px-5 sm:px-8 py-6 flex flex-col md:flex-row md:items-center gap-5">
             {/* Icon + Text */}
