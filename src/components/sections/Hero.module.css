@@ -72,7 +72,7 @@
 .subline {
   margin-top: 2rem;
   color: var(--color-text-secondary);
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
@@ -80,7 +80,7 @@
 
 @media (min-width: 768px) {
   .subline {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 

@@ -42,7 +42,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.4 }}
           className={styles.tagline}
         >
-          Ergebnisse entstehen.
+          Ergebnisse entstehen in:       Augsburg • Heidelberg • Barcelona 
         </motion.h2>
 
         <motion.p
@@ -51,10 +51,9 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.4 }}
           className={styles.subline}
         >
-          Die KAOS-Methode verbindet Kreativität, Daten und klare Prozesse zu
-          digitalen Lösungen, die funktionieren.
+         <strong>KAOS ist kein Fehler, es ist eine Formel!</strong>
         </motion.p>
-
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

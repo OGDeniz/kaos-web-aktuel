@@ -55,6 +55,7 @@
   color: #b3b3b3;
   font-size: 0.95rem;
   line-height: 1.7;
+  text-wrap: balance;
 }
 
 @media (max-width: 1024px) {

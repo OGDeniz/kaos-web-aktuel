@@ -9,7 +9,7 @@ const services = [
   {
     num: '01',
     title: 'Branding & Positionierung',
-    desc: 'Wir schärfen eure Marke vom Naming bis zum marktrelevanten Messaging – für Wiedererkennung und Vertrauen.',
+    desc: 'Wir schärfen eure Marke vom Naming bis zum marktrelevanten Messaging für Wiedererkennung und Vertrauen.',
   },
   {
     num: '02',

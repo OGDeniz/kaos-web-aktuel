@@ -37,7 +37,7 @@ export default function KaosMethodSection() {
   return (
     <SectionWrapper id="kaos-methode">
       <SectionHeading
-        title="Die KAOS-Methode"
+        title="Die KAOS-Formel"
         subtitle="KAOS steht nicht nur für unseren Namen, sondern für die Art, wie wir digitale Projekte denken: kreativ in der Idee, analytisch in der Strategie, originell in der Umsetzung und strukturiert im Prozess."
         label="Unsere Arbeitsweise"
       />
