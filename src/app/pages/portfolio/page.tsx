@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
 import Layout from "@/layouts/Layout";
 import PortfolioGrid from "@/components/sections/PortfolioGrid";
 import { getPortfolio } from "@/lib/getPortfolio";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: 'Portfolio – Unsere Arbeiten',
+  description: 'Ausgewählte Projekte von KAOS Media: Von der ersten Idee bis zum fertigen Webauftritt. Branding, Webdesign und mehr.',
+  alternates: { canonical: 'https://www.kaosmedia.de/pages/portfolio' },
+};
 
 export default async function PortfolioPage() {
   const posts = await getPortfolio(9);
