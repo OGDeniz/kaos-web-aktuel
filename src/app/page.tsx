@@ -5,6 +5,8 @@ import ServicesSection from '@/components/sections/ServicesSection';
 import AboutSection from '@/components/sections/AboutSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
 import ReferenzenSection from '@/components/sections/ReferenzenSection';
+import FAQSection from '@/components/sections/FAQSection';
+import { faqHomeData } from '@/data/faq';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/ui/Footer';
 import ProofSection from '@/components/sections/ProofSection';
@@ -20,6 +22,7 @@ export default function HomePage() {
         <AboutSection />
         <PortfolioSection />
         <ProofSection />
+        <FAQSection items={faqHomeData} />
         <ContactSection />
       </main>
       <Footer />

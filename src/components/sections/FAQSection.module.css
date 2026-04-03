@@ -1,0 +1,68 @@
+.sectionCard {
+  position: relative;
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+  border-radius: 1.75rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-text-primary) 3.5%, transparent),
+    color-mix(in srgb, var(--color-text-primary) 1.5%, transparent)
+  );
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 color-mix(in srgb, var(--color-text-primary) 4%, transparent);
+  overflow: hidden;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  backdrop-filter: blur(10px);
+}
+
+.sectionInner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.introCard {
+  border: 1px solid color-mix(in srgb, var(--color-text-primary) 6%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-text-primary) 2.5%, transparent);
+  padding: 1.25rem 1.25rem 1.15rem;
+}
+
+.introTitle {
+  margin: 0 0 0.6rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.introText {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+@media (max-width: 640px) {
+  .sectionCard {
+    border-radius: 1.25rem;
+    padding: 1rem;
+  }
+
+  .introCard {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .introText {
+    font-size: 0.92rem;
+  }
+}
