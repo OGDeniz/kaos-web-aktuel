@@ -79,6 +79,11 @@
   color: var(--color-accent-hover);
 }
 
+.sectionBody strong {
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
 /* Utility modifiers */
 .textWhite {
   color: var(--color-text-primary);

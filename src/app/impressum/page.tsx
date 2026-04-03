@@ -44,24 +44,30 @@ export default function ImpressumPage() {
             <p>Deutschland</p>
           </Section>
 
-          {/* Vertreten durch */}
-          <Section title="Vertreten durch">
-            <p>Anna-Katharina Dhillon</p>
-            <p>Deniz Yavuzkaya</p>
-            <p>Florian Kos</p>
+          {/* Kontakt Deutschland */}
+          <Section title="Kontakt Deutschland">
+            <p><strong>Anna-Katharina Dhillon</strong></p>
+            <p>Herbststraße 2</p>
+            <p>86551 Aichach</p>
+            <p className={styles.mt1}><strong>Deniz Yavuzkaya</strong></p>
+            <p>Oberstraße 39</p>
+            <p>74927 Eschelbronn</p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
           </Section>
 
-          {/* Kontakt */}
-          <Section title="Kontakt">
-            {/* TODO: Telefonnummer eintragen falls vorhanden */}
-            {/* <p>Telefon: +49 [NUMMER]</p> */}
-            <p>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
+          {/* Kontakt Spanien */}
+          <Section title="Kontakt Spanien">
+            <p><strong>Florian Kos</strong></p>
+            <p>Calle Víctor Balaguer 24, 4-1</p>
+            <p>08914 Badalona, Barcelona</p>
+            <p>España</p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
           </Section>
 
           {/* Steuernummer */}
           <Section title="Steuernummer">
             <p>Steuernummer: <span className={styles.fontMono} style={{ color: 'var(--color-text-primary)' }}>102/211/11317</span></p>
-            <p className={styles.mt1}>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
+            {/* <p className={styles.mt1}>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p> */}
           </Section>
 
           {/* Verantwortlich für den Inhalt */}
