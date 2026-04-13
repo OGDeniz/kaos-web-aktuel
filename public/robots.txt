@@ -1,6 +1,6 @@
-# *
 User-agent: *
 Allow: /
+Disallow: /pages/dashboard
 
 # Host
 Host: https://www.kaosmedia.de
