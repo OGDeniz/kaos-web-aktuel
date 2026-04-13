@@ -42,6 +42,7 @@ export default function ImpressumPage() {
             <p>Herbststraße 2</p>
             <p>86551 Aichach</p>
             <p>Deutschland</p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
           </Section>
 
           {/* Kontakt Deutschland */}
