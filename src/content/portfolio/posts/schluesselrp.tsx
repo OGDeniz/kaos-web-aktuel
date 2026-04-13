@@ -2,9 +2,9 @@ import type { LocalPortfolioPost } from '@/types/portfolio';
 
 export const meta: LocalPortfolioPost = {
   slug: 'portfolio-schluesselrp',
-  title: 'RP Schließtechnik – Digitaler Auftritt für einen 24/7-Schlüsseldienst aus Bruchsal',
+  title: 'RP Schliesstechnik – Digitaler Auftritt für einen 24/7-Schlüsseldienst aus Bruchsal',
   excerpt:
-    'Wie wir für RP Schließtechnik eine Website entwickelt haben, die Notfallkunden in Sekundenbruchteilen zur richtigen Information führt – rund um die Uhr, 365 Tage im Jahr.',
+    'Wie wir für RP Schliesstechnik eine Website entwickelt haben, die Notfallkunden in Sekundenbruchteilen zur richtigen Information führt – rund um die Uhr, 365 Tage im Jahr.',
   image: '/blog/schluessel.webp',
   category: 'Portfolio',
   date: '18. März 2026',
@@ -19,7 +19,7 @@ export default function Content() {
         Wer um 2 Uhr nachts vor seiner Haustür steht und den Schlüssel vergessen hat, will keine
         schöne Website — er will sofort eine Telefonnummer. Genau das war die Herausforderung bei{' '}
         <a href="https://schluesselrp.de/" target="_blank" rel="noopener noreferrer">
-          RP Schließtechnik
+          RP Schliesstechnik
         </a>{' '}
         aus Bruchsal: Ein Webauftritt, der im Notfall funktioniert und gleichzeitig das volle
         Leistungsspektrum des Unternehmens professionell präsentiert.
@@ -27,7 +27,7 @@ export default function Content() {
 
       <h2>Die Ausgangssituation</h2>
       <p>
-        RP Schließtechnik bietet rund um die Uhr Notdienst im gesamten Landkreis Karlsruhe —
+        RP Schliesstechnik bietet rund um die Uhr Notdienst im gesamten Landkreis Karlsruhe —
         Bruchsal, Ettlingen, Bretten, Stutensee, Waghäusel und Umgebung. Das Kernproblem vieler
         Handwerksbetriebe im Netz: Die Website wirkt veraltet, die Kontaktdaten sind schwer zu
         finden, und mobile Besucher springen schnell wieder ab. Im Notdienst-Bereich kostet das
@@ -54,7 +54,7 @@ export default function Content() {
         <li>
           <strong>Lokale SEO:</strong> Suchanfragen wie „Schlüsseldienst Bruchsal" oder
           „Türöffnung Karlsruhe Notfall" haben hohes Volumen. Wir haben Seiteninhalte und
-          Struktur so aufgebaut, dass RP Schließtechnik bei diesen Anfragen organisch gefunden wird.
+          Struktur so aufgebaut, dass RP Schliesstechnik bei diesen Anfragen organisch gefunden wird.
         </li>
         <li>
           <strong>Mobile-First:</strong> Der Großteil der Notfall-Suchanfragen kommt vom
@@ -67,7 +67,7 @@ export default function Content() {
       <p>
         Ein Webauftritt, der im entscheidenden Moment liefert: Notfallkunden finden die
         Kontaktdaten in Sekundenbruchteilen, Interessenten bekommen das volle Leistungsbild des
-        Betriebs — und Google erkennt RP Schließtechnik als relevanten lokalen Anbieter im
+        Betriebs — und Google erkennt RP Schliesstechnik als relevanten lokalen Anbieter im
         Großraum Karlsruhe.
       </p>
       <a
