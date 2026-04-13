@@ -48,18 +48,7 @@ export default function AboutPage() {
                 <Image src="/aboutus/flo1.png" alt="Florian" fill className={styles.objectCover} style={{ objectFit: "cover" }} />
               </div>
               <h3 className={styles.teamName}>Florian</h3>
-              <p className={styles.teamRole}>Co-Founder & Strategie</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className={styles.teamLogo}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/KAOSmedia.svg" alt="KAOS Media Logo" className={styles.logoImg} />
+              <p className={styles.teamRole}>Co-Founder & Marketing</p>
             </motion.div>
 
             <motion.div
@@ -70,10 +59,24 @@ export default function AboutPage() {
               className={styles.teamMember}
             >
               <div className={styles.teamImageWrapper}>
+                <Image src="/aboutus/anna.webp" alt="Anna" fill style={{ objectFit: "cover", objectPosition: "center 3%" }} />
+              </div>
+              <h3 className={styles.teamName}>Anna</h3>
+              <p className={styles.teamRole}>Co-Founder & Backoffice</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className={styles.teamMember}
+            >
+              <div className={styles.teamImageWrapper}>
                 <Image src="/aboutus/deniz1.jpg" alt="Deniz" fill style={{ objectFit: "cover" }} />
               </div>
               <h3 className={styles.teamName}>Deniz</h3>
-              <p className={styles.teamRole}>Co-Founder & Kreation</p>
+              <p className={styles.teamRole}>Co-Founder & Technik</p>
             </motion.div>
           </div>
 
