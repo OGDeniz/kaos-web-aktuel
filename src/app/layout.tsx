@@ -21,6 +21,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kaosmedia.de'),
   icons: {
     icon: '/icons/favIcon.png',
   },
