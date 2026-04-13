@@ -49,10 +49,14 @@ export default function ImpressumPage() {
             <p><strong>Anna-Katharina Dhillon</strong></p>
             <p>Herbststraße 2</p>
             <p>86551 Aichach</p>
+            <p>Tel.: <a href="tel:+4915253776846" className={styles.link}>+49 152 53776846</a></p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:anna.dhillon@kaosmedia.de" className={styles.link}>anna.dhillon@kaosmedia.de</a></p>
+
             <p className={styles.mt1}><strong>Deniz Yavuzkaya</strong></p>
             <p>Oberstraße 39</p>
             <p>74927 Eschelbronn</p>
-            <p className={styles.mt1}>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
+            <p>Tel.: <a href="tel:+4917682155891" className={styles.link}>+49 176 82155891</a></p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:deniz.yavuzkaya@kaosmedia.de" className={styles.link}>deniz.yavuzkaya@kaosmedia.de</a></p>
           </Section>
 
           {/* Kontakt Spanien */}
@@ -61,7 +65,8 @@ export default function ImpressumPage() {
             <p>Calle Víctor Balaguer 24, 4-1</p>
             <p>08914 Badalona, Barcelona</p>
             <p>España</p>
-            <p className={styles.mt1}>E-Mail: <a href="mailto:info@kaosmedia.de" className={styles.link}>info@kaosmedia.de</a></p>
+            <p>Tel.: <a href="tel:+34602134982" className={styles.link}>+34 602 134982</a></p>
+            <p className={styles.mt1}>E-Mail: <a href="mailto:florian.kos@kaosmedia.de" className={styles.link}>florian.kos@kaosmedia.de</a></p>
           </Section>
 
           {/* Steuernummer */}
