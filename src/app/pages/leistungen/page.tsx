@@ -131,6 +131,7 @@ export default function LeistungenPage() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    unoptimized
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
