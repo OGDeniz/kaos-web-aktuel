@@ -36,7 +36,7 @@ export default function Footer() {
         <div className={styles.grid}>
           <div className={styles.brand}>
             <Link href="/" className={styles.logoLink}>
-              <Image src="/kaosLogo.jpeg" alt="KAOS Media Logo" width={36} height={36} style={{ borderRadius: '2px' }} />
+              <Image src="/logo/K_logo.svg" alt="KAOS Media Logo" width={52} height={52} />
               <span className={styles.logoText}>
                 KAOS <span className={styles.logoAccent}>MEDIA</span>
               </span>
