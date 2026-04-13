@@ -10,7 +10,7 @@ const services = [
   {
     title: "Branding & Positionierung",
     description: "Wir schärfen eure Marke vom Naming bis zum marktrelevanten Messaging.",
-    image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.pexels.com/photos/3584994/pexels-photo-3584994.jpeg?auto=compress&cs=tinysrgb&w=900",
     foerderbar: true,
     bullets: [
       "Markenanalyse & Zielgruppen-Research",
@@ -21,7 +21,7 @@ const services = [
   {
     title: "Webdesign & Development",
     description: "Conversion-orientierte Websites, die eure Marke erlebbar machen.",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900",
     foerderbar: true,
     bullets: [
       "UX/UI Design mit Fokus auf Nutzerführung",
@@ -32,7 +32,7 @@ const services = [
   {
     title: "Content & Social Media",
     description: "Content, der eure Community aktiviert und für Wiedererkennung sorgt.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=900",
     foerderbar: false,
     bullets: [
       "Kampagnenplanung & Redaktionskonzept",
@@ -43,7 +43,7 @@ const services = [
   {
     title: "Performance & Automation",
     description: "Wir skalieren Leads und Sales mit datengetriebenen Kampagnen.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=900",
     foerderbar: true,
     bullets: [
       "Paid Social & Search Kampagnen",
