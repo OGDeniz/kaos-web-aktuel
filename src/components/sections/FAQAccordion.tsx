@@ -97,7 +97,33 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                   }}
                   style={{ overflow: 'hidden' }}
                 >
-                  <p className={styles.answerText}>{item.answer}</p>
+                  <div className={styles.answerBody}>
+                    {/* Intro-Text vor den Sections */}
+                    {item.intro && (
+                      <p className={styles.answerText}>{item.intro}</p>
+                    )}
+                    {/* Einfacher Antwort-Text */}
+                    {item.answer && (
+                      <p className={styles.answerText}>{item.answer}</p>
+                    )}
+                    {/* Strukturierte Sections mit nummerierten Listen */}
+                    {item.sections && item.sections.length > 0 && (
+                      <div className={styles.sections}>
+                        {item.sections.map((section) => (
+                          <div key={section.title} className={styles.sectionBlock}>
+                            <p className={styles.sectionTitle}>{section.title}</p>
+                            <ol className={styles.sectionList}>
+                              {section.items.map((entry, idx) => (
+                                <li key={idx} className={styles.sectionItem}>
+                                  {entry}
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

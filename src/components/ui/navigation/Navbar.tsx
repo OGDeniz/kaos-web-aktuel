@@ -23,6 +23,7 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: 'Portfolio', href: '/pages/portfolio' },
+  { label: 'FAQ', href: '/pages/faq' },
   { label: 'Kontakt', href: '/pages/contact' },
 ];
 

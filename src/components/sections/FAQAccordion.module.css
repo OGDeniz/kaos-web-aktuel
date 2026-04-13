@@ -169,12 +169,73 @@
 
 /* ─── Answer Panel ───────────────────────────────────────────── */
 
+.answerBody {
+  padding: 0 1.5rem 1.5rem calc(1.5rem + 56px + 1.25rem);
+}
+
 .answerText {
-  margin: 0;
-  padding: 0 1.5rem 1.45rem calc(1.5rem + 56px + 1.25rem);
+  margin: 0 0 0.5rem;
   color: var(--color-text-secondary);
   font-size: 0.98rem;
   line-height: 1.85;
+}
+
+/* ─── Structured Sections ────────────────────────────────────── */
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+.sectionList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sectionItem {
+  display: flex;
+  gap: 0.65rem;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  counter-increment: section-counter;
+}
+
+.sectionItem::before {
+  content: counter(section-counter) ".";
+  flex-shrink: 0;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.7;
+  min-width: 1.1rem;
+}
+
+.sectionList {
+  counter-reset: section-counter;
 }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
@@ -201,8 +262,11 @@
     font-size: 0.95rem;
   }
 
-  .answerText {
+  .answerBody {
     padding: 0 1.15rem 1.2rem 1.15rem;
+  }
+
+  .answerText {
     font-size: 0.9rem;
   }
 }

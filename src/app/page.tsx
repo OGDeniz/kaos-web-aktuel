@@ -22,7 +22,6 @@ export default function HomePage() {
         <AboutSection />
         <PortfolioSection />
         <ProofSection />
-        <FAQSection items={faqHomeData} />
         <ContactSection />
       </main>
       <Footer />

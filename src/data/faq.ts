@@ -1,8 +1,15 @@
+export type FaqSection = {
+  title: string;
+  items: string[];
+};
+
 export type FaqItem = {
   id: string;
   question: string;
-  answer: string;
-  category: 'Allgemein' | 'Leistungen' | 'Prozess' | 'Preise';
+  answer?: string;        // einfacher Text
+  intro?: string;         // Einleitungstext vor den Sections
+  sections?: FaqSection[]; // strukturierte Abschnitte mit Unterlisten
+  category: string;
 };
 
 /** Homepage FAQ – bearbeite dieses Array um Fragen auf der Startseite zu ändern */
