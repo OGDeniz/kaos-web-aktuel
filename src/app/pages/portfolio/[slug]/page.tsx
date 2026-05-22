@@ -15,9 +15,18 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const entry = postRegistry[slug];
   if (!entry) return {};
+  const url = `https://kaosmedia.de/pages/portfolio/${slug}`;
   return {
     title: `${entry.meta.title} | KAOS Media Portfolio`,
     description: entry.meta.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article',
+      url,
+      title: `${entry.meta.title} | KAOS Media Portfolio`,
+      description: entry.meta.excerpt,
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: entry.meta.title }],
+    },
   };
 }
 

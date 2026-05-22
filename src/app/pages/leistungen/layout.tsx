@@ -1,9 +1,16 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Leistungen – Branding, Webdesign, Content & Performance',
-  description: 'Unsere Services: Branding & Positionierung, Web Design & Development, Content & Social Media, Performance & Automatisierung – bis zu 50 % förderbar.',
-  alternates: { canonical: 'https://www.kaosmedia.de/pages/leistungen' },
+  title: 'Leistungen – Branding, Webdesign & Performance | KAOS Media',
+  description: 'Branding, Webdesign, Content, Social Media und Performance Marketing – strukturierte Services, kreative Ergebnisse.',
+  alternates: { canonical: 'https://kaosmedia.de/pages/leistungen' },
+  openGraph: {
+    type: 'website',
+    url: 'https://kaosmedia.de/pages/leistungen',
+    title: 'Leistungen – Branding, Webdesign & Performance | KAOS Media',
+    description: 'Branding, Webdesign, Content, Social Media und Performance Marketing – strukturierte Services, kreative Ergebnisse.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Leistungen' }],
+  },
 };
 
 export default function LeistungenLayout({ children }: { children: React.ReactNode }) {

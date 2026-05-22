@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'KAOS MEDIA – Kreativagentur für digitales Marketing',
+    description: 'Deine kreative Agentur für digitales Marketing aus Heidelberg. Branding, Webdesign, Content & Performance.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

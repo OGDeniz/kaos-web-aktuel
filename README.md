@@ -1,106 +1,129 @@
-# 🌀 KAOS-WEB – Next.js Projekt für KAOS Media
+# KAOS Media — Website
 
-Dies ist das offizielle Frontend-Projekt für **KAOS Media** – ein modernes Webauftrittskonzept basierend auf Next.js, Tailwind CSS, TypeScript und einer komponentenbasierten Architektur.
+Offizielle Website von **KAOS Media**, einer Kreativagentur für digitales Marketing aus Heidelberg. Gebaut mit Next.js 16 App Router, React 19 und Tailwind CSS v4.
 
----
-
-## 📁 Projektstruktur
-
-```
-kaos-web/
-├── public/                  # Statische Dateien (z. B. Bilder, Favicon)
-├── src/
-│   ├── app/                 # Next.js App-Router Struktur (Pages & Layout)
-│   │   ├── layout.tsx       # Root-Layout für alle Seiten
-│   │   └── page.tsx         # Aktuelle Startseite
-│   ├── styles/              # Globale CSS-Dateien inkl. Tailwind
-│   ├── components/          # (wird folgen) – UI-Komponenten (Atoms, Molecules…)
-│   └── layouts/             # (wird folgen) – Seitenlayouts nach Wireframe
-├── .gitignore
-├── package.json
-├── tsconfig.json
-├── next.config.ts
-├── tailwind.config.js
-├── postcss.config.js
-├── eslint.config.mjs
-└── README.md
-```
+**Live:** [kaosmedia.de](https://kaosmedia.de)
 
 ---
 
-## ⚙️ Technologien & Tools
+## Tech Stack
 
-| Zweck                  | Stack/Tool                    |
-| ---------------------- | ----------------------------- |
-| Framework              | [Next.js](https://nextjs.org) |
-| Sprache                | TypeScript                    |
-| Styling                | Tailwind CSS, PostCSS         |
-| Linting & Formatierung | ESLint                        |
-| Entwicklungsserver     | Vite Dev mit `npm run dev`    |
-| Paketverwaltung        | npm                           |
+| Bereich         | Technologie                              |
+| --------------- | ---------------------------------------- |
+| Framework       | Next.js 16.1.6 (App Router, Turbopack)   |
+| Sprache         | TypeScript 5.9                           |
+| UI              | React 19                                 |
+| Styling         | Tailwind CSS v4 (`@theme {}` in globals) |
+| Animationen     | Framer Motion                            |
+| Font            | Manrope + Outfit (Google Fonts)          |
+| Tracking        | Google Tag Manager (GTM-TWSLXCXM) + GA4  |
+| Formular        | EmailJS                                  |
+| Terminbuchung   | Cal.eu                                   |
+| Deployment      | VPS netcup · Domain IONOS                |
 
 ---
 
-## 📦 Installation
-
-### 1. Voraussetzungen
-
-- [Node.js 18.x (LTS)](https://nodejs.org/en/download/)
-- npm (wird mit Node automatisch installiert)
-
-### 2. Projekt klonen
+## Befehle
 
 ```bash
-git clone <repo-url>
-cd kaos-web
+npm run dev      # Dev-Server auf localhost:3000 (Turbopack)
+npm run build    # Produktions-Build
+npm run start    # Produktions-Server starten
+npm run lint     # ESLint
 ```
 
-### 3. Abhängigkeiten installieren
+---
 
-```bash
-npm install
+## Projektstruktur
+
+```
+src/
+├── app/
+│   ├── layout.tsx              # Root-Layout: Fonts, GTM, Metadata, CookieBanner
+│   ├── page.tsx                # Homepage (One-Pager)
+│   ├── start/page.tsx          # Landingpage-Variante
+│   ├── datenschutz/            # Datenschutzerklärung (noindex)
+│   ├── impressum/              # Impressum (noindex)
+│   ├── api/
+│   │   └── portfolio/route.ts  # Portfolio-API (statische Daten)
+│   └── pages/
+│       ├── about/              # Über uns
+│       ├── contact/            # Kontakt + Cal.eu Buchung
+│       ├── faq/                # FAQ-Seite
+│       ├── foerderung/         # Staatliche Förderung
+│       ├── leistungen/         # Services
+│       ├── philosophie/        # Unternehmensphilosophie
+│       ├── portfolio/          # Portfolio-Übersicht + [slug] Detailseiten
+│       ├── preise/             # Preispakete
+│       └── dashboard/          # Internes Dashboard (noindex)
+│
+├── components/
+│   ├── ui/                     # Button, Navbar, Footer, SectionWrapper, ScrollProgress …
+│   └── sections/               # Hero, ServicesSection, AboutSection, PortfolioSection …
+│
+├── content/
+│   └── portfolio/              # MDX-Inhalte & postRegistry für Portfolio-Slugs
+│
+├── data/                       # Statische Daten (FAQ, etc.)
+├── layouts/                    # Layout.tsx, HomeLayout.tsx, GrayLayout.tsx
+├── lib/                        # Hilfsfunktionen (getPortfolio, etc.)
+└── styles/
+    └── globals.css             # Tailwind @theme Tokens + globale Stile
 ```
 
-### 4. Dev-Server starten
+---
 
-```bash
-npm run dev
-```
+## Design System
 
-Projekt läuft dann auf:  
-📍 http://localhost:3000
+Alle Design-Tokens sind als CSS Custom Properties in `src/styles/globals.css` unter `@theme {}` definiert.
+
+| Token              | Wert            | Verwendung                   |
+| ------------------ | --------------- | ---------------------------- |
+| `--color-background` | `#000000`     | Hintergrund (Standard)       |
+| `--color-background-alt` | `#0a0a0a` | Wechselnde Sections       |
+| `--color-accent`   | `#cc0000`       | Rot-Akzent, CTAs             |
+| `--color-accent-hover` | `#ff0000`   | Hover-Zustand                |
+| `--color-text-primary` | `#ffffff`   | Haupttext                    |
+| `--color-text-secondary` | `#999999` | Nebentext                  |
+| `--color-border`   | `#1a1a1a`       | Trennlinien                  |
+
+**Styling-Konvention:** CSS Modules — jede Komponente hat eine eigene `.module.css`. Kein Tailwind direkt in JSX/TSX.
 
 ---
 
-## ✅ Aktuell umgesetzt
+## SEO & Metadata
 
-- ✔️ Next.js Projekt aufgesetzt (`npx create-next-app`)
-- ✔️ TypeScript, Tailwind CSS & ESLint konfiguriert
-- ✔️ Dev-Server erfolgreich lauffähig
-- ✔️ Erste Seitenstruktur: `/page.tsx` mit App-Router
-- ✔️ Sprachunterstützung (de/en) vorbereitet
-- ✔️ Bildoptimierung konfiguriert
-
----
-
-## 🔜 Nächste Schritte
-
-- [ ] Layout-Komponenten erstellen (`src/layouts/`)
-- [ ] Section-Komponenten nach Wireframe anlegen (`src/components/sections/`)
-- [ ] Inhalte aus Konzeptplan & Skizzen übertragen
-- [ ] Navigation, CTA und Footer umsetzen
-- [ ] Mehrsprachigkeit & Routing einbinden
+- **metadataBase:** `https://kaosmedia.de` (Root Layout)
+- **Twitter/OG Cards:** Alle 14 Routen haben individuelle `title`, `description`, `openGraph` und `twitter`-Felder
+- **Client Components** (`'use client'`): Metadata wird über Segment-`layout.tsx` im gleichen Ordner gesetzt
+- **noindex:** `/impressum`, `/datenschutz`, `/pages/dashboard`
+- **Sitemap:** automatisch via `next-sitemap` beim Build generiert (`public/sitemap.xml`)
+- **robots.txt:** `public/robots.txt`
 
 ---
 
-## 👤 Autor
+## Tracking & Consent
 
-**Projektidee & Vision:** [KAOS Media]  
-**Setup & Struktur:** [Deniz / FLO]  
-**Stand:** 2025-05-04
+- GTM-Container `GTM-TWSLXCXM` via `next/script (afterInteractive)`
+- Google Consent Mode v2: Defaults `denied` werden vor GTM gesetzt
+- Cookie Consent Banner (`CookieBanner.tsx`) mit 3 Kategorien + Modal
+- Consent-Update nach Nutzerwahl via `gtag('consent', 'update', ...)`
+- GA4 Measurement ID: `G-H35DLFCPC2`
 
 ---
 
-## 📄 Lizenz
+## Wichtige Hinweise
 
-Interne Projektentwicklung – nicht für kommerzielle Nutzung außerhalb von KAOS Media vorgesehen.
+- `kaos-reset/` Unterordner ist in `tsconfig.json` unter `exclude` ausgenommen
+- Tailwind v4 nutzt `@theme {}` — kein `tailwind.config.ts`
+- Nach Änderungen an `next.config.ts` muss der Dev-Server neu gestartet werden
+- Dev.to Bilder erfordern den Wildcard-Pattern `**.dev.to` in `next.config.ts`
+- Jede `page.tsx` muss einen Default Export haben, sonst Build-Fehler
+
+---
+
+## Autoren
+
+KAOS Media — Florian Kos · Anna-Katharina Dhillon · Deniz Yavuzkaya
+
+Stand: Mai 2026

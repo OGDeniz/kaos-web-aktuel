@@ -1,6 +1,6 @@
 # KAOS Media — Website Launch To-Do Liste
 
-> Stand: März 2026 | Zuletzt abgeglichen mit Projektstand März 2026
+> Stand: Mai 2026 | Zuletzt abgeglichen mit Projektstand Mai 2026
 
 ---
 
@@ -96,13 +96,14 @@
 
 ### Meta-Tags & Indexierung je Seite
 
-- [ ] **`noindex, nofollow`** auf `/impressum` und `/datenschutz` setzen (Metadata API: `robots: { index: false }`)
-- [ ] **Open Graph + Twitter Card** auf allen Unterseiten ergänzen
-  - ✅ Homepage (`layout.tsx`): OG-Tags vorhanden
-  - ❌ Alle Unterseiten haben keine eigenen OG-Tags: `/leistungen`, `/preise`, `/foerderung`, `/about`, `/portfolio`, `/contact`, `/philosophie`
-- [ ] **`<title>` und `<meta description>`** individuell pro Unterseite befüllen
-  - ✅ Homepage: Custom Metadata vorhanden
-  - ❌ Alle Unterseiten erben aktuell die generische Homepage-Metadata
+- [x] **`noindex, nofollow`** auf `/impressum` und `/datenschutz` gesetzt — via `layout.tsx` in den jeweiligen Segmenten (`robots: { index: false, follow: false }`)
+- [x] **Open Graph + Twitter Card** auf allen Unterseiten ergänzt
+  - ✅ Root `layout.tsx`: OG-Tags + Twitter Card vorhanden
+  - ✅ `/` · `/start` · `/leistungen` · `/preise` · `/foerderung` · `/about` · `/portfolio` · `/contact` · `/philosophie` · `/pages/faq` — alle haben individuelle OG-Tags
+  - ✅ `/pages/portfolio/[slug]` — `generateMetadata` gibt individuellen OG-Block zurück
+- [x] **`<title>` und `<meta description>`** individuell pro Unterseite befüllt
+  - Alle 14 Routen haben eigene title + description
+  - Umgesetzt via `export const metadata` (Server Components) bzw. Segment-`layout.tsx` (Client Components)
 
 ### Google Search Console
 
@@ -162,6 +163,7 @@
 | Förderung Seite (`/pages/foerderung`) | Vollständig mit Programmen und Prozess                                                                                                |
 | ContactForm inline Success-State      | Grüne Erfolgsmeldung nach Absenden vorhanden                                                                                          |
 | Open Graph Tags Homepage              | `layout.tsx` hat vollständige OG-Tags                                                                                                 |
+| Meta Descriptions & OG-Tags (alle)   | Alle 14 Routen haben individuelle title, description, openGraph + Twitter Card — via `metadata` Export oder Segment-`layout.tsx`       |
 | EmailJS Kontaktformular-Backend       | Eingebunden via `@emailjs/browser`                                                                                                    |
 | Favicon                               | Hinzugefügt                                                                                                                           |
 | Impressum vollständig                 | Adresse, Namen, Steuernummer, Kleinunternehmerregelung § 19 UStG                                                                      |
@@ -193,4 +195,4 @@
 
 ---
 
-_Erstellt mit Claude · kaosmedia.de · Stand März 2026 · Zuletzt abgeglichen März 2026_
+_Erstellt mit Claude · kaosmedia.de · Stand Mai 2026 · Zuletzt abgeglichen Mai 2026_

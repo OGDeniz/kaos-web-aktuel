@@ -7,7 +7,14 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: 'Portfolio – Unsere Arbeiten',
   description: 'Ausgewählte Projekte von KAOS Media: Von der ersten Idee bis zum fertigen Webauftritt. Branding, Webdesign und mehr.',
-  alternates: { canonical: 'https://www.kaosmedia.de/pages/portfolio' },
+  alternates: { canonical: 'https://kaosmedia.de/pages/portfolio' },
+  openGraph: {
+    type: 'website',
+    url: 'https://kaosmedia.de/pages/portfolio',
+    title: 'Portfolio – Unsere Arbeiten | KAOS Media',
+    description: 'Ausgewählte Projekte von KAOS Media: Von der ersten Idee bis zum fertigen Webauftritt. Branding, Webdesign und mehr.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Portfolio' }],
+  },
 };
 
 export default async function PortfolioPage() {
