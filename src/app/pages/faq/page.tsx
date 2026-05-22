@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/pages/faq',
     title: 'FAQ – Häufige Fragen | KAOS Media',
     description: 'Antworten auf die wichtigsten Fragen rund um Marketing, Agenturen, Google Ads, SEO und KI.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media FAQ' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media FAQ' }],
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/pages/preise',
     title: 'Preise – Transparente Pakete & Konditionen | KAOS Media',
     description: 'Transparente Preise für Branding, Webdesign, SEO und Social Media. Flexible Pakete, monatlich kündbar, bis zu 50 % staatlich förderbar.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Preise' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Preise' }],
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/pages/foerderung',
     title: 'Förderung – Bis zu 50 % staatliche Förderung | KAOS Media',
     description: 'Digitales Marketing bis zu 50 % staatlich förderbar – BAFA, go-digital, Landesprogramme. Kostenloser Förder-Check von KAOS Media.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Förderung' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Förderung' }],
   },
 };
 

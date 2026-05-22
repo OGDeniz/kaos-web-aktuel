@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props) {
       url,
       title: `${entry.meta.title} | KAOS Media Portfolio`,
       description: entry.meta.excerpt,
-      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: entry.meta.title }],
+      images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: entry.meta.title }],
     },
   };
 }

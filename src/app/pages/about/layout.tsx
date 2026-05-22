@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/pages/about',
     title: 'Über uns – Die Macher von KAOS Media',
     description: 'Das Team hinter KAOS Media: Florian, Anna und Deniz. Boutique-Agentur mit Gründer-Know-how und Herzblut.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Team' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Team' }],
   },
 };
 

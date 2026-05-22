@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/start',
     title: 'KAOS MEDIA – Kreativität trifft Struktur',
     description: 'Kreativität trifft Strategie – KAOS Media, die Boutique-Agentur für deine Marke. Branding, Webdesign und mehr.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media' }],
   },
 };
 

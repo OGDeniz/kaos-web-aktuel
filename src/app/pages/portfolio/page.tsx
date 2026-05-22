@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de/pages/portfolio',
     title: 'Portfolio – Unsere Arbeiten | KAOS Media',
     description: 'Ausgewählte Projekte von KAOS Media: Von der ersten Idee bis zum fertigen Webauftritt. Branding, Webdesign und mehr.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Portfolio' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media Portfolio' }],
   },
 };
 

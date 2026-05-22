@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: 'https://kaosmedia.de',
     title: 'KAOS MEDIA – Kreativagentur für digitales Marketing',
     description: 'Branding, Webdesign, SEO & digitales Marketing aus Heidelberg. Messbare Ergebnisse für Startups und KMU.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'KAOS Media' }],
+    images: [{ url: 'https://kaosmedia.de/og-image.png', width: 1200, height: 630, alt: 'KAOS Media' }],
   },
 };
 
