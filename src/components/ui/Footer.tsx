@@ -86,6 +86,15 @@ export default function Footer() {
               <a href="#" aria-label="Facebook" className={styles.socialLink}>
                 <img src="/icons/fb.svg" alt="Facebook" width={20} height={20} className={styles.socialIcon} />
               </a>
+              <a
+                href="https://www.youtube.com/@KAOSMEDIA-Getyourkaos"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className={styles.socialLink}
+              >
+                <img src="/icons/yt.svg" alt="YouTube" width={20} height={20} className={styles.socialIcon} />
+              </a>
             </div>
           </div>
         </div>
